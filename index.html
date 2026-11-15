@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triada Hotel Karaköy - Sarı Taksi & Bellboy Destek</title>
+    <title>Triada Hotel Karaköy - Wi-Fi & Bellboy Destek</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #121212; color: #f5f5f5; padding: 15px; padding-bottom: 90px; display: flex; justify-content: center; }
@@ -25,7 +25,7 @@
         .menu-link:hover { color: #f2a900; }
         .menu-subtext { font-size: 11px; color: #aaa; display: block; margin-top: 2px; }
 
-        /* AKORDİYON / AÇILIR-KAPANIR BAŞLIKLAR */
+        /* AKORDİYON BAŞLIKLAR */
         .accordion-header { background: #242424; color: #f2a900; font-size: 14px; font-weight: bold; padding: 12px; border-radius: 8px; margin-top: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: 1px solid #333; transition: 0.2s; }
         .accordion-header:hover { background: #2d2d2d; border-color: #f2a900; }
         .accordion-content { display: none; padding-left: 8px; margin-bottom: 10px; background: #1a1a1a; border-radius: 0 0 8px 8px; padding-right: 8px; }
@@ -65,6 +65,10 @@
         .btn-map { background-color: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 10px; border-radius: 30px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; text-decoration: none; }
         .btn-yt { background-color: #bb0000; color: #fff; border: none; width: 100%; padding: 9px; border-radius: 30px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; text-decoration: none; }
 
+        /* Wi-Fi Adım Kartları (Görseldeki yeni sisteme göre) */
+        .wifi-step-box { background: #1a1a1a; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #25D366; font-size: 13px; line-height: 1.5; color: #ddd; }
+        .wifi-step-box strong { color: #25D366; }
+
         /* Rehber & Market Liste Stili */
         .guide-item { background: #1a1a1a; padding: 12px; border-radius: 8px; margin-bottom: 8px; border-left: 3px solid #f2a900; display: flex; justify-content: space-between; align-items: center; }
         .guide-title { font-size: 14px; font-weight: bold; color: #fff; }
@@ -76,12 +80,10 @@
         .shop-price { font-size: 14px; font-weight: bold; color: #25D366; margin-top: 2px; }
         .shop-btn { background: #25D366; color: #fff; border: none; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; text-decoration: none; }
 
-        /* Tıklanabilir Özel İstek Kutusu */
         .custom-request-box { background: #1a1a1a; border: 1px dashed #f2a900; border-radius: 8px; padding: 12px; margin-top: 10px; cursor: pointer; transition: 0.2s; }
         .custom-request-header { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: bold; color: #f2a900; }
         .custom-request-content { display: none; margin-top: 10px; font-size: 12px; color: #ccc; line-height: 1.5; border-top: 1px solid #333; padding-top: 10px; }
 
-        /* Gizlenen / Genişletilen Alanlar */
         .more-items { display: none; }
         .btn-expand { background: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 12px; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; margin-top: 8px; margin-bottom: 10px; transition: 0.2s; }
 
@@ -105,54 +107,20 @@
     <button class="menu-close" onclick="closeMenu()">✕</button>
     <div class="menu-title" id="menuTitle">🏢 Triada Hotel Rehber Menü</div>
     
-    <!-- ANA SAYFA GEZİNTİ LİNKLERİ -->
-    <a href="#taxiSec" class="menu-link" onclick="closeMenu()"><span id="ml1">🚕 Sarı Taksi Çağır</span> 📍</a>
+    <a href="#wifiSec" class="menu-link" onclick="closeMenu()"><span id="mlWifi">📶 Wi-Fi Bağlantı Rehberi</span> 📍</a>
     <a href="#buildingsSec" class="menu-link" onclick="closeMenu()"><span id="ml2">📍 Otel Binalarımız (Konumlar)</span> 📍</a>
+    <a href="#taxiSec" class="menu-link" onclick="closeMenu()"><span id="ml1">🚕 Sarı Taksi Çağır</span> 📍</a>
     <a href="#shopSec" class="menu-link" onclick="closeMenu()"><span id="ml3">🛒 Acil İhtiyaç Marketi</span> 📍</a>
     <a href="#guideSec" class="menu-link" onclick="closeMenu()"><span id="ml4">🗺️ Karaköy Gezi Rehberi</span> 📍</a>
     
-    <!-- ACİL HİZMETLER & KONUMLAR -->
     <div class="menu-category-fixed" id="mcEmergency">🚨 Acil Hizmetler & Konumlar</div>
-    <a href="https://maps.app.goo.gl/JFxu71nuaVbqgrmw7?g_st=ac" target="_blank" class="menu-link">
-        <div>
-            <span id="mEx">💱 Güvenilir Döviz Bürosu</span>
-            <span class="menu-subtext">Nakit/Döviz bozdurma noktası</span>
-        </div>
-        📍
-    </a>
-    <a href="https://maps.app.goo.gl/3rqEYji6614mcJdD8?g_st=ac" target="_blank" class="menu-link">
-        <div>
-            <span id="mPh">🏥 Nöbetçi / Yakın Eczane</span>
-            <span class="menu-subtext">Sağlık & İlaç ihtiyaçları</span>
-        </div>
-        📍
-    </a>
-    <a href="https://maps.app.goo.gl/4HxWnq7aXRUeTqtGA?g_st=ac" target="_blank" class="menu-link">
-        <div>
-            <span id="mMkt">🛒 En Yakın Market</span>
-            <span class="menu-subtext">Günlük ihtiyaç & Atıştırmalık</span>
-        </div>
-        📍
-    </a>
-    <a href="https://maps.app.goo.gl/esDV88XG8D1Tt74C6?g_st=ac" target="_blank" class="menu-link">
-        <div>
-            <span id="mAtm">🏧 Ortak ATM Noktaları</span>
-            <span class="menu-subtext">Nakit çekim bankamatikler</span>
-        </div>
-        📍
-    </a>
-    <a href="https://maps.app.goo.gl/F3ZvGWppxmUXPoneA?g_st=ac" target="_blank" class="menu-link">
-        <div>
-            <span id="mPk">🅿️ Galataport AVM Kapalı Otoparkı</span>
-            <span class="menu-subtext">7/24 Güvenli kapalı otopark</span>
-        </div>
-        📍
-    </a>
+    <a href="https://maps.app.goo.gl/JFxu71nuaVbqgrmw7?g_st=ac" target="_blank" class="menu-link"><div><span id="mEx">💱 Güvenilir Döviz Bürosu</span><span class="menu-subtext">Nakit/Döviz bozdurma noktası</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/3rqEYji6614mcJdD8?g_st=ac" target="_blank" class="menu-link"><div><span id="mPh">🏥 Nöbetçi / Yakın Eczane</span><span class="menu-subtext">Sağlık & İlaç ihtiyaçları</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/4HxWnq7aXRUeTqtGA?g_st=ac" target="_blank" class="menu-link"><div><span id="mMkt">🛒 En Yakın Market</span><span class="menu-subtext">Günlük ihtiyaç & Atıştırmalık</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/esDV88XG8D1Tt74C6?g_st=ac" target="_blank" class="menu-link"><div><span id="mAtm">🏧 Ortak ATM Noktaları</span><span class="menu-subtext">Nakit çekim bankamatikler</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/F3ZvGWppxmUXPoneA?g_st=ac" target="_blank" class="menu-link"><div><span id="mPk">🅿️ Galataport AVM Kapalı Otoparkı</span><span class="menu-subtext">7/24 Güvenli kapalı otopark</span></div>📍</a>
 
-    <!-- AÇILIR-KAPANIR (AKORDİYON) BAŞLIKLAR -->
-    <div class="accordion-header" onclick="toggleAcc('accFood')">
-        <span id="mcFood">🥐 Yeme, İçme & Cafeler</span> <span>▼</span>
-    </div>
+    <div class="accordion-header" onclick="toggleAcc('accFood')"><span id="mcFood">🥐 Yeme, İçme & Cafeler</span> <span>▼</span></div>
     <div class="accordion-content" id="accFood">
         <a href="https://maps.app.goo.gl/ie138XCPTvNUPj4Q9?g_st=ac" target="_blank" class="menu-link"><div><span>🍲 Restoran</span><span class="menu-subtext">Geleneksel & Akşam Yemeği</span></div>📍</a>
         <a href="https://maps.app.goo.gl/osv2t9MHzxxchnDH7?g_st=ac" target="_blank" class="menu-link"><div><span>🐟 Balık Restoranı</span><span class="menu-subtext">Taze Balık & Deniz Ürünleri</span></div>📍</a>
@@ -160,17 +128,13 @@
         <a href="https://maps.app.goo.gl/kc4KeuVZiTEE4D9VA?g_st=ac" target="_blank" class="menu-link"><div><span>🍸 Bar & Gece Mekanı</span><span class="menu-subtext">Kokteyl & Eğlence</span></div>📍</a>
     </div>
 
-    <div class="accordion-header" onclick="toggleAcc('accCare')">
-        <span id="mcCare">💈 Berber, Kuaför & SPA</span> <span>▼</span>
-    </div>
+    <div class="accordion-header" onclick="toggleAcc('accCare')"><span id="mcCare">💈 Berber, Kuaför & SPA</span> <span>▼</span></div>
     <div class="accordion-content" id="accCare">
         <a href="https://maps.app.goo.gl/g4uM7aNUdCu27fKM7?g_st=ac" target="_blank" class="menu-link"><div><span>💈 Berber & Kuaför</span><span class="menu-subtext">Erkek & Kadın Saç Bakımı</span></div>📍</a>
         <a href="https://maps.app.goo.gl/nxQoA6fDi7grMk9g6?g_st=ac" target="_blank" class="menu-link"><div><span>🧖 Masaj, SPA & Hamam</span><span class="menu-subtext">Yol Yorgunluğu & Rahatlama</span></div>📍</a>
     </div>
 
-    <div class="accordion-header" onclick="toggleAcc('accWalk')">
-        <span id="mcWalk">🚶 Yürüme Mesafesindeki Yerler</span> <span>▼</span>
-    </div>
+    <div class="accordion-header" onclick="toggleAcc('accWalk')"><span id="mcWalk">🚶 Yürüme Mesafesindeki Yerler</span> <span>▼</span></div>
     <div class="accordion-content" id="accWalk">
         <a href="https://www.google.com/maps/search/?api=1&query=Galataport+Istanbul" target="_blank" class="menu-link"><span>🏬 Galataport İstanbul</span>📍</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Galata+Tower" target="_blank" class="menu-link"><span>🏰 Galata Kulesi</span>📍</a>
@@ -180,27 +144,21 @@
         <a href="https://www.google.com/maps/search/?api=1&query=Kilic+Ali+Pasa+Hamami" target="_blank" class="menu-link"><span>♨️ Kılıç Ali Paşa Hamamı</span>📍</a>
     </div>
 
-    <div class="accordion-header" onclick="toggleAcc('accMuseum')">
-        <span id="mcMuseum">🎨 Müzeler & Sanat Merkezleri</span> <span>▼</span>
-    </div>
+    <div class="accordion-header" onclick="toggleAcc('accMuseum')"><span id="mcMuseum">🎨 Müzeler & Sanat Merkezleri</span> <span>▼</span></div>
     <div class="accordion-content" id="accMuseum">
         <a href="https://www.google.com/maps/search/?api=1&query=Istanbul+Modern" target="_blank" class="menu-link"><span>🖼️ İstanbul Modern</span>📍</a>
         <a href="https://www.google.com/maps/search/?api=1&query=SALT+Galata" target="_blank" class="menu-link"><span>📚 SALT Galata</span>📍</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Tophane-i+Amire" target="_blank" class="menu-link"><span>🏛️ Tophane-i Âmire</span>📍</a>
     </div>
 
-    <div class="accordion-header" onclick="toggleAcc('accReligion')">
-        <span id="mcReligion">🕌 Camiler & Tarihi Kiliseler</span> <span>▼</span>
-    </div>
+    <div class="accordion-header" onclick="toggleAcc('accReligion')"><span id="mcReligion">🕌 Camiler & Tarihi Kiliseler</span> <span>▼</span></div>
     <div class="accordion-content" id="accReligion">
         <a href="https://www.google.com/maps/search/?api=1&query=Arap+Camii+Karakoy" target="_blank" class="menu-link"><span>🕌 Arap Camii (Gotik Mimari)</span>📍</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Yeralti+Camii+Karakoy" target="_blank" class="menu-link"><span>🕌 Yeraltı Camii (Tarihi Mahzen)</span>📍</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Saint+Benoit+Church+Karakoy" target="_blank" class="menu-link"><span>⛪ Saint Benoit Kilisesi</span>📍</a>
     </div>
 
-    <div class="accordion-header" onclick="toggleAcc('accOldCity')">
-        <span id="mcOldCity">🚃 Tarihi Yarımada (Tramvay T1)</span> <span>▼</span>
-    </div>
+    <div class="accordion-header" onclick="toggleAcc('accOldCity')"><span id="mcOldCity">🚃 Tarihi Yarımada (Tramvay T1)</span> <span>▼</span></div>
     <div class="accordion-content" id="accOldCity">
         <a href="https://www.google.com/maps/search/?api=1&query=Hagia+Sophia" target="_blank" class="menu-link"><span>🕌 Ayasofya-i Kebir Cami</span>📍</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Blue+Mosque" target="_blank" class="menu-link"><span>🕌 Sultanahmet Camii</span>📍</a>
@@ -210,9 +168,7 @@
         <a href="https://www.google.com/maps/search/?api=1&query=Spice+Bazaar" target="_blank" class="menu-link"><span>🍵 Mısır Çarşısı</span>📍</a>
     </div>
 
-    <div class="accordion-header" onclick="toggleAcc('accTaksim')">
-        <span id="mcTaksim">🚕 Taksim & Boğaz Hattı</span> <span>▼</span>
-    </div>
+    <div class="accordion-header" onclick="toggleAcc('accTaksim')"><span id="mcTaksim">🚕 Taksim & Boğaz Hattı</span> <span>▼</span></div>
     <div class="accordion-content" id="accTaksim">
         <a href="https://www.google.com/maps/search/?api=1&query=Istiklal+Street" target="_blank" class="menu-link"><span>🚶 İstiklal Caddesi & Taksim</span>📍</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Dolmabahce+Palace" target="_blank" class="menu-link"><span>🏛️ Dolmabahçe Sarayı</span>📍</a>
@@ -239,7 +195,53 @@
     <div class="header">
         <div class="badge">⭐ Triada Hotel Guest Approved 5.0 ★</div>
         <h1>Triada Hotel Karaköy</h1>
-        <p id="subTitle">7/24 Sarı Taksi & Bellboy Destek Hizmetleri</p>
+        <p id="subTitle">7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri</p>
+    </div>
+
+    <!-- 1. SIRADA: Wİ-Fİ BAĞLANTI REHBERİ (YENİ SİSTEM - GÖRSELDEKİ ADIMLAR) -->
+    <div class="card" id="wifiSec" style="border-left-color: #25D366;">
+        <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
+        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="wifiSub">Triada Guest ağına kolayca bağlanın:</p>
+        
+        <div class="wifi-step-box">
+            <strong>Adım 1 & 2:</strong> Telefonunuzun Wi-Fi ayarlarından <strong>"Triada Guest"</strong> ağını seçin ve ekranda çıkan <em>"Kablosuz ağda oturum açın"</em> bildirimine dokunun.
+        </div>
+        <div class="wifi-step-box">
+            <strong>Adım 3 & 4:</strong> Oturum açma sayfası açıldığında alt kısımdaki turuncu <strong>"Hızlı Giriş"</strong> butonuna basın ve açılan menüden <strong>"Hotel Misafir Girişi"</strong> seçeneğini seçin.
+        </div>
+        <div class="wifi-step-box">
+            <strong>Adım 5:</strong> Pasaport / TC Numaranızı (harf ve rakamlar dahil eksiksiz) ve doğum yılınızı (örn: 19xx) yazın, sözleşmeyi onaylayıp <strong>"Hotel Misafir Girişi"</strong> butonuna basarak internete bağlanın!
+        </div>
+    </div>
+
+    <!-- 2. SIRADA: OTEL BİNALARI SEKSİYONU -->
+    <div class="card" id="buildingsSec" style="border-left-color: #f2a900;">
+        <h2 id="titleBuildings">🏢 Triada Hotel Binalarımız</h2>
+        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="subBuildings">Otel binalarımızın konumlarına tek tıkla ulaşın:</p>
+        
+        <div class="guide-item">
+            <div>
+                <div class="guide-title" id="b1Title">🏨 Ana Bina (Main Building)</div>
+                <div class="guide-desc" id="b1Desc">Triada Hotel Karaköy Merkez Bina</div>
+            </div>
+            <a href="https://maps.google.com/?cid=16349782730457908562&entry=gps&g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
+        </div>
+
+        <div class="guide-item">
+            <div>
+                <div class="guide-title" id="b2Title">🏢 1. Ek Bina (Annex 1)</div>
+                <div class="guide-desc" id="b2Desc">Triada Hotel Annex Building 1</div>
+            </div>
+            <a href="https://maps.app.goo.gl/ekuJ6mV7aZAYTFrF9?g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
+        </div>
+
+        <div class="guide-item">
+            <div>
+                <div class="guide-title" id="b3Title">🏢 2. Ek Bina (Annex 2)</div>
+                <div class="guide-desc" id="b3Desc">Triada Hotel Annex Building 2</div>
+            </div>
+            <a href="https://maps.app.goo.gl/dVAUehD18cSLg6Cg8?g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
+        </div>
     </div>
 
     <!-- GÜVEN KUTUSU -->
@@ -248,7 +250,7 @@
         Ödemenizi İster Nakit İster Kartla Taksicide Yapabilirsiniz!
     </div>
 
-    <!-- 1. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASİYON FORMU -->
+    <!-- 3. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASİYON FORMU -->
     <div id="taxiSec">
         <div class="card">
             <h2><span id="titleIst">✈️ İstanbul Havalimanı (IST)</span></h2>
@@ -333,37 +335,7 @@
         </div>
     </div>
 
-    <!-- 2. OTEL BİNALARI SEKSİYONU -->
-    <div class="card" id="buildingsSec" style="border-left-color: #f2a900;">
-        <h2 id="titleBuildings">🏢 Triada Hotel Binalarımız</h2>
-        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="subBuildings">Otel binalarımızın konumlarına tek tıkla ulaşın:</p>
-        
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="b1Title">🏨 Ana Bina (Main Building)</div>
-                <div class="guide-desc" id="b1Desc">Triada Hotel Karaköy Merkez Bina</div>
-            </div>
-            <a href="https://maps.google.com/?cid=16349782730457908562&entry=gps&g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
-        </div>
-
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="b2Title">🏢 1. Ek Bina (Annex 1)</div>
-                <div class="guide-desc" id="b2Desc">Triada Hotel Annex Building 1</div>
-            </div>
-            <a href="https://maps.app.goo.gl/ekuJ6mV7aZAYTFrF9?g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
-        </div>
-
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="b3Title">🏢 2. Ek Bina (Annex 2)</div>
-                <div class="guide-desc" id="b3Desc">Triada Hotel Annex Building 2</div>
-            </div>
-            <a href="https://maps.app.goo.gl/dVAUehD18cSLg6Cg8?g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
-        </div>
-    </div>
-
-    <!-- 3. ACİL İHTİYAÇ & DESTEK MARKETİ -->
+    <!-- 4. SIRADA: ACİL İHTİYAÇ & DESTEK MARKETİ -->
     <div class="card" id="shopSec" style="border-left-color: #25D366;">
         <h2 style="color:#25D366;" id="titleShop">🛒 Acil İhtiyaç & Destek Marketi</h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="subShop">İhtiyacınız olan ürünler kapınıza gelsin:</p>
@@ -422,7 +394,7 @@
         </div>
     </div>
 
-    <!-- 4. İSTANBUL GEZİ REHBERİ -->
+    <!-- 5. İSTANBUL GEZİ REHBERİ -->
     <div class="card" id="guideSec" style="border-left-color: #f2a900;">
         <h2 id="guideHeader">🗺️ Popüler Gezilecek Yerler</h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="guideSub">Otelinize yakın en meşhur noktalar:</p>
@@ -572,8 +544,9 @@
 
     const translations = {
         tr: {
-            subTitle: "7/24 Sarı Taksi & Bellboy Destek Hizmetleri",
+            subTitle: "7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri",
             menuTitle: "🏢 Triada Hotel Rehber Menü",
+            mlWifi: "📶 Wi-Fi Bağlantı Rehberi",
             ml1: "🚕 Sarı Taksi Çağır",
             ml2: "📍 Otel Binalarımız (Konumlar)",
             ml3: "🛒 Acil İhtiyaç Marketi",
@@ -592,6 +565,8 @@
             mcReligion: "🕌 Camiler & Tarihi Kiliseler",
             mcOldCity: "🚃 Tarihi Yarımada (Tramvay T1)",
             mcTaksim: "🚕 Taksim & Boğaz Hattı",
+            wifiTitle: "📶 Ücretsiz Wi-Fi Oturum Açma Rehberi",
+            wifiSub: "Triada Guest ağına kolayca bağlanın:",
             titleBuildings: "🏢 Triada Hotel Binalarımız",
             subBuildings: "Otel binalarımızın konumlarına tek tıkla ulaşın:",
             b1Title: "🏨 Ana Bina (Main Building)", b1Desc: "Triada Hotel Karaköy Merkez Bina",
@@ -633,8 +608,9 @@
             btnHotelMap: "🏨 Triada Hotel Karaköy Yol Tarifi", btnCallCall: "📞 Hemen Ara"
         },
         en: {
-            subTitle: "24/7 Yellow Taxi & Bellboy Support",
+            subTitle: "24/7 Wi-Fi, Location & Bellboy Support",
             menuTitle: "🏢 Triada Hotel Guide Menu",
+            mlWifi: "📶 Wi-Fi Connection Guide",
             ml1: "🚕 Order Yellow Taxi",
             ml2: "📍 Hotel Buildings (Locations)",
             ml3: "🛒 Emergency Shop",
@@ -653,6 +629,8 @@
             mcReligion: "🕌 Mosques & Historical Churches",
             mcOldCity: "🚃 Old City Peninsula (Tram T1)",
             mcTaksim: "🚕 Taksim & Bosphorus Line",
+            wifiTitle: "📶 Free Wi-Fi Login Guide",
+            wifiSub: "Easily connect to Triada Guest network:",
             titleBuildings: "🏢 Triada Hotel Buildings",
             subBuildings: "Direct map directions to our hotel buildings:",
             b1Title: "🏨 Main Building", b1Desc: "Triada Hotel Karaköy Central",
@@ -694,8 +672,9 @@
             btnHotelMap: "🏨 Triada Hotel Karaköy Directions", btnCallCall: "📞 Call Now"
         },
         ru: {
-            subTitle: "24/7 Заказ Такси и Поддержка Беллбоя",
+            subTitle: "24/7 Wi-Fi, Локация и Поддержка Беллбоя",
             menuTitle: "🏢 Меню Triada Hotel",
+            mlWifi: "📶 Руководство по Wi-Fi",
             ml1: "🚕 Заказать Желтое Такси",
             ml2: "📍 Здания Отеля (Карта)",
             ml3: "🛒 Магазин Первой Помощи",
@@ -714,6 +693,8 @@
             mcReligion: "🕌 Мечети и Исторические Церкви",
             mcOldCity: "🚃 Старый Город (Трамвай T1)",
             mcTaksim: "🚕 Таксим и Босфор",
+            wifiTitle: "📶 Инструкция по входу в Wi-Fi",
+            wifiSub: "Легкое подключение к сети Triada Guest:",
             titleBuildings: "🏢 Здания Triada Hotel",
             subBuildings: "Прямые маршруты к нашим зданиям:",
             b1Title: "🏨 Главный Корпус", b1Desc: "Triada Hotel Karaköy Главное здание",
@@ -755,8 +736,9 @@
             btnHotelMap: "🏨 Маршрут к Triada Hotel Karaköy", btnCallCall: "📞 Позвонить"
         },
         ar: {
-            subTitle: "خدمة طلب التاكسي ودعم بيلبوي 24/7",
+            subTitle: "خدمة الواي فاي، الموقع ودعم بيلبوي 24/7",
             menuTitle: "🏢 قائمة فندق تريادا",
+            mlWifi: "📶 دليل الاتصال بالواي فاي",
             ml1: "🚕 طلب تاكسي أصفر",
             ml2: "📍 مباني الفندق (المواقع)",
             ml3: "🛒 متجر الاحتياجات",
@@ -775,6 +757,8 @@
             mcReligion: "🕌 المساجد والكنائس التاريخية",
             mcOldCity: "🚃 المدينة القديمة (الترام T1)",
             mcTaksim: "🚕 تقسيم وخط البوسفور",
+            wifiTitle: "📶 دليل تسجيل الدخول لشبكة الواي فاي المجانية",
+            wifiSub: "اتصل بسهولة بشبكة Triada Guest:",
             titleBuildings: "🏢 مباني فندق تريادا",
             subBuildings: "اتجاهات الخريطة المباشرة لمباني الفندق:",
             b1Title: "🏨 المبنى الرئيسي", b1Desc: "فندق تريادا كراكوي المبنى الرئيسي",
@@ -832,14 +816,13 @@
         for(let key in t) {
             let el = document.getElementById(key);
             if(el) {
-                if(key.includes('Info') || key === 'capBox' || key === 'trustBox' || key === 'flexBox') {
+                if(key.includes('Info') || key === 'capBox' || key === 'trustBox' || key === 'flexBox' || key.includes('wifi')) {
                     el.innerHTML = t[key];
                 } else {
                     el.innerText = t[key];
                 }
             }
         }
-        // Dil değiştiğinde hesaplanan fiyatın güncel kalması sağlanır
         updateCalc();
     }
 
@@ -891,7 +874,7 @@
         const formattedNow = now.toISOString().slice(0, 16);
         const timeInput = document.getElementById('txtTime');
         timeInput.value = formattedNow;
-        timeInput.min = formattedNow; // Geçmiş tarih seçimi engellendi
+        timeInput.min = formattedNow;
     }
 
     window.onload = function() {
