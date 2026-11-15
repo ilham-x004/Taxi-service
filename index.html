@@ -86,6 +86,14 @@
         .more-items { display: none; }
         .btn-expand { background: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 12px; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; margin-top: 8px; margin-bottom: 10px; transition: 0.2s; }
 
+        /* YORUM KARTI STİLLERİ */
+        .review-card { background: linear-gradient(135deg, #262626, #1f1f1f); border: 1px dashed #f2a900; border-radius: 12px; padding: 18px; margin-top: 20px; text-align: center; }
+        .review-card h3 { font-size: 15px; color: #f2a900; margin-bottom: 8px; }
+        .review-card p { font-size: 12.5px; color: #ccc; line-height: 1.5; margin-bottom: 12px; }
+        .btn-review { background-color: #f2a900; color: #000; border: none; width: 100%; padding: 12px; border-radius: 25px; font-size: 14px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(242,169,0,0.3); }
+        .review-qr-container { background: #fff; padding: 10px; border-radius: 8px; display: inline-block; margin-top: 5px; }
+        .review-qr-container img { width: 140px; height: 140px; display: block; }
+
         /* Sabit Alt Bar */
         .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #181818; border-top: 1px solid #333; padding: 10px 20px; display: flex; gap: 10px; justify-content: center; z-index: 999; }
         .sticky-btn { flex: 1; max-width: 220px; padding: 12px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
@@ -113,9 +121,10 @@
     <a href="#shopSec" class="menu-link" onclick="closeMenu()"><span id="ml3">🛒 Acil İhtiyaç Marketi</span> 📍</a>
     
     <div class="menu-category-fixed" id="mcEmergency">🚨 Acil Hizmetler & Konumlar</div>
-    <a href="https://maps.app.goo.gl/JFxu71nuaVbqgrmw7?g_st=ac" target="_blank" class="menu-link"><div><span id="mEx">💱 Güvenilir Döviz Bürosu</span><span class="menu-subtext">Nakit/Döviz bozdurma noktası</span></div>📍</a>
-    <a href="https://maps.app.goo.gl/3rqEYji6614mcJdD8?g_st=ac" target="_blank" class="menu-link"><div><span id="mPh">🏥 Nöbetçi / Yakın Eczane</span><span class="menu-subtext">Sağlık & İlaç ihtiyaçları</span></div>📍</a>
-    <a href="https://maps.app.goo.gl/4HxWnq7aXRUeTqtGA?g_st=ac" target="_blank" class="menu-link"><div><span id="mMkt">🛒 En Yakın Market</span><span class="menu-subtext">Günlük ihtiyaç & Atıştırmalık</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/biVGdVAnQXLnwANe6?g_st=ac" target="_blank" class="menu-link"><div><span id="mEx">💱 Güvenilir Döviz Bürosu</span><span class="menu-subtext">Nakit/Döviz bozdurma noktası</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/tJkGVbgf96CGFTE49?g_st=ac" target="_blank" class="menu-link"><div><span id="mPh">🏥 Nöbetçi 24 Saat Açık Eczane</span><span class="menu-subtext">7/24 Sağlık & İlaç ihtiyaçları</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/aKrabXJbymTmtfP3A" target="_blank" class="menu-link"><div><span id="mPh2">💊 En Yakın Eczane</span><span class="menu-subtext">Yakın sağlık noktası</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/MkQuQitKw48yYTw98?g_st=ac" target="_blank" class="menu-link"><div><span id="mMkt">🛒 En Yakın Market</span><span class="menu-subtext">Günlük ihtiyaç & Atıştırmalık</span></div>📍</a>
     <a href="https://maps.app.goo.gl/esDV88XG8D1Tt74C6?g_st=ac" target="_blank" class="menu-link"><div><span id="mAtm">🏧 Ortak ATM Noktaları</span><span class="menu-subtext">Nakit çekim bankamatikler</span></div>📍</a>
     <a href="https://maps.app.goo.gl/F3ZvGWppxmUXPoneA?g_st=ac" target="_blank" class="menu-link"><div><span id="mPk">🅿️ Galataport AVM Kapalı Otoparkı</span><span class="menu-subtext">7/24 Güvenli kapalı otopark</span></div>📍</a>
 
@@ -156,7 +165,7 @@
         <p id="subTitle">7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri</p>
     </div>
 
-    <!-- 1. SIRADA: Wİ-Fİ REHBERİ (GÖRSEL ÜSTTE, ÇOK DİLLİ DETAYLAR AKORDİYON İÇİNDE) -->
+    <!-- 1. SIRADA: Wİ-Fİ REHBERİ -->
     <div class="card" id="wifiSec" style="border-left-color: #25D366;">
         <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:10px;" id="wifiSub">Görsele bakarak hızlıca bağlanabilirsiniz:</p>
@@ -211,15 +220,12 @@
         </div>
     </div>
 
-    <!-- 3. SIRADA: KARAKÖY & İSTANBUL GEZİ REHBERİ (İLK 3 GÖZÜKÜR, GERİ KALAN 63 YER GİZLİ DURUR) -->
+    <!-- 3. SIRADA: GEZİ REHBERİ -->
     <div class="card" id="guideSec" style="border-left-color: #f2a900;">
         <h2 id="guideHeader">🗺️ Karaköy & İstanbul Gezi Rehberi</h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="guideSub">En popüler noktalar ve tüm İstanbul harita konumları:</p>
         
-        <!-- İLK 3 GÖZÜKEN YERLER -->
         <div id="topGuidesList"></div>
-
-        <!-- GİZLİ DURAN DİĞER YERLER -->
         <div class="more-items" id="moreGuidesList"></div>
 
         <button class="btn-expand" onclick="toggleGuides()" id="btnExpandGuides">
@@ -265,7 +271,6 @@
             🚖 <strong>Sarı Taksi Kapasitesi:</strong><br>• Maksimum 4 Yolcu<br>• 4-5 Büyük Valiz / 3-4 El Çantası sığabilir.
         </div>
 
-        <!-- REZERVASYON FORMU -->
         <div class="card" style="border-left-color: #25D366;">
             <h2 style="color: #25D366;" id="formTitle">🚕 Sarı Taksi Çağır</h2>
             
@@ -310,7 +315,6 @@
                 </select>
             </div>
 
-            <!-- HESAPLAMA ÖZETİ -->
             <div class="calc-summary">
                 <h3 id="lblTotalTitle">Ödenecek Net Fiyat:</h3>
                 <div class="total-price" id="txtTotalPrice">1.800 ₺</div>
@@ -322,7 +326,7 @@
         </div>
     </div>
 
-    <!-- 5. SIRADA: ACİL İHTİYAÇ & DESTEK MARKETİ (ŞARJ KABLOSU KALDIRILDI) -->
+    <!-- 5. SIRADA: ACİL İHTİYAÇ & DESTEK MARKETİ -->
     <div class="card" id="shopSec" style="border-left-color: #25D366;">
         <h2 style="color:#25D366;" id="titleShop">🛒 Acil İhtiyaç & Destek Marketi</h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="subShop">İhtiyacınız olan ürünler kapınıza gelsin:</p>
@@ -372,6 +376,21 @@
         </div>
     </div>
 
+    <!-- SAYFA SONU: İLHAM ADINA DEĞERLENDİRME & YORUM KARTI -->
+    <div class="review-card">
+        <h3 id="reviewTitle">⭐ İlham İçin Değerlendirme & Yorum</h3>
+        <p id="reviewDesc">Sayfadaki bilgi ve hizmetimizden memnun kaldıysanız, İlham adına çok kısa bir yorum bırakırsanız çok seviniriz!</p>
+        
+        <a href="https://search.google.com/local/writereview?placeid=ChIJdXLQod25yhQRUoXCu8QY5uI&source=g.page.m.ia._&laa=nmx-review-solicitation-ia2" target="_blank" class="btn-review" id="btnReviewWrite">
+            ⭐ Google'da Değerlendir / Yorum Yaz
+        </a>
+
+        <!-- YÜKLEDİĞİNİZ QR KOD GÖRSELİ (Yorum.png / 35722.png) -->
+        <div class="review-qr-container">
+            <img src="35722.png" alt="İlham Google Yorum QR Kod">
+        </div>
+    </div>
+
     <div class="footer">
         Bellboy Support Service - İlham Bekmetov
     </div>
@@ -384,14 +403,10 @@
 </div>
 
 <script>
-    // TÜM GEZİLECEK YERLER VERİTABANI (66 NOKTA)
     const placesList = [
-        // İLK 3 ÖNE ÇIKAN NOKTA (HEMEN GÖZÜKÜR)
         { icon: "🏬", tr: "Galataport İstanbul", en: "Galataport Istanbul", ru: "Галатапорт Стамбул", ar: "غالاتابورت إسطنبول", q: "Galataport Istanbul" },
         { icon: "🏰", tr: "Galata Kulesi", en: "Galata Tower", ru: "Башня Галата", ar: "برج غالاتا", q: "Galata Tower Istanbul" },
         { icon: "🕌", tr: "Ayasofya-i Kebir Cami-i Şerifi", en: "Hagia Sophia Grand Mosque", ru: "Собор Святой Софии", ar: "مسجد آيا صوفيا الكبير", q: "Hagia Sophia Istanbul" },
-        
-        // DİĞER 63 NOKTA (AÇILIR LİSTEDE)
         { icon: "🕌", tr: "Sultanahmet Camii", en: "Blue Mosque (Sultanahmet)", ru: "Голубая мечеть", ar: "جامع السلطان أحمد", q: "Sultanahmet Mosque Istanbul" },
         { icon: "💧", tr: "Yerebatan Sarnıcı", en: "Basilica Cistern", ru: "Цистерна Базилика", ar: "صهريج البازيليك", q: "Basilica Cistern Istanbul" },
         { icon: "👑", tr: "Topkapı Sarayı Müzesi", en: "Topkapi Palace Museum", ru: "Дворец Топкапы", ar: "متحف قصر طوب قابي", q: "Topkapi Palace Museum Istanbul" },
@@ -573,7 +588,8 @@
             ml5: "💬 Bellboy Destek WhatsApp",
             mcEmergency: "🚨 Acil Hizmetler & Konumlar",
             mEx: "💱 Güvenilir Döviz Bürosu",
-            mPh: "🏥 Nöbetçi / Yakın Eczane",
+            mPh: "🏥 Nöbetçi 24 Saat Açık Eczane",
+            mPh2: "💊 En Yakın Eczane",
             mMkt: "🛒 En Yakın Market",
             mAtm: "🏧 Ortak ATM Noktaları",
             mPk: "🅿️ Galataport AVM Kapalı Otoparkı",
@@ -618,6 +634,9 @@
             crHeader: "🎁 Özel İstek & Diğer Talepleriniz",
             crText: "Gece market ihtiyaçları, kişisel bakım/hijyen ürünleri, özel siparişleriniz veya aklınıza gelen her türlü acil talep için 7/24 WhatsApp'tan bize yazabilirsiniz. Bellboy ekibimiz kapınıza kadar getirsin!",
             btnCustomWa: "💬 WhatsApp ile İstekte Bulun",
+            reviewTitle: "⭐ İlham İçin Değerlendirme & Yorum",
+            reviewDesc: "Sayfadaki bilgi ve hizmetimizden memnun kaldıysanız, İlham adına çok kısa bir yorum bırakırsanız çok seviniriz!",
+            btnReviewWrite: "⭐ Google'da Değerlendir / Yorum Yaz",
             btnCallCall: "📞 Hemen Ara"
         },
         en: {
@@ -631,7 +650,8 @@
             ml5: "💬 Bellboy Support WhatsApp",
             mcEmergency: "🚨 Emergency Services & Map",
             mEx: "💱 Currency Exchange Office",
-            mPh: "🏥 Pharmacy On Duty",
+            mPh: "🏥 Pharmacy 24/7 Open On Duty",
+            mPh2: "💊 Nearest Pharmacy",
             mMkt: "🛒 Nearest Supermarket",
             mAtm: "🏧 ATM Cash Machines",
             mPk: "🅿️ Galataport Mall Parking",
@@ -676,6 +696,9 @@
             crHeader: "🎁 Special Requests & Custom Orders",
             crText: "For late-night market items, personal care/hygiene products, or any special requests, feel free to text us on WhatsApp 24/7. Our Bellboy team will deliver it directly to your room!",
             btnCustomWa: "💬 Send Custom Request via WhatsApp",
+            reviewTitle: "⭐ Review & Feedback for Ilham",
+            reviewDesc: "If you are satisfied with our info and service, we would be very happy if you could leave a short review on behalf of Ilham!",
+            btnReviewWrite: "⭐ Review on Google",
             btnCallCall: "📞 Call Now"
         },
         ru: {
@@ -689,7 +712,8 @@
             ml5: "💬 WhatsApp Поддержка",
             mcEmergency: "🚨 Важные услуги и карта",
             mEx: "💱 Обмен Валюты",
-            mPh: "🏥 Дежурная Аптека",
+            mPh: "🏥 Дежурная Аптека 24/7",
+            mPh2: "💊 Ближайшая Аптека",
             mMkt: "🛒 Ближайший Супермаркет",
             mAtm: "🏧 Банкоматы (ATM)",
             mPk: "🅿️ Парковка Galataport AVM",
@@ -734,6 +758,9 @@
             crHeader: "🎁 Особые Пожелания и Индивидуальные Заказы",
             crText: "Для ночных покупок, средств личной гигиены или любых других особых запросов пишите нам в WhatsApp 24/7. Наша команда беллбоев доставит всё прямо к вашей двери!",
             btnCustomWa: "💬 Написать запрос в WhatsApp",
+            reviewTitle: "⭐ Отзыв и Оценка для Ильхама",
+            reviewDesc: "Если вам понравился наш сервис и информация, мы будем очень рады, если вы оставите краткий отзыв от имени Ильхама!",
+            btnReviewWrite: "⭐ Оставить отзыв в Google",
             btnCallCall: "📞 Позвонить"
         },
         ar: {
@@ -747,7 +774,8 @@
             ml5: "💬 واتساب دعم بيلبوي",
             mcEmergency: "🚨 الخدمات الطارئة والمواقع",
             mEx: "💱 مكتب صرافة معتمد",
-            mPh: "🏥 صيدلية مناوبة / قريبة",
+            mPh: "🏥 صيدلية مناوبة 24 ساعة",
+            mPh2: "💊 أقرب صيدلية",
             mMkt: "🛒 أقرب سوبرماركت",
             mAtm: "🏧 أجهزة الصراف الآلي (ATM)",
             mPk: "🅿️ موقف سيارات غالاتابورت",
@@ -792,6 +820,9 @@
             crHeader: "🎁 طلبات خاصة وخدمات إضافية",
             crText: "لمستلزمات المتجر الليلية، منتجات العناية الشخصية، أو أي طلبات خاصة، يمكنك مراسلتنا عبر الواتساب على مدار 24 ساعة. سيقوم فريق البيلبوي بتوصيلها إلى غرفتك مباشرة!",
             btnCustomWa: "💬 إرسال طلب خاص عبر WhatsApp",
+            reviewTitle: "⭐ تقييم وتعليق لصالح إلهام",
+            reviewDesc: "إذا كنت مسروراً بالمعلومات والخدمة المقدمة، سنكون سعيدين جداً إذا تركت تعليقاً قصيراً باسم إلهام!",
+            btnReviewWrite: "⭐ اكتب تقييماً على جوجل",
             btnCallCall: "📞 اتصل الآن"
         }
     };
@@ -820,7 +851,6 @@
             }
         }
         
-        // Açık/kapalı buton metinlerini ve gezi rehberini dil değişikliğine göre yeniden çiz
         renderPlaces();
         if(isExpandedGuides) {
             document.getElementById('btnExpandGuides').innerText = (lang === 'en') ? "▲ Show Less" : (lang === 'ru') ? "▲ Свернуть" : (lang === 'ar') ? "▲ إخفاء" : "▲ Listeyi Daralt / Gizle";
@@ -865,12 +895,10 @@
         }
 
         const payIcon = payVal.includes('Card') ? "💳" : "💸";
-
         const msg = `🚖 YENİ SARI TAKSİ TALEBİ:\n👤 İsim: ${name}\n🔑 Oda No: ${room}\n🛫 Havalimanı: ${airport}\n🎫 Uçuş Kodu: ${flight}\n📅 Tarih/Saat: ${time}\n${payIcon} Ödeme: ${payText}\n💰 Net Tutar: ${totalPrice}`;
 
         const targetNumber = "905014712020";
         const url = `https://wa.me/${targetNumber}?text=${encodeURIComponent(msg)}`;
-        
         window.open(url, '_blank');
     }
 
