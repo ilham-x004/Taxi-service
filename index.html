@@ -65,8 +65,10 @@
         .btn-map { background-color: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 10px; border-radius: 30px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; text-decoration: none; }
         .btn-yt { background-color: #bb0000; color: #fff; border: none; width: 100%; padding: 9px; border-radius: 30px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; text-decoration: none; }
 
-        /* Wi-Fi Adım Kartları (Görseldeki yeni sisteme göre) */
-        .wifi-step-box { background: #1a1a1a; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #25D366; font-size: 13px; line-height: 1.5; color: #ddd; }
+        /* Wi-Fi Görsel ve Detay Alanı Stilleri */
+        .wifi-img-container { text-align: center; margin-top: 10px; margin-bottom: 10px; }
+        .wifi-img-container img { width: 100%; max-width: 100%; border-radius: 8px; border: 1px solid #444; }
+        .wifi-step-box { background: #1a1a1a; padding: 10px; border-radius: 6px; margin-bottom: 8px; border-left: 3px solid #25D366; font-size: 12px; line-height: 1.4; color: #ddd; }
         .wifi-step-box strong { color: #25D366; }
 
         /* Rehber & Market Liste Stili */
@@ -75,7 +77,6 @@
         .guide-desc { font-size: 12px; color: #aaa; margin-top: 2px; }
         .guide-link { color: #f2a900; font-size: 13px; text-decoration: none; font-weight: bold; }
         
-        /* Market Ürün Kartları */
         .shop-item { background: #1a1a1a; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #25D366; display: flex; justify-content: space-between; align-items: center; }
         .shop-price { font-size: 14px; font-weight: bold; color: #25D366; margin-top: 2px; }
         .shop-btn { background: #25D366; color: #fff; border: none; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; text-decoration: none; }
@@ -198,19 +199,30 @@
         <p id="subTitle">7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri</p>
     </div>
 
-    <!-- 1. SIRADA: Wİ-Fİ BAĞLANTI REHBERİ (YENİ SİSTEM - GÖRSELDEKİ ADIMLAR) -->
+    <!-- 1. SIRADA: Wİ-Fİ REHBERİ (GÖRSEL ÜSTTE, DETAYLAR AKORDİYON İÇİNDE) -->
     <div class="card" id="wifiSec" style="border-left-color: #25D366;">
         <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
-        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="wifiSub">Triada Guest ağına kolayca bağlanın:</p>
+        <p style="font-size:12px; color:#aaa; margin-bottom:10px;" id="wifiSub">Görsele bakarak hızlıca bağlanabilirsiniz:</p>
         
-        <div class="wifi-step-box">
-            <strong>Adım 1 & 2:</strong> Telefonunuzun Wi-Fi ayarlarından <strong>"Triada Guest"</strong> ağını seçin ve ekranda çıkan <em>"Kablosuz ağda oturum açın"</em> bildirimine dokunun.
+        <!-- YÜKLEDİĞİNİZ GÖRSEL (ÜSTTE SABİT) -->
+        <div class="wifi-img-container">
+            <img src="wifi.png" alt="Triada Guest Wi-Fi Bağlantı Rehberi Adımları" onerror="this.src='https://i.imgur.com/35695.png'">
         </div>
-        <div class="wifi-step-box">
-            <strong>Adım 3 & 4:</strong> Oturum açma sayfası açıldığında alt kısımdaki turuncu <strong>"Hızlı Giriş"</strong> butonuna basın ve açılan menüden <strong>"Hotel Misafir Girişi"</strong> seçeneğini seçin.
+
+        <!-- İSTEYENLER İÇİN AÇILIR-KAPANIR YAZILI DETAYLAR -->
+        <div class="accordion-header" onclick="toggleAcc('wifiDetailsContent')" style="margin-top:12px; background:#1a1a1a; font-size:13px;">
+            <span id="wifiDetailToggleTitle">📖 Detaylı Yazılı Adımları Göster / Gizle</span> <span>▼</span>
         </div>
-        <div class="wifi-step-box">
-            <strong>Adım 5:</strong> Pasaport / TC Numaranızı (harf ve rakamlar dahil eksiksiz) ve doğum yılınızı (örn: 19xx) yazın, sözleşmeyi onaylayıp <strong>"Hotel Misafir Girişi"</strong> butonuna basarak internete bağlanın!
+        <div class="accordion-content" id="wifiDetailsContent" style="margin-top:5px; background:none; padding:0;">
+            <div class="wifi-step-box">
+                <strong>Adım 1 & 2:</strong> Telefonunuzun Wi-Fi ayarlarından <strong>"Triada Guest"</strong> ağını seçin ve ekranda çıkan <em>"Kablosuz ağda oturum açın"</em> bildirimine dokunun.
+            </div>
+            <div class="wifi-step-box">
+                <strong>Adım 3 & 4:</strong> Oturum açma sayfası açıldığında alt kısımdaki turuncu <strong>"Hızlı Giriş"</strong> butonuna basın ve açılan menüden <strong>"Hotel Misafir Girişi"</strong> seçeneğini seçin.
+            </div>
+            <div class="wifi-step-box">
+                <strong>Adım 5:</strong> Pasaport / TC Numaranızı (harf ve rakamlar dahil eksiksiz) ve doğum yılınızı (örn: 19xx) yazın, sözleşmeyi onaylayıp <strong>"Hotel Misafir Girişi"</strong> butonuna basarak internete bağlanın!
+            </div>
         </div>
     </div>
 
@@ -566,7 +578,8 @@
             mcOldCity: "🚃 Tarihi Yarımada (Tramvay T1)",
             mcTaksim: "🚕 Taksim & Boğaz Hattı",
             wifiTitle: "📶 Ücretsiz Wi-Fi Oturum Açma Rehberi",
-            wifiSub: "Triada Guest ağına kolayca bağlanın:",
+            wifiSub: "Görsele bakarak hızlıca bağlanabilirsiniz:",
+            wifiDetailToggleTitle: "📖 Detaylı Yazılı Adımları Göster / Gizle",
             titleBuildings: "🏢 Triada Hotel Binalarımız",
             subBuildings: "Otel binalarımızın konumlarına tek tıkla ulaşın:",
             b1Title: "🏨 Ana Bina (Main Building)", b1Desc: "Triada Hotel Karaköy Merkez Bina",
@@ -630,7 +643,8 @@
             mcOldCity: "🚃 Old City Peninsula (Tram T1)",
             mcTaksim: "🚕 Taksim & Bosphorus Line",
             wifiTitle: "📶 Free Wi-Fi Login Guide",
-            wifiSub: "Easily connect to Triada Guest network:",
+            wifiSub: "Connect easily by following the image:",
+            wifiDetailToggleTitle: "📖 Show / Hide Detailed Written Steps",
             titleBuildings: "🏢 Triada Hotel Buildings",
             subBuildings: "Direct map directions to our hotel buildings:",
             b1Title: "🏨 Main Building", b1Desc: "Triada Hotel Karaköy Central",
@@ -694,7 +708,8 @@
             mcOldCity: "🚃 Старый Город (Трамвай T1)",
             mcTaksim: "🚕 Таксим и Босфор",
             wifiTitle: "📶 Инструкция по входу в Wi-Fi",
-            wifiSub: "Легкое подключение к сети Triada Guest:",
+            wifiSub: "Подключайтесь, следуя изображению:",
+            wifiDetailToggleTitle: "📖 Показать / Скрыть подробные шаги",
             titleBuildings: "🏢 Здания Triada Hotel",
             subBuildings: "Прямые маршруты к нашим зданиям:",
             b1Title: "🏨 Главный Корпус", b1Desc: "Triada Hotel Karaköy Главное здание",
@@ -730,7 +745,7 @@
             gt1: "🏬 Галатапорт Стамбул", gd1: "Прогулки у моря, шопинг и вид на Босфор (🚶 5 мин)", gl1: "Карта 📍",
             gt2: "🥐 Каракёй Гюллюоглу", gd2: "Всемирно известная историческая пахлава (🚶 2 мин)", gl2: "Карта 📍",
             gt3: "🏰 Башня Галата", gd3: "Историческая башня и панорамный вид (🚶 10 мин)", gl3: "Карта 📍",
-            gt4: "🕌 Собор Святой Софии & Голубая Мечеть", gd4: "Сердце исторического центра (🚃 Трамвай 10 мин)", gl4: "Карта 📍",
+            gt4: "🕌 Собор Святой Софии & Голубая Мечеть", gd4: "Сердце исторического центра (🚃 Трамвай 10 мин)", gd4: "Карта 📍",
             gt5: "🛍️ Гранд-Базар (Kapalıçarşı)", gd5: "Старейший исторический рынок (🚃 Трамвай 12 мин)", gl5: "Карта 📍",
             gt6: "🍵 Египетский Базар & Эминёню", gd6: "Рынок специй и свежая рыба (🚶 12 мин)", gl6: "Карта 📍",
             btnHotelMap: "🏨 Маршрут к Triada Hotel Karaköy", btnCallCall: "📞 Позвонить"
@@ -758,7 +773,8 @@
             mcOldCity: "🚃 المدينة القديمة (الترام T1)",
             mcTaksim: "🚕 تقسيم وخط البوسفور",
             wifiTitle: "📶 دليل تسجيل الدخول لشبكة الواي فاي المجانية",
-            wifiSub: "اتصل بسهولة بشبكة Triada Guest:",
+            wifiSub: "اتصل بسهولة باتباع الصورة أدناه:",
+            wifiDetailToggleTitle: "📖 إظهار / إخفاء الخطوات المكتوبة المفصلة",
             titleBuildings: "🏢 مباني فندق تريادا",
             subBuildings: "اتجاهات الخريطة المباشرة لمباني الفندق:",
             b1Title: "🏨 المبنى الرئيسي", b1Desc: "فندق تريادا كراكوي المبنى الرئيسي",
