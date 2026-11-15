@@ -86,13 +86,14 @@
         .more-items { display: none; }
         .btn-expand { background: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 12px; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; margin-top: 8px; margin-bottom: 10px; transition: 0.2s; }
 
-        /* YORUM KARTI STİLLERİ */
+        /* YORUM KARTI STİLLERİ (Boşlukları kırpan ve ortalayan yapı) */
         .review-card { background: linear-gradient(135deg, #262626, #1f1f1f); border: 1px dashed #f2a900; border-radius: 12px; padding: 18px; margin-top: 20px; text-align: center; }
         .review-card h3 { font-size: 15px; color: #f2a900; margin-bottom: 8px; }
         .review-card p { font-size: 12.5px; color: #ccc; line-height: 1.5; margin-bottom: 12px; }
         .btn-review { background-color: #f2a900; color: #000; border: none; width: 100%; padding: 12px; border-radius: 25px; font-size: 14px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(242,169,0,0.3); }
-        .review-qr-container { background: #fff; padding: 10px; border-radius: 8px; display: inline-block; margin-top: 5px; }
-        .review-qr-container img { width: 140px; height: 140px; display: block; }
+        
+        .review-qr-container { background: #fff; padding: 8px; border-radius: 8px; display: inline-block; margin-top: 5px; width: 160px; height: 160px; overflow: hidden; position: relative; }
+        .review-qr-container img { width: 160px; height: auto; position: absolute; top: -10px; left: 0; }
 
         /* Sabit Alt Bar */
         .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #181818; border-top: 1px solid #333; padding: 10px 20px; display: flex; gap: 10px; justify-content: center; z-index: 999; }
@@ -385,9 +386,9 @@
             ⭐ Google'da Değerlendir / Yorum Yaz
         </a>
 
-        <!-- YORUM1.PNG GÖRSELİ -->
+        <!-- YORUM1.PNG GÖRSELİ (Kırpılmış ve ortalanmış) -->
         <div class="review-qr-container">
-            <img src="Yorum1.png" alt="İlham Google Yorum QR Kod">
+            <img src="yorum1.png" alt="İlham Google Yorum QR Kod">
         </div>
     </div>
 
@@ -465,7 +466,7 @@
         { icon: "🚂", tr: "Rahmi M. Koç Müzesi", en: "Rahmi M. Koc Museum", ru: "Музей Рахми М. Коча", ar: "متحف رحمي كوتش", q: "Rahmi M. Koc Museum Istanbul" },
         { icon: " miniature", tr: "Miniatürk", en: "Miniaturk Miniature Park", ru: "Парк Миниатюрк", ar: "حديقة مينيا تورك", q: "Miniaturk Istanbul" },
         { icon: "🌲", tr: "Belgrad Ormanı (Neşet Suyu Yürüyüş Yolu)", en: "Belgrad Forest", ru: "Белградский лес", ar: "غابات بلغراد", q: "Belgrad Ormani Neset Suyu" },
-        { icon: "🦌", tr: "Polonezköy Tabiat Parkı", en: "Polonezkoy Nature Park", ru: "Природный парк Полонезкёй", ar: "منتزه بولونيزكوي الطبيعي", q: "Polonezkoy Tabiat Parki" },
+        { icon: "🦌", tr: "Polonezköy Tabiat Parkı", en: "Polonezkoy Nature Park", ru: "Природный парк Полонезкёй", ar: "منتزه بولونيزكوي الطبيعي", q: "Polonezkoy Nature Parki" },
         { icon: "🚨", tr: "Şile Feneri", en: "Sile Lighthouse", ru: "Маяк Шиле", ar: "منارة شيلا", q: "Sile Feneri" },
         { icon: "🚣", tr: "Ağva Göksu Nehir Kıyısı", en: "Agva Goksu River", ru: "Река Гёксу в Агве", ar: "نهر غوكسو أغفا", q: "Agva Goksu Nehri" },
         { icon: "🌉", tr: "Fatih Korusu (Otağtepe)", en: "Otagtepe Fatih Grove", ru: "Роща Отагтепе", ar: "تلة أوتاغ تيبي", q: "Otagtepe Fatih Korusu" },
