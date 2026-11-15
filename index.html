@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triada Hotel Karaköy - Wi-Fi & Bellboy Destek</title>
+    <title>Triada Hotel Karaköy - Wi-Fi, Rehber & Bellboy Destek</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #121212; color: #f5f5f5; padding: 15px; padding-bottom: 90px; display: flex; justify-content: center; }
@@ -19,13 +19,11 @@
         .menu-close { background: none; border: none; color: #f2a900; font-size: 26px; float: right; cursor: pointer; }
         .menu-title { font-size: 18px; color: #f2a900; font-weight: bold; margin-bottom: 15px; margin-top: 5px; border-bottom: 1px solid #333; padding-bottom: 10px; }
         
-        /* SABİT AÇIK LİNKLER */
         .menu-category-fixed { font-size: 13px; color: #f2a900; font-weight: bold; text-transform: uppercase; margin-top: 15px; margin-bottom: 8px; border-bottom: 1px dashed #444; padding-bottom: 4px; }
         .menu-link { display: flex; justify-content: space-between; align-items: center; color: #fff; text-decoration: none; padding: 12px 0; font-size: 14px; border-bottom: 1px solid #262626; font-weight: 500; }
         .menu-link:hover { color: #f2a900; }
         .menu-subtext { font-size: 11px; color: #aaa; display: block; margin-top: 2px; }
 
-        /* AKORDİYON BAŞLIKLAR */
         .accordion-header { background: #242424; color: #f2a900; font-size: 14px; font-weight: bold; padding: 12px; border-radius: 8px; margin-top: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: 1px solid #333; transition: 0.2s; }
         .accordion-header:hover { background: #2d2d2d; border-color: #f2a900; }
         .accordion-content { display: none; padding-left: 8px; margin-bottom: 10px; background: #1a1a1a; border-radius: 0 0 8px 8px; padding-right: 8px; }
@@ -65,17 +63,17 @@
         .btn-map { background-color: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 10px; border-radius: 30px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; text-decoration: none; }
         .btn-yt { background-color: #bb0000; color: #fff; border: none; width: 100%; padding: 9px; border-radius: 30px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; text-decoration: none; }
 
-        /* Wi-Fi Görsel ve Detay Alanı Stilleri */
+        /* Wi-Fi Görsel ve Detay Alanı */
         .wifi-img-container { text-align: center; margin-top: 10px; margin-bottom: 10px; }
         .wifi-img-container img { width: 100%; max-width: 100%; border-radius: 8px; border: 1px solid #444; }
-        .wifi-step-box { background: #1a1a1a; padding: 10px; border-radius: 6px; margin-bottom: 8px; border-left: 3px solid #25D366; font-size: 12px; line-height: 1.4; color: #ddd; }
+        .wifi-step-box { background: #1a1a1a; padding: 10px; border-radius: 6px; margin-bottom: 8px; border-left: 3px solid #25D366; font-size: 12px; line-height: 1.5; color: #ddd; }
         .wifi-step-box strong { color: #25D366; }
 
         /* Rehber & Market Liste Stili */
-        .guide-item { background: #1a1a1a; padding: 12px; border-radius: 8px; margin-bottom: 8px; border-left: 3px solid #f2a900; display: flex; justify-content: space-between; align-items: center; }
-        .guide-title { font-size: 14px; font-weight: bold; color: #fff; }
-        .guide-desc { font-size: 12px; color: #aaa; margin-top: 2px; }
-        .guide-link { color: #f2a900; font-size: 13px; text-decoration: none; font-weight: bold; }
+        .guide-item { background: #1a1a1a; padding: 11px 12px; border-radius: 8px; margin-bottom: 8px; border-left: 3px solid #f2a900; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+        .guide-title { font-size: 13.5px; font-weight: bold; color: #fff; }
+        .guide-desc { font-size: 11.5px; color: #aaa; margin-top: 2px; }
+        .guide-link { color: #f2a900; font-size: 12.5px; text-decoration: none; font-weight: bold; white-space: nowrap; background: #262626; padding: 6px 10px; border-radius: 15px; border: 1px solid #444; }
         
         .shop-item { background: #1a1a1a; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #25D366; display: flex; justify-content: space-between; align-items: center; }
         .shop-price { font-size: 14px; font-weight: bold; color: #25D366; margin-top: 2px; }
@@ -110,9 +108,9 @@
     
     <a href="#wifiSec" class="menu-link" onclick="closeMenu()"><span id="mlWifi">📶 Wi-Fi Bağlantı Rehberi</span> 📍</a>
     <a href="#buildingsSec" class="menu-link" onclick="closeMenu()"><span id="ml2">📍 Otel Binalarımız (Konumlar)</span> 📍</a>
+    <a href="#guideSec" class="menu-link" onclick="closeMenu()"><span id="ml4">🗺️ İstanbul Gezi Rehberi</span> 📍</a>
     <a href="#taxiSec" class="menu-link" onclick="closeMenu()"><span id="ml1">🚕 Sarı Taksi Çağır</span> 📍</a>
     <a href="#shopSec" class="menu-link" onclick="closeMenu()"><span id="ml3">🛒 Acil İhtiyaç Marketi</span> 📍</a>
-    <a href="#guideSec" class="menu-link" onclick="closeMenu()"><span id="ml4">🗺️ Karaköy Gezi Rehberi</span> 📍</a>
     
     <div class="menu-category-fixed" id="mcEmergency">🚨 Acil Hizmetler & Konumlar</div>
     <a href="https://maps.app.goo.gl/JFxu71nuaVbqgrmw7?g_st=ac" target="_blank" class="menu-link"><div><span id="mEx">💱 Güvenilir Döviz Bürosu</span><span class="menu-subtext">Nakit/Döviz bozdurma noktası</span></div>📍</a>
@@ -133,47 +131,6 @@
     <div class="accordion-content" id="accCare">
         <a href="https://maps.app.goo.gl/g4uM7aNUdCu27fKM7?g_st=ac" target="_blank" class="menu-link"><div><span>💈 Berber & Kuaför</span><span class="menu-subtext">Erkek & Kadın Saç Bakımı</span></div>📍</a>
         <a href="https://maps.app.goo.gl/nxQoA6fDi7grMk9g6?g_st=ac" target="_blank" class="menu-link"><div><span>🧖 Masaj, SPA & Hamam</span><span class="menu-subtext">Yol Yorgunluğu & Rahatlama</span></div>📍</a>
-    </div>
-
-    <div class="accordion-header" onclick="toggleAcc('accWalk')"><span id="mcWalk">🚶 Yürüme Mesafesindeki Yerler</span> <span>▼</span></div>
-    <div class="accordion-content" id="accWalk">
-        <a href="https://www.google.com/maps/search/?api=1&query=Galataport+Istanbul" target="_blank" class="menu-link"><span>🏬 Galataport İstanbul</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Galata+Tower" target="_blank" class="menu-link"><span>🏰 Galata Kulesi</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Kamondo+Stairs" target="_blank" class="menu-link"><span>🪜 Kamondo Merdivenleri</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Bankalar+Caddesi+Karakoy" target="_blank" class="menu-link"><span>🏛️ Bankalar Caddesi</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Galata+Bridge" target="_blank" class="menu-link"><span>🌉 Galata Köprüsü</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Kilic+Ali+Pasa+Hamami" target="_blank" class="menu-link"><span>♨️ Kılıç Ali Paşa Hamamı</span>📍</a>
-    </div>
-
-    <div class="accordion-header" onclick="toggleAcc('accMuseum')"><span id="mcMuseum">🎨 Müzeler & Sanat Merkezleri</span> <span>▼</span></div>
-    <div class="accordion-content" id="accMuseum">
-        <a href="https://www.google.com/maps/search/?api=1&query=Istanbul+Modern" target="_blank" class="menu-link"><span>🖼️ İstanbul Modern</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=SALT+Galata" target="_blank" class="menu-link"><span>📚 SALT Galata</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Tophane-i+Amire" target="_blank" class="menu-link"><span>🏛️ Tophane-i Âmire</span>📍</a>
-    </div>
-
-    <div class="accordion-header" onclick="toggleAcc('accReligion')"><span id="mcReligion">🕌 Camiler & Tarihi Kiliseler</span> <span>▼</span></div>
-    <div class="accordion-content" id="accReligion">
-        <a href="https://www.google.com/maps/search/?api=1&query=Arap+Camii+Karakoy" target="_blank" class="menu-link"><span>🕌 Arap Camii (Gotik Mimari)</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Yeralti+Camii+Karakoy" target="_blank" class="menu-link"><span>🕌 Yeraltı Camii (Tarihi Mahzen)</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Saint+Benoit+Church+Karakoy" target="_blank" class="menu-link"><span>⛪ Saint Benoit Kilisesi</span>📍</a>
-    </div>
-
-    <div class="accordion-header" onclick="toggleAcc('accOldCity')"><span id="mcOldCity">🚃 Tarihi Yarımada (Tramvay T1)</span> <span>▼</span></div>
-    <div class="accordion-content" id="accOldCity">
-        <a href="https://www.google.com/maps/search/?api=1&query=Hagia+Sophia" target="_blank" class="menu-link"><span>🕌 Ayasofya-i Kebir Cami</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Blue+Mosque" target="_blank" class="menu-link"><span>🕌 Sultanahmet Camii</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Topkapi+Palace" target="_blank" class="menu-link"><span>👑 Topkapı Sarayı Müzesi</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Basilica+Cistern" target="_blank" class="menu-link"><span>💧 Yerebatan Sarnıcı</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Grand+Bazaar" target="_blank" class="menu-link"><span>🛍️ Kapalıçarşı (Grand Bazaar)</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Spice+Bazaar" target="_blank" class="menu-link"><span>🍵 Mısır Çarşısı</span>📍</a>
-    </div>
-
-    <div class="accordion-header" onclick="toggleAcc('accTaksim')"><span id="mcTaksim">🚕 Taksim & Boğaz Hattı</span> <span>▼</span></div>
-    <div class="accordion-content" id="accTaksim">
-        <a href="https://www.google.com/maps/search/?api=1&query=Istiklal+Street" target="_blank" class="menu-link"><span>🚶 İstiklal Caddesi & Taksim</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Dolmabahce+Palace" target="_blank" class="menu-link"><span>🏛️ Dolmabahçe Sarayı</span>📍</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Ortakoy+Square" target="_blank" class="menu-link"><span>🕌 Ortaköy Meydanı & Camii</span>📍</a>
     </div>
 
     <a href="https://wa.me/905014712020" target="_blank" class="menu-link" style="color:#25D366; font-weight:bold; margin-top:20px; font-size:15px;" id="ml5">💬 Bellboy Destek WhatsApp</a>
@@ -199,28 +156,26 @@
         <p id="subTitle">7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri</p>
     </div>
 
-    <!-- 1. SIRADA: Wİ-Fİ REHBERİ (GÖRSEL ÜSTTE, DETAYLAR AKORDİYON İÇİNDE) -->
+    <!-- 1. SIRADA: Wİ-Fİ REHBERİ (GÖRSEL ÜSTTE, ÇOK DİLLİ DETAYLAR AKORDİYON İÇİNDE) -->
     <div class="card" id="wifiSec" style="border-left-color: #25D366;">
         <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:10px;" id="wifiSub">Görsele bakarak hızlıca bağlanabilirsiniz:</p>
         
-        <!-- YÜKLEDİĞİNİZ GÖRSEL (ÜSTTE SABİT) -->
         <div class="wifi-img-container">
             <img src="wifi.png" alt="Triada Guest Wi-Fi Bağlantı Rehberi Adımları" onerror="this.src='https://i.imgur.com/35695.png'">
         </div>
 
-        <!-- İSTEYENLER İÇİN AÇILIR-KAPANIR YAZILI DETAYLAR -->
         <div class="accordion-header" onclick="toggleAcc('wifiDetailsContent')" style="margin-top:12px; background:#1a1a1a; font-size:13px;">
             <span id="wifiDetailToggleTitle">📖 Detaylı Yazılı Adımları Göster / Gizle</span> <span>▼</span>
         </div>
         <div class="accordion-content" id="wifiDetailsContent" style="margin-top:5px; background:none; padding:0;">
-            <div class="wifi-step-box">
+            <div class="wifi-step-box" id="wifiStep1">
                 <strong>Adım 1 & 2:</strong> Telefonunuzun Wi-Fi ayarlarından <strong>"Triada Guest"</strong> ağını seçin ve ekranda çıkan <em>"Kablosuz ağda oturum açın"</em> bildirimine dokunun.
             </div>
-            <div class="wifi-step-box">
+            <div class="wifi-step-box" id="wifiStep2">
                 <strong>Adım 3 & 4:</strong> Oturum açma sayfası açıldığında alt kısımdaki turuncu <strong>"Hızlı Giriş"</strong> butonuna basın ve açılan menüden <strong>"Hotel Misafir Girişi"</strong> seçeneğini seçin.
             </div>
-            <div class="wifi-step-box">
+            <div class="wifi-step-box" id="wifiStep3">
                 <strong>Adım 5:</strong> Pasaport / TC Numaranızı (harf ve rakamlar dahil eksiksiz) ve doğum yılınızı (örn: 19xx) yazın, sözleşmeyi onaylayıp <strong>"Hotel Misafir Girişi"</strong> butonuna basarak internete bağlanın!
             </div>
         </div>
@@ -236,7 +191,7 @@
                 <div class="guide-title" id="b1Title">🏨 Ana Bina (Main Building)</div>
                 <div class="guide-desc" id="b1Desc">Triada Hotel Karaköy Merkez Bina</div>
             </div>
-            <a href="https://maps.google.com/?cid=16349782730457908562&entry=gps&g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
+            <a href="https://maps.google.com/?cid=16349782730457908562&entry=gps&g_st=ac" target="_blank" class="guide-link" id="bMap1">Harita 📍</a>
         </div>
 
         <div class="guide-item">
@@ -244,7 +199,7 @@
                 <div class="guide-title" id="b2Title">🏢 1. Ek Bina (Annex 1)</div>
                 <div class="guide-desc" id="b2Desc">Triada Hotel Annex Building 1</div>
             </div>
-            <a href="https://maps.app.goo.gl/ekuJ6mV7aZAYTFrF9?g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
+            <a href="https://maps.app.goo.gl/ekuJ6mV7aZAYTFrF9?g_st=ac" target="_blank" class="guide-link" id="bMap2">Harita 📍</a>
         </div>
 
         <div class="guide-item">
@@ -252,8 +207,28 @@
                 <div class="guide-title" id="b3Title">🏢 2. Ek Bina (Annex 2)</div>
                 <div class="guide-desc" id="b3Desc">Triada Hotel Annex Building 2</div>
             </div>
-            <a href="https://maps.app.goo.gl/dVAUehD18cSLg6Cg8?g_st=ac" target="_blank" class="guide-link">Harita 📍</a>
+            <a href="https://maps.app.goo.gl/dVAUehD18cSLg6Cg8?g_st=ac" target="_blank" class="guide-link" id="bMap3">Harita 📍</a>
         </div>
+    </div>
+
+    <!-- 3. SIRADA: KARAKÖY & İSTANBUL GEZİ REHBERİ (İLK 3 GÖZÜKÜR, GERİ KALAN 63 YER GİZLİ DURUR) -->
+    <div class="card" id="guideSec" style="border-left-color: #f2a900;">
+        <h2 id="guideHeader">🗺️ Karaköy & İstanbul Gezi Rehberi</h2>
+        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="guideSub">En popüler noktalar ve tüm İstanbul harita konumları:</p>
+        
+        <!-- İLK 3 GÖZÜKEN YERLER -->
+        <div id="topGuidesList"></div>
+
+        <!-- GİZLİ DURAN DİĞER YERLER -->
+        <div class="more-items" id="moreGuidesList"></div>
+
+        <button class="btn-expand" onclick="toggleGuides()" id="btnExpandGuides">
+            🔍 Tüm Gezilecek Yerleri Göster (66 Nokta)
+        </button>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Triada+Hotel+Karakoy" target="_blank" class="btn-map" style="background:#222; color:#fff; border-color:#555; margin-top:5px;" id="btnHotelMap">
+            🏨 Triada Hotel Karaköy Yol Tarifi
+        </a>
     </div>
 
     <!-- GÜVEN KUTUSU -->
@@ -262,7 +237,7 @@
         Ödemenizi İster Nakit İster Kartla Taksicide Yapabilirsiniz!
     </div>
 
-    <!-- 3. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASİYON FORMU -->
+    <!-- 4. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASYON FORMU -->
     <div id="taxiSec">
         <div class="card">
             <h2><span id="titleIst">✈️ İstanbul Havalimanı (IST)</span></h2>
@@ -347,7 +322,7 @@
         </div>
     </div>
 
-    <!-- 4. SIRADA: ACİL İHTİYAÇ & DESTEK MARKETİ -->
+    <!-- 5. SIRADA: ACİL İHTİYAÇ & DESTEK MARKETİ (ŞARJ KABLOSU KALDIRILDI) -->
     <div class="card" id="shopSec" style="border-left-color: #25D366;">
         <h2 style="color:#25D366;" id="titleShop">🛒 Acil İhtiyaç & Destek Marketi</h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="subShop">İhtiyacınız olan ürünler kapınıza gelsin:</p>
@@ -368,15 +343,6 @@
                 <div class="shop-price">300 ₺</div>
             </div>
             <a href="https://wa.me/905014712020?text=Merhaba,%20Sarj%20donusturucu%20almak%20istiyorum." target="_blank" class="shop-btn" id="btnBuy2">Sipariş Et 💬</a>
-        </div>
-
-        <div class="shop-item">
-            <div>
-                <div class="guide-title" id="sp3Title">⚡ Hızlı Şarj Kablosu</div>
-                <div class="guide-desc" id="sp3Desc">Type-C veya Lightning Şarj Kablosu</div>
-                <div class="shop-price">300 ₺</div>
-            </div>
-            <a href="https://wa.me/905014712020?text=Merhaba,%20Sarj%20kablosu%20almak%20istiyorum." target="_blank" class="shop-btn" id="btnBuy3">Sipariş Et 💬</a>
         </div>
 
         <div class="more-items" id="moreShopList">
@@ -406,70 +372,6 @@
         </div>
     </div>
 
-    <!-- 5. İSTANBUL GEZİ REHBERİ -->
-    <div class="card" id="guideSec" style="border-left-color: #f2a900;">
-        <h2 id="guideHeader">🗺️ Popüler Gezilecek Yerler</h2>
-        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="guideSub">Otelinize yakın en meşhur noktalar:</p>
-        
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="gt1">🏬 Galataport İstanbul</div>
-                <div class="guide-desc" id="gd1">Sahil yürüyüşü, alışveriş & Boğaz manzarası (🚶 5 Dk)</div>
-            </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Galataport+Istanbul" target="_blank" class="guide-link" id="gl1">Harita 📍</a>
-        </div>
-
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="gt2">🥐 Karaköy Güllüoğlu</div>
-                <div class="guide-desc" id="gd2">Dünyaca ünlü tarihi baklavacı (🚶 2 Dk)</div>
-            </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Karakoy+Gulluoglu" target="_blank" class="guide-link" id="gl2">Harita 📍</a>
-        </div>
-
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="gt3">🏰 Galata Kulesi</div>
-                <div class="guide-desc" id="gd3">Tarihi kule & panoramik İstanbul manzarası (🚶 10 Dk)</div>
-            </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Galata+Tower" target="_blank" class="guide-link" id="gl3">Harita 📍</a>
-        </div>
-
-        <div class="more-items" id="moreGuidesList">
-            <div class="guide-item">
-                <div>
-                    <div class="guide-title" id="gt4">🕌 Ayasofya & Sultanahmet</div>
-                    <div class="guide-desc" id="gd4">Tarihi yarımadanın kalbi (🚃 Tramvay ile 10 Dk)</div>
-                </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Hagia+Sophia" target="_blank" class="guide-link" id="gl4">Harita 📍</a>
-            </div>
-
-            <div class="guide-item">
-                <div>
-                    <div class="guide-title" id="gt5">🛍️ Kapalıçarşı (Grand Bazaar)</div>
-                    <div class="guide-desc" id="gd5">Tarihi alışveriş çarşısı (🚃 Tramvay ile 12 Dk)</div>
-                </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Grand+Bazaar+Istanbul" target="_blank" class="guide-link" id="gl5">Harita 📍</a>
-            </div>
-
-            <div class="guide-item">
-                <div>
-                    <div class="guide-title" id="gt6">🍵 Mısır Çarşısı & Eminönü</div>
-                    <div class="guide-desc" id="gd6">Baharatçılar & Balık-Ekmek (🚶 12 Dk)</div>
-                </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Spice+Bazaar+Istanbul" target="_blank" class="guide-link" id="gl6">Harita 📍</a>
-            </div>
-        </div>
-
-        <button class="btn-expand" onclick="toggleGuides()" id="btnExpandGuides">
-            🔍 Tüm Gezilecek Yerleri Büyüt / Göster
-        </button>
-
-        <a href="https://www.google.com/maps/search/?api=1&query=Triada+Hotel+Karakoy" target="_blank" class="btn-map" style="background:#222; color:#fff; border-color:#555; margin-top:5px;" id="btnHotelMap">
-            🏨 Triada Hotel Karaköy Yol Tarifi
-        </a>
-    </div>
-
     <div class="footer">
         Bellboy Support Service - İlham Bekmetov
     </div>
@@ -482,6 +384,114 @@
 </div>
 
 <script>
+    // TÜM GEZİLECEK YERLER VERİTABANI (66 NOKTA)
+    const placesList = [
+        // İLK 3 ÖNE ÇIKAN NOKTA (HEMEN GÖZÜKÜR)
+        { icon: "🏬", tr: "Galataport İstanbul", en: "Galataport Istanbul", ru: "Галатапорт Стамбул", ar: "غالاتابورت إسطنبول", q: "Galataport Istanbul" },
+        { icon: "🏰", tr: "Galata Kulesi", en: "Galata Tower", ru: "Башня Галата", ar: "برج غالاتا", q: "Galata Tower Istanbul" },
+        { icon: "🕌", tr: "Ayasofya-i Kebir Cami-i Şerifi", en: "Hagia Sophia Grand Mosque", ru: "Собор Святой Софии", ar: "مسجد آيا صوفيا الكبير", q: "Hagia Sophia Istanbul" },
+        
+        // DİĞER 63 NOKTA (AÇILIR LİSTEDE)
+        { icon: "🕌", tr: "Sultanahmet Camii", en: "Blue Mosque (Sultanahmet)", ru: "Голубая мечеть", ar: "جامع السلطان أحمد", q: "Sultanahmet Mosque Istanbul" },
+        { icon: "💧", tr: "Yerebatan Sarnıcı", en: "Basilica Cistern", ru: "Цистерна Базилика", ar: "صهريج البازيليك", q: "Basilica Cistern Istanbul" },
+        { icon: "👑", tr: "Topkapı Sarayı Müzesi", en: "Topkapi Palace Museum", ru: "Дворец Топкапы", ar: "متحف قصر طوب قابي", q: "Topkapi Palace Museum Istanbul" },
+        { icon: "🌳", tr: "Gülhane Parkı", en: "Gulhane Park", ru: "Парк Гюльхане", ar: "حديقة جولهانه", q: "Gulhane Park Istanbul" },
+        { icon: "🍽️", tr: "Tarihi Sultanahmet Köftecisi", en: "Historical Sultanahmet Koftecisi", ru: "Историческая котлетная Султанахмет", ar: "مطعم كفتجي السلطان أحمد التاريخي", q: "Tarihi Sultanahmet Koftecisi Selim Usta" },
+        { icon: "🍵", tr: "Mısır Çarşısı", en: "Spice Bazaar (Egyptian Bazaar)", ru: "Египетский базар", ar: "السوق المصري (سوق البهارات)", q: "Spice Bazaar Istanbul" },
+        { icon: "☕", tr: "Kurukahveci Mehmet Efendi (Eminönü)", en: "Kurukahveci Mehmet Efendi Coffee", ru: "Кофе Курукахведжи Мехмет Эфенди", ar: "قهوة محمد أفندي (أمينونو)", q: "Kurukahveci Mehmet Efendi Eminonu" },
+        { icon: "🛍️", tr: "Kapalıçarşı", en: "Grand Bazaar", ru: "Гранд-базар", ar: "البازار الكبير (جراند بازار)", q: "Grand Bazaar Istanbul" },
+        { icon: "🕌", tr: "Süleymaniye Camii", en: "Suleymaniye Mosque", ru: "Мечеть Сулеймание", ar: "مسجد السليمانية", q: "Suleymaniye Mosque Istanbul" },
+        { icon: "🏪", tr: "Tahtakale", en: "Tahtakale Market District", ru: "Район Тахтакале", ar: "سوق تحت القلعة", q: "Tahtakale Istanbul" },
+        { icon: "🚶", tr: "İstiklal Caddesi", en: "Istiklal Avenue", ru: "Улица Истикляль", ar: "شارع الاستقلال", q: "Istiklal Street Istanbul" },
+        { icon: "🏛️", tr: "Çiçek Pasajı", en: "Cicek Pasaji (Flower Passage)", ru: "Цветочный пассаж", ar: "ممر الزهور", q: "Cicek Pasaji Beyoglu" },
+        { icon: "⛪", tr: "St. Antuan Katolik Kilisesi", en: "Church of St. Anthony of Padua", ru: "Церковь Святого Антония Падуанского", ar: "كنيسة القديس أنطوان", q: "St. Anthony of Padua Church Istanbul" },
+        { icon: "🎨", tr: "Cihangir & Çukurcuma", en: "Cihangir & Cukurcuma Antiques", ru: "Джихангир и Чукурджума", ar: "جهانكير وتشوكورجوما", q: "Cihangir Cukurcuma Istanbul" },
+        { icon: "🖼️", tr: "İstanbul Modern Sanat Müzesi", en: "Istanbul Modern Art Museum", ru: "Стамбульский музей современного искусства", ar: "متحف إسطنبول للفن الحديث", q: "Istanbul Modern" },
+        { icon: "⛪", tr: "Fener Rum Ortodoks Patrikhanesi", en: "Ecumenical Patriarchate of Constantinople", ru: "Константинопольский патриархат", ar: "بطريركية القسطنطينية المسكونية", q: "Ecumenical Patriarchate Fener" },
+        { icon: "🏫", tr: "Özel Fener Rum Ortaokulu ve Lisesi", en: "Phanar Greek Orthodox College (Red School)", ru: "Греческий лицей Фенер", ar: "كلية فنار للروم الأرثوذكس", q: "Phanar Greek Orthodox College" },
+        { icon: "🏘️", tr: "Balat Renkli Evleri", en: "Colorful Houses of Balat", ru: "Разноцветные дома Балата", ar: "منازل بلاط الملونة", q: "Balat Colorful Houses Istanbul" },
+        { icon: "🪜", tr: "Merdivenli Yokuş Sokak", en: "Merdivenli Yokus Street (Balat)", ru: "Улица Мердивенли Йокуш", ar: "شارع الدرج الملون بلاط", q: "Merdivenli Yokus Balat" },
+        { icon: "⛰️", tr: "Pierre Loti Tepesi", en: "Pierre Loti Hill", ru: "Холм Пьера Лоти", ar: "تلة بيير لوتي", q: "Pierre Loti Hill Eyup" },
+        { icon: "🏰", tr: "Dolmabahçe Sarayı", en: "Dolmabahce Palace", ru: "Дворец Долмабахче", ar: "قصر دولمة بهجة", q: "Dolmabahce Palace Istanbul" },
+        { icon: "⚓", tr: "Beşiktaş Deniz Müzesi", en: "Istanbul Naval Museum", ru: "Морской музей Стамбула", ar: "المتحف البحري في بشيكتاش", q: "Istanbul Naval Museum Besiktas" },
+        { icon: "🛍️", tr: "Beşiktaş Çarşısı", en: "Besiktas Bazaar & Fish Market", ru: "Базар Бешикташ", ar: "سوق بشيكتاش", q: "Besiktas Carsisi" },
+        { icon: "🌲", tr: "Yıldız Parkı", en: "Yildiz Park", ru: "Парк Йылдыз", ar: "حديقة يلدز", q: "Yildiz Park Istanbul" },
+        { icon: "🏛️", tr: "Malta Köşkü", en: "Malta Pavilion", ru: "Мальтийский павильон", ar: "قصر مالطا", q: "Malta Kosku Yildiz Park" },
+        { icon: "🌊", tr: "Ortaköy Meydanı", en: "Ortakoy Square", ru: "Площадь Ортакёй", ar: "ساحة أورتاكوي", q: "Ortakoy Square Istanbul" },
+        { icon: "🕌", tr: "Büyük Mecidiye Camii (Ortaköy Camii)", en: "Ortakoy Mosque", ru: "Мечеть Ортакёй", ar: "مسجد أورتاكوي", q: "Ortakoy Mosque Istanbul" },
+        { icon: "🌊", tr: "Arnavutköy Sahili", en: "Arnavutkoy Coastline", ru: "Набережная Арнавуткёй", ar: "ساحل أرناؤوط كوي", q: "Arnavutkoy Sahili Istanbul" },
+        { icon: "🌳", tr: "Bebek Parkı", en: "Bebek Park", ru: "Парк Бебек", ar: "حديقة بيبك", q: "Bebek Park Istanbul" },
+        { icon: "🏰", tr: "Rumeli Hisarı Müzesi", en: "Rumeli Fortress Museum", ru: "Крепость Румелихисар", ar: "قلعة روملي حصار", q: "Rumeli Fortress Istanbul" },
+        { icon: "🌷", tr: "Emirgan Korusu", en: "Emirgan Park", ru: "Парк Эмирган", ar: "حديقة أميرجان", q: "Emirgan Korusu Istanbul" },
+        { icon: "🖼️", tr: "Sakıp Sabancı Müzesi", en: "Sakip Sabanci Museum", ru: "Музей Сакыпа Сабанджи", ar: "متحف ثاقب صابانجي", q: "Sakip Sabanci Museum" },
+        { icon: "🌿", tr: "Atatürk Arboretumu", en: "Ataturk Arboretum", ru: "Дендрарий Ататюрка", ar: "مشتل أتاتورك", q: "Ataturk Arboretum Sariyer" },
+        { icon: "🌊", tr: "Sarıyer Sahili", en: "Sariyer Coast", ru: "Набережная Сарыер", ar: "ساحل صاري ير", q: "Sariyer Sahil Istanbul" },
+        { icon: "🐟", tr: "Garipçe Köyü", en: "Garipce Fishing Village", ru: "Деревня Гарипче", ar: "قرية غاربتشه", q: "Garipce Koyu Sariyer" },
+        { icon: "🌳", tr: "Maçka Demokrasi Parkı", en: "Macka Democracy Park", ru: "Парк Мачка", ar: "حديقة ماتشكا", q: "Macka Demokrasi Parki" },
+        { icon: "👗", tr: "Abdi İpekçi Caddesi (Nişantaşı)", en: "Abdi Ipekci Street (Nisantasi)", ru: "Улица Абди Ипекчи (Нишанташи)", ar: "شارع عبدي إيبكجي (نيشانتاشي)", q: "Abdi Ipekci Caddesi Nisantasi" },
+        { icon: "🏛️", tr: "Ihlamur Kasrı", en: "Ihlamur Palace", ru: "Дворец Ыхламур", ar: "قصر إيهلامور", q: "Ihlamur Kasri Besiktas" },
+        { icon: "⛴️", tr: "Karaköy İskelesi", en: "Karakoy Ferry Terminal", ru: "Причал Каракёй", ar: "ميناء عبارات كراكوي", q: "Karakoy Iskelesi" },
+        { icon: "🛍️", tr: "Kadıköy Tarihi Çarşısı", en: "Kadikoy Historical Market", ru: "Исторический рынок Кадыкёй", ar: "سوق كاديكوي التاريخي", q: "Kadikoy Tarihi Carsisi" },
+        { icon: "📚", tr: "Tellalzade Sokak (Sahaflar)", en: "Tellalzade Antiques & Book Street", ru: "Улица букинистов Теллалзаде", ar: "شارع التحف والكتب كاديكوي", q: "Tellalzade Sokak Kadikoy" },
+        { icon: "☕", tr: "Moda Caddesi", en: "Moda Street", ru: "Улица Мода", ar: "شارع مودا", q: "Moda Caddesi Kadikoy" },
+        { icon: "🌊", tr: "Moda Sahil Parkı", en: "Moda Coastal Park", ru: "Прибрежный парк Мода", ar: "حديقة ساحل مودا", q: "Moda Sahil Parki" },
+        { icon: "🎭", tr: "Müze Gazhane", en: "Museum Gazhane", ru: "Музей Газхане", ar: "متحف غاز هانه", q: "Muze Gazhane Kadikoy" },
+        { icon: "🗼", tr: "Kız Kulesi", en: "Maiden's Tower", ru: "Девичья башня", ar: "برج الفتاة", q: "Maiden's Tower Istanbul" },
+        { icon: "🏘️", tr: "Kuzguncuk Mahallesi (İcadiye Caddesi)", en: "Kuzguncuk Neighborhood", ru: "Район Кузгунджук", ar: "حي كوزغونجوك", q: "Kuzguncuk Icadiye Caddesi" },
+        { icon: "🏰", tr: "Beylerbeyi Sarayı", en: "Beylerbeyi Palace", ru: "Дворец Бейлербейи", ar: "قصر بيلربي", q: "Beylerbeyi Palace Istanbul" },
+        { icon: "🍵", tr: "Çengelköy Tarihi Çınaraltı Çay Bahçesi", en: "Cengelkoy Historical Tea Garden", ru: "Историческая чайная Ченгелькёй", ar: "مقهى شجرة الدلب التاريخي جنغل كوي", q: "Cengelkoy Tarihi Cinaralti" },
+        { icon: "⛪", tr: "Büyükada Aya Yorgi Kilisesi", en: "Aya Yorgi Church (Buyukada)", ru: "Церковь Святого Георгия (Бююкада)", ar: "كنيسة آيا يورغي (جزيرة الأميرات)", q: "Aya Yorgi Kilisesi Buyukada" },
+        { icon: "🏛️", tr: "Heybeliada Ruhban Okulu", en: "Halki Seminary (Heybeliada)", ru: "Халкинская богословская школа", ar: "مدرسة هالكي اللاهوتية", q: "Heybeliada Ruhban Okulu" },
+        { icon: "🛍️", tr: "Bağdat Caddesi", en: "Bagdat Avenue", ru: "Проспект Багдад", ar: "شارع بغداد", q: "Bagdat Caddesi Istanbul" },
+        { icon: "🌊", tr: "Caddebostan Sahili", en: "Caddebostan Coast", ru: "Набережная Джаддебостан", ar: "ساحل جادة بوستان", q: "Caddebostan Sahili" },
+        { icon: "🏰", tr: "Yoros Kalesi (Anadolu Kavağı)", en: "Yoros Castle (Anadolu Kavagi)", ru: "Крепость Йорос", ar: "قلعة يوروس", q: "Yoros Kalesi Anadolu Kavagi" },
+        { icon: "🏰", tr: "Yedikule Hisarı (Zindanları)", en: "Yedikule Fortress", ru: "Семибашенный замок (Едикуле)", ar: "قلعة يدي كوله", q: "Yedikule Fortress Istanbul" },
+        { icon: "🏛️", tr: "Panoramik 1453 Tarih Müzesi", en: "Panorama 1453 History Museum", ru: "Музей Панорама 1453", ar: "متحف بانوراما 1453 التاريخي", q: "Panorama 1453 History Museum" },
+        { icon: "🚂", tr: "Rahmi M. Koç Müzesi", en: "Rahmi M. Koc Museum", ru: "Музей Рахми М. Коча", ar: "متحف رحمي كوتش", q: "Rahmi M. Koc Museum Istanbul" },
+        { icon: " miniature", tr: "Miniatürk", en: "Miniaturk Miniature Park", ru: "Парк Миниатюрк", ar: "حديقة مينيا تورك", q: "Miniaturk Istanbul" },
+        { icon: "🌲", tr: "Belgrad Ormanı (Neşet Suyu Yürüyüş Yolu)", en: "Belgrad Forest", ru: "Белградский лес", ar: "غابات بلغراد", q: "Belgrad Ormani Neset Suyu" },
+        { icon: "🦌", tr: "Polonezköy Tabiat Parkı", en: "Polonezkoy Nature Park", ru: "Природный парк Полонезкёй", ar: "منتزه بولونيزكوي الطبيعي", q: "Polonezkoy Tabiat Parki" },
+        { icon: "🚨", tr: "Şile Feneri", en: "Sile Lighthouse", ru: "Маяк Шиле", ar: "منارة شيلا", q: "Sile Feneri" },
+        { icon: "🚣", tr: "Ağva Göksu Nehir Kıyısı", en: "Agva Goksu River", ru: "Река Гёксу в Агве", ar: "نهر غوكسو أغفا", q: "Agva Goksu Nehri" },
+        { icon: "🌉", tr: "Fatih Korusu (Otağtepe)", en: "Otagtepe Fatih Grove", ru: "Роща Отагтепе", ar: "تلة أوتاغ تيبي", q: "Otagtepe Fatih Korusu" },
+        { icon: "⛰️", tr: "Çamlıca Tepesi", en: "Camlica Hill", ru: "Холм Чамлыджа", ar: "تلة تشامليجا (العرائس)", q: "Camlica Tepesi" },
+        { icon: "🕰️", tr: "Feriköy Antika Pazarı", en: "Ferikoy Flea & Antique Market", ru: "Антикварный рынок Ферикёй", ar: "سوق فيريكوي للتحف", q: "Ferikoy Antika Pazari" }
+    ];
+
+    let currentLang = 'tr';
+    let isExpandedGuides = false;
+
+    function renderPlaces() {
+        const topContainer = document.getElementById('topGuidesList');
+        const moreContainer = document.getElementById('moreGuidesList');
+        const mapLabel = (currentLang === 'en') ? "Map 📍" : (currentLang === 'ru') ? "Карта 📍" : (currentLang === 'ar') ? "الخريطة 📍" : "Harita 📍";
+
+        let topHTML = "";
+        let moreHTML = "";
+
+        placesList.forEach((item, index) => {
+            const title = item[currentLang] || item.tr;
+            const icon = item.icon === " miniature" ? "🏛️" : item.icon;
+            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.q)}`;
+            
+            const cardHTML = `
+                <div class="guide-item">
+                    <div class="guide-title">${icon} ${title}</div>
+                    <a href="${url}" target="_blank" class="guide-link">${mapLabel}</a>
+                </div>
+            `;
+
+            if (index < 3) {
+                topHTML += cardHTML;
+            } else {
+                moreHTML += cardHTML;
+            }
+        });
+
+        topContainer.innerHTML = topHTML;
+        moreContainer.innerHTML = moreHTML;
+    }
+
     function openMenu() {
         document.getElementById('sideMenu').classList.add('active');
         document.getElementById('menuOverlay').classList.add('active');
@@ -524,33 +534,30 @@
     function toggleShop() {
         const list = document.getElementById('moreShopList');
         const btn = document.getElementById('btnExpandShop');
-        const lang = document.querySelector('.lang-btn.active').innerText.toLowerCase();
 
         if(isExpandedShop) {
             list.style.display = "none";
             isExpandedShop = false;
-            btn.innerText = (lang === 'en') ? "🔍 Show All Products" : (lang === 'ru') ? "🔍 Показать все товары" : (lang === 'ar') ? "🔍 عرض جميع المنتجات" : "🔍 Tüm Ürünleri Göster / Büyüt";
+            btn.innerText = translations[currentLang].btnExpandShop;
         } else {
             list.style.display = "block";
             isExpandedShop = true;
-            btn.innerText = (lang === 'en') ? "▲ Show Less" : (lang === 'ru') ? "▲ Свернуть" : (lang === 'ar') ? "▲ إخفاء" : "▲ Daha Az Göster / Küçült";
+            btn.innerText = (currentLang === 'en') ? "▲ Show Less" : (currentLang === 'ru') ? "▲ Свернуть" : (currentLang === 'ar') ? "▲ إخفاء" : "▲ Daha Az Göster / Küçült";
         }
     }
 
-    let isExpandedGuides = false;
     function toggleGuides() {
         const list = document.getElementById('moreGuidesList');
         const btn = document.getElementById('btnExpandGuides');
-        const lang = document.querySelector('.lang-btn.active').innerText.toLowerCase();
 
         if(isExpandedGuides) {
             list.style.display = "none";
             isExpandedGuides = false;
-            btn.innerText = (lang === 'en') ? "🔍 Expand All Places To Visit" : (lang === 'ru') ? "🔍 Показать все места" : (lang === 'ar') ? "🔍 عرض جميع الأماكن" : "🔍 Tüm Gezilecek Yerleri Büyüt / Göster";
+            btn.innerText = translations[currentLang].btnExpandGuides;
         } else {
             list.style.display = "block";
             isExpandedGuides = true;
-            btn.innerText = (lang === 'en') ? "▲ Show Less" : (lang === 'ru') ? "▲ Свернуть" : (lang === 'ar') ? "▲ إخفاء" : "▲ Daha Az Göster / Küçült";
+            btn.innerText = (currentLang === 'en') ? "▲ Show Less" : (currentLang === 'ru') ? "▲ Свернуть" : (currentLang === 'ar') ? "▲ إخفاء" : "▲ Listeyi Daralt / Gizle";
         }
     }
 
@@ -559,10 +566,10 @@
             subTitle: "7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri",
             menuTitle: "🏢 Triada Hotel Rehber Menü",
             mlWifi: "📶 Wi-Fi Bağlantı Rehberi",
-            ml1: "🚕 Sarı Taksi Çağır",
             ml2: "📍 Otel Binalarımız (Konumlar)",
+            ml4: "🗺️ İstanbul Gezi Rehberi",
+            ml1: "🚕 Sarı Taksi Çağır",
             ml3: "🛒 Acil İhtiyaç Marketi",
-            ml4: "🗺️ Karaköy Gezi Rehberi",
             ml5: "💬 Bellboy Destek WhatsApp",
             mcEmergency: "🚨 Acil Hizmetler & Konumlar",
             mEx: "💱 Güvenilir Döviz Bürosu",
@@ -572,62 +579,55 @@
             mPk: "🅿️ Galataport AVM Kapalı Otoparkı",
             mcFood: "🥐 Yeme, İçme & Cafeler",
             mcCare: "💈 Berber, Kuaför & SPA",
-            mcWalk: "🚶 Yürüme Mesafesindeki Yerler",
-            mcMuseum: "🎨 Müzeler & Sanat Merkezleri",
-            mcReligion: "🕌 Camiler & Tarihi Kiliseler",
-            mcOldCity: "🚃 Tarihi Yarımada (Tramvay T1)",
-            mcTaksim: "🚕 Taksim & Boğaz Hattı",
             wifiTitle: "📶 Ücretsiz Wi-Fi Oturum Açma Rehberi",
             wifiSub: "Görsele bakarak hızlıca bağlanabilirsiniz:",
             wifiDetailToggleTitle: "📖 Detaylı Yazılı Adımları Göster / Gizle",
+            wifiStep1: '<strong>Adım 1 & 2:</strong> Telefonunuzun Wi-Fi ayarlarından <strong>"Triada Guest"</strong> ağını seçin ve ekranda çıkan <em>"Kablosuz ağda oturum açın"</em> bildirimine dokunun.',
+            wifiStep2: '<strong>Adım 3 & 4:</strong> Oturum açma sayfası açıldığında alt kısımdaki turuncu <strong>"Hızlı Giriş"</strong> butonuna basın ve açılan menüden <strong>"Hotel Misafir Girişi"</strong> seçeneğini seçin.',
+            wifiStep3: '<strong>Adım 5:</strong> Pasaport / TC Numaranızı (harf ve rakamlar dahil eksiksiz) ve doğum yılınızı (örn: 19xx) yazın, sözleşmeyi onaylayıp <strong>"Hotel Misafir Girişi"</strong> butonuna basarak internete bağlanın!',
             titleBuildings: "🏢 Triada Hotel Binalarımız",
             subBuildings: "Otel binalarımızın konumlarına tek tıkla ulaşın:",
-            b1Title: "🏨 Ana Bina (Main Building)", b1Desc: "Triada Hotel Karaköy Merkez Bina",
-            b2Title: "🏢 1. Ek Bina (Annex 1)", b2Desc: "Triada Hotel Annex Building 1",
-            b3Title: "🏢 2. Ek Bina (Annex 2)", b3Desc: "Triada Hotel Annex Building 2",
-            titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
-            subShop: "İhtiyacınız olan ürünler kapınıza gelsin:",
-            sp1Title: "💳 İstanbulkart (Ulaşım Kartı)", sp1Desc: "Tramvay, metro ve otobüs kullanımı için", btnBuy1: "Sipariş Et 💬",
-            sp2Title: "🔌 Şarj Başlığı & Dönüştürücü", sp2Desc: "Priz adaptör dönüştürücü (Converter)", btnBuy2: "Sipariş Et 💬",
-            sp3Title: "⚡ Hızlı Şarj Kablosu", sp3Desc: "Type-C veya Lightning Şarj Kablosu", btnBuy3: "Sipariş Et 💬",
-            sp4Title: "☂️ Yağmur Şemsiyesi", sp4Desc: "Kaliteli kişisel şemsiye", btnBuy4: "Sipariş Et 💬",
-            btnExpandShop: "🔍 Tüm Ürünleri Göster / Büyüt",
-            crHeader: "🎁 Özel İstek & Diğer Talepleriniz",
-            crText: "Gece market ihtiyaçları, kişisel bakım/hijyen ürünleri, özel siparişleriniz veya aklınıza gelen her türlü acil talep için 7/24 WhatsApp'tan bize yazabilirsiniz. Bellboy ekibimiz kapınıza kadar getirsin!",
-            btnCustomWa: "💬 WhatsApp ile İstekte Bulun",
+            b1Title: "🏨 Ana Bina (Main Building)", b1Desc: "Triada Hotel Karaköy Merkez Bina", bMap1: "Harita 📍",
+            b2Title: "🏢 1. Ek Bina (Annex 1)", b2Desc: "Triada Hotel Annex Building 1", bMap2: "Harita 📍",
+            b3Title: "🏢 2. Ek Bina (Annex 2)", b3Desc: "Triada Hotel Annex Building 2", bMap3: "Harita 📍",
+            guideHeader: "🗺️ Karaköy & İstanbul Gezi Rehberi",
+            guideSub: "En popüler noktalar ve tüm İstanbul harita konumları:",
+            btnExpandGuides: "🔍 Tüm Gezilecek Yerleri Göster (66 Nokta)",
+            btnHotelMap: "🏨 Triada Hotel Karaköy Yol Tarifi",
             trustBox: "🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>Ödemenizi İster Nakit İster Kartla Taksicide Yapabilirsiniz!",
-            flexBox: "🔄 Rezervasyonunuzu oluşturduktan sonra istediğiniz zaman tarih ve saati ücretsiz değiştirebilirsiniz!",
-            capBox: "🚖 <strong>Sarı Taksi Kapasitesi:</strong><br>• Maksimum 4 Yolcu<br>• 4-5 Büyük Valiz / 3-4 El Çantası sığabilir.",
             titleIst: "✈️ İstanbul Havalimanı (IST)",
             istInfo: "• Ulaşım süresi: Yaklaşık 45 - 60 dakika.<br>• Uçuştan <strong>en geç 3.5 saat önce</strong> taksi ayarlanmalıdır.",
             mapBtnIst: "📍 IST Harita Konumu", ytBtnIst: "▶ IST Yolcu Video Rehberi",
             titleSaw: "✈️ Sabiha Gökçen Havalimanı (SAW)",
             sawInfo: "• Ulaşım süresi: Yaklaşık 60 - 90 dakika.<br>• Uçuştan <strong>en geç 4 saat önce</strong> taksi ayarlanmalıdır.",
             mapBtnSaw: "📍 SAW Harita Konumu", ytBtnSaw: "▶ SAW Yolcu Video Rehberi",
+            capBox: "🚖 <strong>Sarı Taksi Kapasitesi:</strong><br>• Maksimum 4 Yolcu<br>• 4-5 Büyük Valiz / 3-4 El Çantası sığabilir.",
             formTitle: "🚕 Sarı Taksi Çağır",
+            flexBox: "🔄 Rezervasyonunuzu oluşturduktan sonra istediğiniz zaman tarih ve saati ücretsiz değiştirebilirsiniz!",
             lblNa: "Adınız Soyadınız:", lblRm: "Oda Numaranız:", lblAp: "Havalimanı Seçin:",
             optIst: "İstanbul Havalimanı (IST) - 1.800 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.000 ₺",
             lblFlight: "Uçuş Kodu (İsteğe Bağlı):", lblDt: "Taksi İstediğiniz Tarih ve Saat:", lblPy: "Ödeme Yeri ve Şekli:",
             optPy1: "Araçta Nakit (Taksiciye)", optPy2: "Araçta Kredi Kartı (+%10)", optPy3: "Otelde Nakit Ödeme",
             lblTotalTitle: "Ödenecek Net Fiyat:", btnWsSend: "TAKSİ TALEBİ GÖNDER",
-            guideHeader: "🗺️ Popüler Gezilecek Yerler", guideSub: "Otelinize yakın en meşhur noktalar:",
-            btnExpandGuides: "🔍 Tüm Gezilecek Yerleri Büyüt / Göster",
-            gt1: "🏬 Galataport İstanbul", gd1: "Sahil yürüyüşü, alışveriş & Boğaz manzarası (🚶 5 Dk)", gl1: "Harita 📍",
-            gt2: "🥐 Karaköy Güllüoğlu", gd2: "Dünyaca ünlü tarihi baklavacı (🚶 2 Dk)", gl2: "Harita 📍",
-            gt3: "🏰 Galata Kulesi", gd3: "Tarihi kule & panoramik İstanbul manzarası (🚶 10 Dk)", gl3: "Harita 📍",
-            gt4: "🕌 Ayasofya & Sultanahmet", gd4: "Tarihi yarımadanın kalbi (🚃 Tramvay ile 10 Dk)", gl4: "Harita 📍",
-            gt5: "🛍️ Kapalıçarşı (Grand Bazaar)", gd5: "Tarihi alışveriş çarşısı (🚃 Tramvay ile 12 Dk)", gl5: "Harita 📍",
-            gt6: "🍵 Mısır Çarşısı & Eminönü", gd6: "Baharatçılar & Balık-Ekmek (🚶 12 Dk)", gl6: "Harita 📍",
-            btnHotelMap: "🏨 Triada Hotel Karaköy Yol Tarifi", btnCallCall: "📞 Hemen Ara"
+            titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
+            subShop: "İhtiyacınız olan ürünler kapınıza gelsin:",
+            sp1Title: "💳 İstanbulkart (Ulaşım Kartı)", sp1Desc: "Tramvay, metro ve otobüs kullanımı için", btnBuy1: "Sipariş Et 💬",
+            sp2Title: "🔌 Şarj Başlığı & Dönüştürücü", sp2Desc: "Priz adaptör dönüştürücü (Converter)", btnBuy2: "Sipariş Et 💬",
+            sp4Title: "☂️ Yağmur Şemsiyesi", sp4Desc: "Kaliteli kişisel şemsiye", btnBuy4: "Sipariş Et 💬",
+            btnExpandShop: "🔍 Tüm Ürünleri Göster / Büyüt",
+            crHeader: "🎁 Özel İstek & Diğer Talepleriniz",
+            crText: "Gece market ihtiyaçları, kişisel bakım/hijyen ürünleri, özel siparişleriniz veya aklınıza gelen her türlü acil talep için 7/24 WhatsApp'tan bize yazabilirsiniz. Bellboy ekibimiz kapınıza kadar getirsin!",
+            btnCustomWa: "💬 WhatsApp ile İstekte Bulun",
+            btnCallCall: "📞 Hemen Ara"
         },
         en: {
             subTitle: "24/7 Wi-Fi, Location & Bellboy Support",
             menuTitle: "🏢 Triada Hotel Guide Menu",
             mlWifi: "📶 Wi-Fi Connection Guide",
-            ml1: "🚕 Order Yellow Taxi",
             ml2: "📍 Hotel Buildings (Locations)",
+            ml4: "🗺️ Istanbul City Guide",
+            ml1: "🚕 Order Yellow Taxi",
             ml3: "🛒 Emergency Shop",
-            ml4: "🗺️ Karaköy City Guide",
             ml5: "💬 Bellboy Support WhatsApp",
             mcEmergency: "🚨 Emergency Services & Map",
             mEx: "💱 Currency Exchange Office",
@@ -637,62 +637,55 @@
             mPk: "🅿️ Galataport Mall Parking",
             mcFood: "🥐 Dining, Food & Cafes",
             mcCare: "💈 Barber, Hairdresser & SPA",
-            mcWalk: "🚶 Walking Distance Places",
-            mcMuseum: "🎨 Museums & Art Centers",
-            mcReligion: "🕌 Mosques & Historical Churches",
-            mcOldCity: "🚃 Old City Peninsula (Tram T1)",
-            mcTaksim: "🚕 Taksim & Bosphorus Line",
             wifiTitle: "📶 Free Wi-Fi Login Guide",
             wifiSub: "Connect easily by following the image:",
             wifiDetailToggleTitle: "📖 Show / Hide Detailed Written Steps",
+            wifiStep1: '<strong>Step 1 & 2:</strong> Select the <strong>"Triada Guest"</strong> network from your phone Wi-Fi settings and tap the <em>"Sign in to Wi-Fi network"</em> notification.',
+            wifiStep2: '<strong>Step 3 & 4:</strong> When the login page opens, tap the orange <strong>"Hızlı Giriş" (Quick Login)</strong> button at the bottom and select <strong>"Hotel Misafir Girişi"</strong> from the menu.',
+            wifiStep3: '<strong>Step 5:</strong> Enter your Passport / ID Number (including letters and numbers completely) and birth year (e.g. 19xx), agree to the terms and press the <strong>"Hotel Misafir Girişi"</strong> button to connect!',
             titleBuildings: "🏢 Triada Hotel Buildings",
             subBuildings: "Direct map directions to our hotel buildings:",
-            b1Title: "🏨 Main Building", b1Desc: "Triada Hotel Karaköy Central",
-            b2Title: "🏢 1st Annex Building", b2Desc: "Triada Hotel Annex Building 1",
-            b3Title: "🏢 2nd Annex Building", b3Desc: "Triada Hotel Annex Building 2",
-            titleShop: "🛒 Emergency & Support Shop",
-            subShop: "Essential items delivered to your door:",
-            sp1Title: "💳 Istanbulkart (Transport Card)", sp1Desc: "For tram, metro and bus usage", btnBuy1: "Order Now 💬",
-            sp2Title: "🔌 Charging Adapter Converter", sp2Desc: "Universal socket converter", btnBuy2: "Order Now 💬",
-            sp3Title: "⚡ Fast Charging Cable", sp3Desc: "Type-C or Lightning Cable", btnBuy3: "Order Now 💬",
-            sp4Title: "☂️ Rain Umbrella", sp4Desc: "High quality personal umbrella", btnBuy4: "Order Now 💬",
-            btnExpandShop: "🔍 Show All Products",
-            crHeader: "🎁 Special Requests & Custom Orders",
-            crText: "For late-night market items, personal care/hygiene products, or any special requests, feel free to text us on WhatsApp 24/7. Our Bellboy team will deliver it directly to your room!",
-            btnCustomWa: "💬 Send Custom Request via WhatsApp",
+            b1Title: "🏨 Main Building", b1Desc: "Triada Hotel Karaköy Central", bMap1: "Map 📍",
+            b2Title: "🏢 1st Annex Building", b2Desc: "Triada Hotel Annex Building 1", bMap2: "Map 📍",
+            b3Title: "🏢 2nd Annex Building", b3Desc: "Triada Hotel Annex Building 2", bMap3: "Map 📍",
+            guideHeader: "🗺️ Karakoy & Istanbul City Guide",
+            guideSub: "Most popular spots and full Istanbul map locations:",
+            btnExpandGuides: "🔍 Show All Places To Visit (66 Spots)",
+            btnHotelMap: "🏨 Triada Hotel Karaköy Directions",
             trustBox: "🛡️ 100% Safe, Economical & Fixed Price Guarantee<br>Pay either in Cash or by Credit Card to the driver!",
-            flexBox: "🔄 You can freely change your date and time anytime after creating your reservation!",
-            capBox: "🚖 <strong>Yellow Taxi Capacity:</strong><br>• Maximum 4 Passengers<br>• Fits 4-5 Large Suitcases / 3-4 Hand Luggage.",
             titleIst: "✈️ Istanbul Airport (IST)",
             istInfo: "• Travel time: Approx. 45 - 60 mins.<br>• Taxi must be arranged <strong>at least 3.5 hours before</strong> flight.",
             mapBtnIst: "📍 IST Map Location", ytBtnIst: "▶ IST Passenger Video Guide",
             titleSaw: "✈️ Sabiha Gokcen Airport (SAW)",
             sawInfo: "• Travel time: Approx. 60 - 90 mins.<br>• Taxi must be arranged <strong>at least 4 hours before</strong> flight.",
             mapBtnSaw: "📍 SAW Map Location", ytBtnSaw: "▶ SAW Passenger Video Guide",
+            capBox: "🚖 <strong>Yellow Taxi Capacity:</strong><br>• Maximum 4 Passengers<br>• Fits 4-5 Large Suitcases / 3-4 Hand Luggage.",
             formTitle: "🚕 Order Yellow Taxi",
+            flexBox: "🔄 You can freely change your date and time anytime after creating your reservation!",
             lblNa: "Full Name:", lblRm: "Room Number:", lblAp: "Select Airport:",
             optIst: "Istanbul Airport (IST) - 1.800 ₺", optSaw: "Sabiha Gokcen (SAW) - 2.000 ₺",
             lblFlight: "Flight Code (Optional):", lblDt: "Taxi Pickup Date & Time:", lblPy: "Payment Location & Method:",
             optPy1: "Cash in Taxi (to Driver)", optPy2: "Credit Card in Taxi (+10%)", optPy3: "Cash at Hotel Reception",
             lblTotalTitle: "Fixed Price To Pay:", btnWsSend: "SEND TAXI REQUEST",
-            guideHeader: "🗺️ Popular Attractions", guideSub: "Famous spots near your hotel:",
-            btnExpandGuides: "🔍 Expand All Places To Visit",
-            gt1: "🏬 Galataport Istanbul", gd1: "Seaside walk, shopping & Bosphorus view (🚶 5 Mins)", gl1: "Map 📍",
-            gt2: "🥐 Karakoy Gulluoglu", gd2: "World famous historical baklava shop (🚶 2 Mins)", gl2: "Map 📍",
-            gt3: "🏰 Galata Tower", gd3: "Historical tower & panoramic city view (🚶 10 Mins)", gl3: "Map 📍",
-            gt4: "🕌 Hagia Sophia & Blue Mosque", gd4: "Heart of historical peninsula (🚃 Tram 10 Mins)", gl4: "Map 📍",
-            gt5: "🛍️ Grand Bazaar", gd5: "World's oldest covered market (🚃 Tram 12 Mins)", gl5: "Map 📍",
-            gt6: "🍵 Spice Bazaar & Eminonu", gd6: "Spices & famous fish sandwich (🚶 Walk 12 Mins)", gl6: "Map 📍",
-            btnHotelMap: "🏨 Triada Hotel Karaköy Directions", btnCallCall: "📞 Call Now"
+            titleShop: "🛒 Emergency & Support Shop",
+            subShop: "Essential items delivered to your door:",
+            sp1Title: "💳 Istanbulkart (Transport Card)", sp1Desc: "For tram, metro and bus usage", btnBuy1: "Order Now 💬",
+            sp2Title: "🔌 Charging Adapter Converter", sp2Desc: "Universal socket converter", btnBuy2: "Order Now 💬",
+            sp4Title: "☂️ Rain Umbrella", sp4Desc: "High quality personal umbrella", btnBuy4: "Order Now 💬",
+            btnExpandShop: "🔍 Show All Products",
+            crHeader: "🎁 Special Requests & Custom Orders",
+            crText: "For late-night market items, personal care/hygiene products, or any special requests, feel free to text us on WhatsApp 24/7. Our Bellboy team will deliver it directly to your room!",
+            btnCustomWa: "💬 Send Custom Request via WhatsApp",
+            btnCallCall: "📞 Call Now"
         },
         ru: {
             subTitle: "24/7 Wi-Fi, Локация и Поддержка Беллбоя",
             menuTitle: "🏢 Меню Triada Hotel",
             mlWifi: "📶 Руководство по Wi-Fi",
-            ml1: "🚕 Заказать Желтое Такси",
             ml2: "📍 Здания Отеля (Карта)",
+            ml4: "🗺️ Путеводитель по Стамбулу",
+            ml1: "🚕 Заказать Желтое Такси",
             ml3: "🛒 Магазин Первой Помощи",
-            ml4: "🗺️ Путеводитель по Каракёй",
             ml5: "💬 WhatsApp Поддержка",
             mcEmergency: "🚨 Важные услуги и карта",
             mEx: "💱 Обмен Валюты",
@@ -702,62 +695,55 @@
             mPk: "🅿️ Парковка Galataport AVM",
             mcFood: "🥐 Еда, Кафе и Рестораны",
             mcCare: "💈 Парикмахерская и СПА",
-            mcWalk: "🚶 Места в пешей доступности",
-            mcMuseum: "🎨 Музеи и Искусство",
-            mcReligion: "🕌 Мечети и Исторические Церкви",
-            mcOldCity: "🚃 Старый Город (Трамвай T1)",
-            mcTaksim: "🚕 Таксим и Босфор",
             wifiTitle: "📶 Инструкция по входу в Wi-Fi",
             wifiSub: "Подключайтесь, следуя изображению:",
             wifiDetailToggleTitle: "📖 Показать / Скрыть подробные шаги",
+            wifiStep1: '<strong>Шаг 1 и 2:</strong> Выберите сеть <strong>"Triada Guest"</strong> в настройках Wi-Fi телефона и нажмите на уведомление <em>"Войти в сеть Wi-Fi"</em>.',
+            wifiStep2: '<strong>Шаг 3 и 4:</strong> Когда откроется страница входа, нажмите оранжевую кнопку <strong>"Hızlı Giriş"</strong> внизу и выберите <strong>"Hotel Misafir Girişi"</strong>.',
+            wifiStep3: '<strong>Шаг 5:</strong> Введите номер паспорта / ID и год рождения (например, 19xx), примите условия и нажмите кнопку <strong>"Hotel Misafir Girişi"</strong> для подключения!',
             titleBuildings: "🏢 Здания Triada Hotel",
             subBuildings: "Прямые маршруты к нашим зданиям:",
-            b1Title: "🏨 Главный Корпус", b1Desc: "Triada Hotel Karaköy Главное здание",
-            b2Title: "🏢 1-й Корпус (Annex 1)", b2Desc: "Triada Hotel Корпус 1",
-            b3Title: "🏢 2-й Корпус (Annex 2)", b3Desc: "Triada Hotel Корпус 2",
-            titleShop: "🛒 Магазин Первой Помощи",
-            subShop: "Необходимые товары с доставкой:",
-            sp1Title: "💳 Istanbulkart (Проездной)", sp1Desc: "Для трамвая, метро и автобуса", btnBuy1: "Заказать 💬",
-            sp2Title: "🔌 Адаптер-Переходник", sp2Desc: "Переходник для розеток", btnBuy2: "Заказать 💬",
-            sp3Title: "⚡ Зарядный Кабель", sp3Desc: "Type-C или Lightning Кабель", btnBuy3: "Заказать 💬",
-            sp4Title: "☂️ Зонт от Дождя", sp4Desc: "Качественный личный зонт", btnBuy4: "Заказать 💬",
-            btnExpandShop: "🔍 Показать все товары",
-            crHeader: "🎁 Особые Пожелания и Индивидуальные Заказы",
-            crText: "Для ночных покупок, средств личной гигиены или любых других особых запросов пишите нам в WhatsApp 24/7. Наша команда беллбоев доставит всё прямо к вашей двери!",
-            btnCustomWa: "💬 Написать запрос в WhatsApp",
+            b1Title: "🏨 Главный Корпус", b1Desc: "Triada Hotel Karaköy Главное здание", bMap1: "Карта 📍",
+            b2Title: "🏢 1-й Корпус (Annex 1)", b2Desc: "Triada Hotel Корпус 1", bMap2: "Карта 📍",
+            b3Title: "🏢 2-й Корпус (Annex 2)", b3Desc: "Triada Hotel Корпус 2", bMap3: "Карта 📍",
+            guideHeader: "🗺️ Путеводитель по Каракёй и Стамбулу",
+            guideSub: "Популярные места и полная карта Стамбула:",
+            btnExpandGuides: "🔍 Показать все места (66 точек)",
+            btnHotelMap: "🏨 Маршрут к Triada Hotel Karaköy",
             trustBox: "🛡️ 100% Безопасность, Экономия и Фиксированная Цена<br>Оплачивайте наличными или картой водителю такси!",
-            flexBox: "🔄 Вы можете бесплатно изменить дату и время в любое время после создания бронирования!",
-            capBox: "🚖 <strong>Вместимость Желтого Такси:</strong><br>• Максимум 4 Пассажира<br>• Вмещает 4-5 больших чемоданов / 3-4 ручные клади.",
             titleIst: "✈️ Аэропорт Стамбула (IST)",
             istInfo: "• Время в пути: около 45-60 минут.<br>• Такси необходимо заказать <strong>минимум за 3.5 часа</strong> до вылета.",
             mapBtnIst: "📍 IST Карта", ytBtnIst: "▶ Видео-гид по аэропорту IST",
             titleSaw: "✈️ Аэропорт Сабиха Гёкчен (SAW)",
             sawInfo: "• Время в пути: около 60-90 минут.<br>• Такси необходимо заказать <strong>минимум за 4 часа</strong> до вылета.",
             mapBtnSaw: "📍 SAW Карта", ytBtnSaw: "▶ Видео-гид по аэропорту SAW",
+            capBox: "🚖 <strong>Вместимость Желтого Такси:</strong><br>• Максимум 4 Пассажира<br>• Вмещает 4-5 больших чемоданов / 3-4 ручные клади.",
             formTitle: "🚕 Заказать Желтое Такси",
+            flexBox: "🔄 Вы можете бесплатно изменить дату и время в любое время после создания бронирования!",
             lblNa: "Имя и Фамилия:", lblRm: "Номер комнаты:", lblAp: "Выберите аэропорт:",
             optIst: "Аэропорт Стамбула (IST) - 1.800 ₺", optSaw: "Сабиха Гёкчен (SAW) - 2.000 ₺",
             lblFlight: "Номер рейса (необязательно):", lblDt: "Дата и время подачи такси:", lblPy: "Место и способ оплаты:",
             optPy1: "Наличными водителю", optPy2: "Картой в такси (+10%)", optPy3: "Наличными в отеле",
             lblTotalTitle: "Фиксированная цена:", btnWsSend: "ОТПРАВИТЬ ЗАПРОС НА ТАКСИ",
-            guideHeader: "🗺️ Популярные Места", guideSub: "Популярные места рядом с отелем:",
-            btnExpandGuides: "🔍 Показать все места",
-            gt1: "🏬 Галатапорт Стамбул", gd1: "Прогулки у моря, шопинг и вид на Босфор (🚶 5 мин)", gl1: "Карта 📍",
-            gt2: "🥐 Каракёй Гюллюоглу", gd2: "Всемирно известная историческая пахлава (🚶 2 мин)", gl2: "Карта 📍",
-            gt3: "🏰 Башня Галата", gd3: "Историческая башня и панорамный вид (🚶 10 мин)", gl3: "Карта 📍",
-            gt4: "🕌 Собор Святой Софии & Голубая Мечеть", gd4: "Сердце исторического центра (🚃 Трамвай 10 мин)", gd4: "Карта 📍",
-            gt5: "🛍️ Гранд-Базар (Kapalıçarşı)", gd5: "Старейший исторический рынок (🚃 Трамвай 12 мин)", gl5: "Карта 📍",
-            gt6: "🍵 Египетский Базар & Эминёню", gd6: "Рынок специй и свежая рыба (🚶 12 мин)", gl6: "Карта 📍",
-            btnHotelMap: "🏨 Маршрут к Triada Hotel Karaköy", btnCallCall: "📞 Позвонить"
+            titleShop: "🛒 Магазин Первой Помощи",
+            subShop: "Необходимые товары с доставкой:",
+            sp1Title: "💳 Istanbulkart (Проездной)", sp1Desc: "Для трамвая, метро и автобуса", btnBuy1: "Заказать 💬",
+            sp2Title: "🔌 Адаптер-Переходник", sp2Desc: "Переходник для розеток", btnBuy2: "Заказать 💬",
+            sp4Title: "☂️ Зонт от Дождя", sp4Desc: "Качественный личный зонт", btnBuy4: "Заказать 💬",
+            btnExpandShop: "🔍 Показать все товары",
+            crHeader: "🎁 Особые Пожелания и Индивидуальные Заказы",
+            crText: "Для ночных покупок, средств личной гигиены или любых других особых запросов пишите нам в WhatsApp 24/7. Наша команда беллбоев доставит всё прямо к вашей двери!",
+            btnCustomWa: "💬 Написать запрос в WhatsApp",
+            btnCallCall: "📞 Позвонить"
         },
         ar: {
             subTitle: "خدمة الواي فاي، الموقع ودعم بيلبوي 24/7",
             menuTitle: "🏢 قائمة فندق تريادا",
             mlWifi: "📶 دليل الاتصال بالواي فاي",
-            ml1: "🚕 طلب تاكسي أصفر",
             ml2: "📍 مباني الفندق (المواقع)",
+            ml4: "🗺️ دليل إسطنبول السياحي",
+            ml1: "🚕 طلب تاكسي أصفر",
             ml3: "🛒 متجر الاحتياجات",
-            ml4: "🗺️ دليل كراكوي",
             ml5: "💬 واتساب دعم بيلبوي",
             mcEmergency: "🚨 الخدمات الطارئة والمواقع",
             mEx: "💱 مكتب صرافة معتمد",
@@ -767,57 +753,51 @@
             mPk: "🅿️ موقف سيارات غالاتابورت",
             mcFood: "🥐 المطاعم والمقاهي",
             mcCare: "💈 الحلاقة والسبا",
-            mcWalk: "🚶 أماكن سياحية قريبة مشياً",
-            mcMuseum: "🎨 المتاحف والمعارض",
-            mcReligion: "🕌 المساجد والكنائس التاريخية",
-            mcOldCity: "🚃 المدينة القديمة (الترام T1)",
-            mcTaksim: "🚕 تقسيم وخط البوسفور",
             wifiTitle: "📶 دليل تسجيل الدخول لشبكة الواي فاي المجانية",
             wifiSub: "اتصل بسهولة باتباع الصورة أدناه:",
             wifiDetailToggleTitle: "📖 إظهار / إخفاء الخطوات المكتوبة المفصلة",
+            wifiStep1: '<strong>الخطوة 1 و 2:</strong> اختر شبكة <strong>"Triada Guest"</strong> من إعدادات الواي فاي بهاتفك واضغط على إشعار <em>"تسجيل الدخول إلى شبكة Wi-Fi"</em>.',
+            wifiStep2: '<strong>الخطوة 3 و 4:</strong> عند فتح صفحة تسجيل الدخول، اضغط على الزر البرتقالي <strong>"Hızlı Giriş"</strong> في الأسفل واختر <strong>"Hotel Misafir Girişi"</strong>.',
+            wifiStep3: '<strong>الخطوة 5:</strong> أدخل رقم جواز السفر أو الهوية (بما في ذلك الحروف والأرقام بالكامل) وسنة ميلادك، وافق على الشروط واضغط على زر <strong>"Hotel Misafir Girişi"</strong> للاتصال!',
             titleBuildings: "🏢 مباني فندق تريادا",
             subBuildings: "اتجاهات الخريطة المباشرة لمباني الفندق:",
-            b1Title: "🏨 المبنى الرئيسي", b1Desc: "فندق تريادا كراكوي المبنى الرئيسي",
-            b2Title: "🏢 المبنى الفرعي الأول", b2Desc: "Triada Hotel Annex Building 1",
-            b3Title: "🏢 المبنى الفرعي الثاني", b3Desc: "Triada Hotel Annex Building 2",
-            titleShop: "🛒 متجر الاحتياجات الطارئة",
-            subShop: "المستلزمات الضرورية تصل إلى باب غرفتك:",
-            sp1Title: "💳 إسطنبول كارت (كرت المواصلات)", sp1Desc: "للتنقل بالترام، المترو والباص", btnBuy1: "اطلب الآن 💬",
-            sp2Title: "🔌 محول رأس الشاحن", sp2Desc: "محول مقبس القابس العالمي", btnBuy2: "اطلب الآن 💬",
-            sp3Title: "⚡ كابل شحن سريع", sp3Desc: "كابل Type-C أو Lightning", btnBuy3: "اطلب الآن 💬",
-            sp4Title: "☂️ مظلة مطر", sp4Desc: "مظلة شخصية عالية الجودة", btnBuy4: "اطلب الآن 💬",
-            btnExpandShop: "🔍 عرض جميع المنتجات",
-            crHeader: "🎁 طلبات خاصة وخدمات إضافية",
-            crText: "لمستلزمات المتجر الليلية، منتجات العناية الشخصية، أو أي طلبات خاصة، يمكنك مراسلتنا عبر الواتساب على مدار 24 ساعة. سيقوم فريق البيلبوي بتوصيلها إلى غرفتك مباشرة!",
-            btnCustomWa: "💬 إرسال طلب خاص عبر WhatsApp",
+            b1Title: "🏨 المبنى الرئيسي", b1Desc: "فندق تريادا كراكوي المبنى الرئيسي", bMap1: "الخريطة 📍",
+            b2Title: "🏢 المبنى الفرعي الأول", b2Desc: "Triada Hotel Annex Building 1", bMap2: "الخريطة 📍",
+            b3Title: "🏢 المبنى الفرعي الثاني", b3Desc: "Triada Hotel Annex Building 2", bMap3: "الخريطة 📍",
+            guideHeader: "🗺️ دليل كراكوي وإسطنبول السياحي",
+            guideSub: "أشهر الأماكن السياحية ومواقع الخرائط في إسطنبول:",
+            btnExpandGuides: "🔍 عرض جميع الأماكن السياحية (66 موقعاً)",
+            btnHotelMap: "🏨 الاتجاهات إلى فندق تريادا كراكوي",
             trustBox: "🛡️ ضمان أمان 100%، توفير وسعر ثابت ومحدد<br>ادفع إما نقداً أو بالبطاقة للسائق!",
-            flexBox: "🔄 يمكنك تغيير التاريخ والوقت مجاناً في أي وقت بعد إنشاء الحجز الخاص بك!",
-            capBox: "🚖 <strong>سعة التاكسي الأصفر:</strong><br>• 4 ركاب كحد أقصى<br>• يتسع لـ 4-5 حقائب كبيرة / 3-4 حقائب يد.",
             titleIst: "✈️ مطار إسطنبول (IST)",
             istInfo: "• مدة الرحلة: حوالي 45 - 60 دقيقة.<br>• يجب حجز التاكسي <strong>قبل 3.5 ساعة على الأقل</strong> من موعد الطيران.",
             mapBtnIst: "📍 موقع خريطة IST", ytBtnIst: "▶ فيديو دليل الركاب IST",
             titleSaw: "✈️ مطار صبيحة كوكجن (SAW)",
             sawInfo: "• مدة الرحلة: حوالي 60 - 90 دقيقة.<br>• يجب حجز التاكسي <strong>قبل 4 ساعات على الأقل</strong> من موعد الطيران.",
             mapBtnSaw: "📍 SAW موقع خريطة", ytBtnSaw: "▶ فيديو دليل الركاب SAW",
+            capBox: "🚖 <strong>سعة التاكسي الأصفر:</strong><br>• 4 ركاب كحد أقصى<br>• يتسع لـ 4-5 حقائب كبيرة / 3-4 حقائب يد.",
             formTitle: "🚕 طلب تاكسي أصفر",
+            flexBox: "🔄 يمكنك تغيير التاريخ والوقت مجاناً في أي وقت بعد إنشاء الحجز الخاص بك!",
             lblNa: "الاسم الكامل:", lblRm: "رقم الغرفة:", lblAp: "اختر المطار:",
             optIst: "مطار إسطنبول (IST) - 1.800 ₺", optSaw: "مطار صبيحة (SAW) - 2.000 ₺",
             lblFlight: "رمز الطيران (اختياري):", lblDt: "تاريخ ووقت طلب التاكسي:", lblPy: "مكان وطريقة الدفع:",
             optPy1: "نقداً في التاكسي", optPy2: "بطاقة في التاكسي (+10%)", optPy3: "نقداً في الفندق",
             lblTotalTitle: "السعر الثابت المقدر:", btnWsSend: "إرسال طلب التاكسي",
-            guideHeader: "🗺️ أشهر الأماكن السياحية", guideSub: "أشهر الأماكن حول الفندق:",
-            btnExpandGuides: "🔍 عرض جميع الأماكن",
-            gt1: "🏬 غالاتابورت إسطنبول", gd1: "المشي على البحر، التسوق وإطلالة البوسفور (🚶 5 دقائق)", gl1: "الخريطة 📍",
-            gt2: "🥐 كراكوي غولو أوغلو", gd2: "أشهر محل بقلاوة تاريخي في العالم (🚶 دقيقتين)", gl2: "الخريطة 📍",
-            gt3: "🏰 برج غالاتا", gd3: "برج تاريخي وإطلالة بانورامية (🚶 10 دقائق)", gl3: "الخريطة 📍",
-            gt4: "🕌 آيا صوفيا والجامع الأزرق", gd4: "قلب المنطقة التاريخية (🚃 بالترام 10 دقائق)", gl4: "الخريطة 📍",
-            gt5: "🛍️ السوق المغلق (جراند بازار)", gd5: "أقدم وأكبر سوق تاريخي (🚃 بالترام 12 دقيقة)", gl5: "الخريطة 📍",
-            gt6: "🍵 سوق البهارات وإمينونو", gd6: "سوق البهارات وساندويتش السمك (🚶 مشياً 12 دقيقة)", gl6: "الخريطة 📍",
-            btnHotelMap: "🏨 الاتجاهات إلى فندق تريادا كراكوي", btnCallCall: "📞 اتصل الآن"
+            titleShop: "🛒 متجر الاحتياجات الطارئة",
+            subShop: "المستلزمات الضرورية تصل إلى باب غرفتك:",
+            sp1Title: "💳 إسطنبول كارت (كرت المواصلات)", sp1Desc: "للتنقل بالترام، المترو والباص", btnBuy1: "اطلب الآن 💬",
+            sp2Title: "🔌 محول رأس الشاحن", sp2Desc: "محول مقبس القابس العالمي", btnBuy2: "اطلب الآن 💬",
+            sp4Title: "☂️ مظلة مطر", sp4Desc: "مظلة شخصية عالية الجودة", btnBuy4: "اطلب الآن 💬",
+            btnExpandShop: "🔍 عرض جميع المنتجات",
+            crHeader: "🎁 طلبات خاصة وخدمات إضافية",
+            crText: "لمستلزمات المتجر الليلية، منتجات العناية الشخصية، أو أي طلبات خاصة، يمكنك مراسلتنا عبر الواتساب على مدار 24 ساعة. سيقوم فريق البيلبوي بتوصيلها إلى غرفتك مباشرة!",
+            btnCustomWa: "💬 إرسال طلب خاص عبر WhatsApp",
+            btnCallCall: "📞 اتصل الآن"
         }
     };
 
     function setLang(lang) {
+        currentLang = lang;
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         event.target.classList.add('active');
         
@@ -832,13 +812,23 @@
         for(let key in t) {
             let el = document.getElementById(key);
             if(el) {
-                if(key.includes('Info') || key === 'capBox' || key === 'trustBox' || key === 'flexBox' || key.includes('wifi')) {
+                if(key.includes('Info') || key === 'capBox' || key === 'trustBox' || key === 'flexBox' || key.includes('wifiStep')) {
                     el.innerHTML = t[key];
                 } else {
                     el.innerText = t[key];
                 }
             }
         }
+        
+        // Açık/kapalı buton metinlerini ve gezi rehberini dil değişikliğine göre yeniden çiz
+        renderPlaces();
+        if(isExpandedGuides) {
+            document.getElementById('btnExpandGuides').innerText = (lang === 'en') ? "▲ Show Less" : (lang === 'ru') ? "▲ Свернуть" : (lang === 'ar') ? "▲ إخفاء" : "▲ Listeyi Daralt / Gizle";
+        }
+        if(isExpandedShop) {
+            document.getElementById('btnExpandShop').innerText = (lang === 'en') ? "▲ Show Less" : (lang === 'ru') ? "▲ Свернуть" : (lang === 'ar') ? "▲ إخفاء" : "▲ Daha Az Göster / Küçült";
+        }
+
         updateCalc();
     }
 
@@ -895,6 +885,7 @@
 
     window.onload = function() {
         setDefaultDateTime();
+        renderPlaces();
         updateCalc();
     }
 </script>
