@@ -86,7 +86,7 @@
         .more-items { display: none; }
         .btn-expand { background: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 12px; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; margin-top: 8px; margin-bottom: 10px; transition: 0.2s; }
 
-        /* YORUM KARTI STİLLERİ (Wi-Fi görseli gibi tam genişlik ve net yapı) */
+        /* YORUM KARTI STİLLERİ (Wi-Fi görseli gibi tam genişlikte büyük boy) */
         .review-card { background: linear-gradient(135deg, #262626, #1f1f1f); border: 1px dashed #f2a900; border-radius: 12px; padding: 18px; margin-top: 20px; text-align: center; }
         .review-card h3 { font-size: 15px; color: #f2a900; margin-bottom: 8px; }
         .review-card p { font-size: 12.5px; color: #ccc; line-height: 1.5; margin-bottom: 12px; }
@@ -241,7 +241,7 @@
     <!-- GÜVEN KUTUSU -->
     <div class="trust-box" id="trustBox">
         🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>
-        Ödemenizi İster Nakit İster Kartla Taksicide Yapabilirsiniz!
+        Ödemenizi İster Nakit İster Kartla Yapabilirsiniz!
     </div>
 
     <!-- 4. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASYON FORMU -->
@@ -309,11 +309,10 @@
 
             <div class="form-group">
                 <label id="lblPy">Ödeme Yeri ve Şekli:</label>
-                <select id="selPay" onchange="updateCalc()">
-                    <option value="Driver-Cash" id="optPy1">Araçta Nakit (Taksiciye) - 2.000 / 2.200 ₺</option>
-                    <option value="Driver-Card" id="optPy2">Araçta Kredi Kartı (+%12.5 Komisyon)</option>
-                    <option value="Hotel-Cash" id="optPy3">Otelde Nakit Ödeme - 2.000 / 2.200 ₺</option>
-                    <option value="Hotel-Card" id="optPy4">Otelde Kredi Kartı (+%12.5 Komisyon)</option>
+                <select id="selPay">
+                    <option value="Hotel-Card" id="optPy1">Otelde Kredi Kartı</option>
+                    <option value="Driver-Cash" id="optPy2">Araçta Nakit (Taksiciye)</option>
+                    <option value="Driver-Card" id="optPy3">Araçta Kredi Kartı</option>
                 </select>
             </div>
 
@@ -612,7 +611,7 @@
             guideSub: "En popüler noktalar ve tüm İstanbul harita konumları:",
             btnExpandGuides: "🔍 Tüm Gezilecek Yerleri Göster (66 Nokta)",
             btnHotelMap: "🏨 Triada Hotel Karaköy Yol Tarifi",
-            trustBox: "🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>Ödemenizi İster Nakit İster Kartla Taksicide Yapabilirsiniz!",
+            trustBox: "🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>Ödemenizi İster Nakit İster Kartla Yapabilirsiniz!",
             titleIst: "✈️ İstanbul Havalimanı (IST)",
             istInfo: "• Ulaşım süresi: Yaklaşık 45 - 60 dakika.<br>• Uçuştan <strong>en geç 3.5 saat önce</strong> taksi ayarlanmalıdır.",
             mapBtnIst: "📍 IST Harita Konumu", ytBtnIst: "▶ IST Yolcu Video Rehberi",
@@ -625,7 +624,7 @@
             lblNa: "Adınız Soyadınız:", lblRm: "Oda Numaranız:", lblAp: "Havalimanı Seçin:",
             optIst: "İstanbul Havalimanı (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
             lblFlight: "Uçuş Kodu (İsteğe Bağlı):", lblDt: "Taksi İstediğiniz Tarih ve Saat:", lblPy: "Ödeme Yeri ve Şekli:",
-            optPy1: "Araçta Nakit (Taksiciye)", optPy2: "Araçta Kredi Kartı (+%12.5 Komisyon)", optPy3: "Otelde Nakit Ödeme", optPy4: "Otelde Kredi Kartı (+%12.5 Komisyon)",
+            optPy1: "Otelde Kredi Kartı", optPy2: "Araçta Nakit (Taksiciye)", optPy3: "Araçta Kredi Kartı",
             lblTotalTitle: "Ödenecek Net Fiyat:", btnWsSend: "TAKSİ TALEBİ GÖNDER",
             titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
             subShop: "İhtiyacınız olan ürünler kapınıza gelsin:",
@@ -674,7 +673,7 @@
             guideSub: "Most popular spots and full Istanbul map locations:",
             btnExpandGuides: "🔍 Show All Places To Visit (66 Spots)",
             btnHotelMap: "🏨 Triada Hotel Karaköy Directions",
-            trustBox: "🛡️ 100% Safe, Economical & Fixed Price Guarantee<br>Pay either in Cash or by Credit Card to the driver!",
+            trustBox: "🛡️ 100% Safe, Economical & Fixed Price Guarantee<br>Pay either in Cash or by Card!",
             titleIst: "✈️ Istanbul Airport (IST)",
             istInfo: "• Travel time: Approx. 45 - 60 mins.<br>• Taxi must be arranged <strong>at least 3.5 hours before</strong> flight.",
             mapBtnIst: "📍 IST Map Location", ytBtnIst: "▶ IST Passenger Video Guide",
@@ -687,7 +686,7 @@
             lblNa: "Full Name:", lblRm: "Room Number:", lblAp: "Select Airport:",
             optIst: "Istanbul Airport (IST) - 2.000 ₺", optSaw: "Sabiha Gokcen (SAW) - 2.200 ₺",
             lblFlight: "Flight Code (Optional):", lblDt: "Taxi Pickup Date & Time:", lblPy: "Payment Location & Method:",
-            optPy1: "Cash in Taxi (to Driver)", optPy2: "Credit Card in Taxi (+12.5% Fee)", optPy3: "Cash at Hotel Reception", optPy4: "Credit Card at Hotel (+12.5% Fee)",
+            optPy1: "Credit Card at Hotel", optPy2: "Cash in Taxi (to Driver)", optPy3: "Credit Card in Taxi",
             lblTotalTitle: "Fixed Price To Pay:", btnWsSend: "SEND TAXI REQUEST",
             titleShop: "🛒 Emergency & Support Shop",
             subShop: "Essential items delivered to your door:",
@@ -736,7 +735,7 @@
             guideSub: "Популярные места и полная карта Стамбула:",
             btnExpandGuides: "🔍 Показать все места (66 точек)",
             btnHotelMap: "🏨 Маршрут к Triada Hotel Karaköy",
-            trustBox: "🛡️ 100% Безопасность, Экономия и Фиксированная Цена<br>Оплачивайте наличными или картой водителю такси!",
+            trustBox: "🛡️ 100% Безопасность и Фиксированная Цена<br>Оплачивайте наличными или картой!",
             titleIst: "✈️ Аэропорт Стамбула (IST)",
             istInfo: "• Время в пути: около 45-60 минут.<br>• Такси необходимо заказать <strong>минимум за 3.5 часа</strong> до вылета.",
             mapBtnIst: "📍 IST Карта", ytBtnIst: "▶ Видео-гид по аэропорту IST",
@@ -747,9 +746,9 @@
             formTitle: "🚕 Заказать Желтое Такси",
             flexBox: "🔄 Вы можете бесплатно изменить дату и время в любое время после создания бронирования!",
             lblNa: "Имя и Фамилия:", lblRm: "Номер комнаты:", lblAp: "Выберите аэропорт:",
-            optIst: "Аэропорт Стамбула (IST) - 2.000 ₺", optSaw: "Сабиха Гёкчен (SAW) - 2.200 ₺",
+            optIst: "Аэропорт Стамбула (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
             lblFlight: "Номер рейса (необязательно):", lblDt: "Дата и время подачи такси:", lblPy: "Место и способ оплаты:",
-            optPy1: "Наличными водителю", optPy2: "Картой в такси (+12.5% комиссия)", optPy3: "Наличными в отеле", optPy4: "Картой в отеле (+12.5% комиссия)",
+            optPy1: "Картой в отеле", optPy2: "Наличными водителю", optPy3: "Картой в такси",
             lblTotalTitle: "Фиксированная цена:", btnWsSend: "ОТПРАВИТЬ ЗАПРОС НА ТАКСИ",
             titleShop: "🛒 Магазин Первой Помощи",
             subShop: "Необходимые товары с доставкой:",
@@ -798,7 +797,7 @@
             guideSub: "أشهر الأماكن السياحية ومواقع الخرائط في إسطنبول:",
             btnExpandGuides: "🔍 عرض جميع الأماكن السياحية (66 موقعاً)",
             btnHotelMap: "🏨 الاتجاهات إلى فندق تريادا كراكوي",
-            trustBox: "🛡️ ضمان أمان 100%، توفير وسعر ثابت ومحدد<br>ادفع إما نقداً أو بالبطاقة للسائق!",
+            trustBox: "🛡️ ضمان أمان وسعر ثابت ومحدد<br>ادفع نقداً أو بالبطاقة!",
             titleIst: "✈️ مطار إسطنبول (IST)",
             istInfo: "• مدة الرحلة: حوالي 45 - 60 دقيقة.<br>• يجب حجز التاكسي <strong>قبل 3.5 ساعة على الأقل</strong> من موعد الطيران.",
             mapBtnIst: "📍 موقع خريطة IST", ytBtnIst: "▶ فيديو دليل الركاب IST",
@@ -811,7 +810,7 @@
             lblNa: "الاسم الكامل:", lblRm: "رقم الغرفة:", lblAp: "اختر المطار:",
             optIst: "مطار إسطنبول (IST) - 2.000 ₺", optSaw: "مطار صبيحة (SAW) - 2.200 ₺",
             lblFlight: "رمز الطيران (اختياري):", lblDt: "تاريخ ووقت طلب التاكسي:", lblPy: "مكان وطريقة الدفع:",
-            optPy1: "نقداً في التاكسي", optPy2: "بطاقة في التاكسي (+12.5% عمولة)", optPy3: "نقداً في الفندق", optPy4: "بطاقة في الفندق (+12.5% عمولة)",
+            optPy1: "بطاقة الائتمان في الفندق", optPy2: "نقداً في التاكسي", optPy3: "بطاقة الائتمان في التاكسي",
             lblTotalTitle: "السعر الثابت المقدر:", btnWsSend: "إرسال طلب التاكسي",
             titleShop: "🛒 متجر الاحتياجات الطارئة",
             subShop: "المستلزمات الضرورية تصل إلى باب غرفتك:",
@@ -866,18 +865,8 @@
 
     function updateCalc() {
         const ap = document.getElementById('selAirport').value;
-        const pay = document.getElementById('selPay').value;
         let basePrice = (ap === "IST") ? 2000 : 2200;
-        let priceStr = "";
-
-        if(pay.includes('Card')) {
-            let finalPrice = basePrice * 1.125; // %12.5 komisyon
-            priceStr = Math.round(finalPrice) + " ₺";
-        } else {
-            priceStr = basePrice + " ₺";
-        }
-
-        document.getElementById('txtTotalPrice').innerText = priceStr;
+        document.getElementById('txtTotalPrice').innerText = basePrice + " ₺";
     }
 
     function sendWhatsAppDirect() {
