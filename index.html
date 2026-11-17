@@ -175,15 +175,16 @@
         <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:10px;" id="wifiSub">Görsele bakarak hızlıca bağlanabilirsiniz:</p>
         
-        <!-- ANNEX BİNA Wİ-Fİ BİLGİ KUTUSU (Detaylı Yazılı Adımlar ile Görselin Arasına Eklendi) -->
-        <div class="annex-wifi-box" id="annexWifiBox">
+        <!-- 1. SIRA: TRİADA GUEST RESİMLİ REHBER -->
+        <div class="wifi-img-container">
+            <img src="wifi.png" alt="Triada Guest Wi-Fi Bağlantı Rehberi Adımları" onerror="this.src='https://i.imgur.com/35695.png'">
+        </div>
+
+        <!-- 2. SIRA: ANNEX BİNA Wİ-Fİ BİLGİ KUTUSU (Görselin Hemen Ardından) -->
+        <div class="annex-wifi-box" id="annexWifiBox" style="margin-top: 12px;">
             🏢 <strong>Annex Bina Misafirlerimiz İçin:</strong><br>
             Wi-Fi Adı: <strong>TRIADA KARAKOY</strong><br>
             Şifre: <strong>triada2022</strong>
-        </div>
-
-        <div class="wifi-img-container">
-            <img src="wifi.png" alt="Triada Guest Wi-Fi Bağlantı Rehberi Adımları" onerror="this.src='https://i.imgur.com/35695.png'">
         </div>
 
         <div class="accordion-header" onclick="toggleAcc('wifiDetailsContent')" style="margin-top:12px; background:#1a1a1a; font-size:13px;">
@@ -321,7 +322,7 @@
             <div class="form-group">
                 <label id="lblPy">Ödeme Yeri ve Şekli:</label>
                 <select id="selPay">
-                    <option value="Hotel-Card" id="optPy1">Otelde Kredi Kartı</option>
+                    <option value="Hotel-Cash" id="optPy1">Otelde Nakit Ödeme</option>
                     <option value="Driver-Cash" id="optPy2">Araçta Nakit (Taksiciye)</option>
                     <option value="Driver-Card" id="optPy3">Araçta Kredi Kartı</option>
                 </select>
@@ -636,7 +637,7 @@
             lblNa: "Adınız Soyadınız:", lblRm: "Oda Numaranız:", lblAp: "Havalimanı Seçin:",
             optIst: "İstanbul Havalimanı (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
             lblFlight: "Uçuş Kodu (İsteğe Bağlı):", lblDt: "Taksi İstediğiniz Tarih ve Saat:", lblPy: "Ödeme Yeri ve Şekli:",
-            optPy1: "Otelde Kredi Kartı", optPy2: "Araçta Nakit (Taksiciye)", optPy3: "Araçta Kredi Kartı",
+            optPy1: "Otelde Nakit Ödeme", optPy2: "Araçta Nakit (Taksiciye)", optPy3: "Araçta Kredi Kartı",
             lblTotalTitle: "Ödenecek Net Fiyat:", btnWsSend: "TAKSİ TALEBİ GÖNDER",
             titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
             subShop: "İhtiyacınız olan ürünler kapınıza gelsin:",
@@ -699,7 +700,7 @@
             lblNa: "Full Name:", lblRm: "Room Number:", lblAp: "Select Airport:",
             optIst: "Istanbul Airport (IST) - 2.000 ₺", optSaw: "Sabiha Gokcen (SAW) - 2.200 ₺",
             lblFlight: "Flight Code (Optional):", lblDt: "Taxi Pickup Date & Time:", lblPy: "Payment Location & Method:",
-            optPy1: "Credit Card at Hotel", optPy2: "Cash in Taxi (to Driver)", optPy3: "Credit Card in Taxi",
+            optPy1: "Cash at Hotel", optPy2: "Cash in Taxi (to Driver)", optPy3: "Credit Card in Taxi",
             lblTotalTitle: "Fixed Price To Pay:", btnWsSend: "SEND TAXI REQUEST",
             titleShop: "🛒 Emergency & Support Shop",
             subShop: "Essential items delivered to your door:",
@@ -762,7 +763,7 @@
             lblNa: "Имя и Фамилия:", lblRm: "Номер комнаты:", lblAp: "Выберите аэропорт:",
             optIst: "Аэропорт Стамбула (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
             lblFlight: "Номер рейса (необязательно):", lblDt: "Дата и время подачи такси:", lblPy: "Место и способ оплаты:",
-            optPy1: "Картой в отеле", optPy2: "Наличными водителю", optPy3: "Картой в такси",
+            optPy1: "Наличными в отеле", optPy2: "Наличными водителю", optPy3: "Картой в такси",
             lblTotalTitle: "Фиксированная цена:", btnWsSend: "ОТПРАВИТЬ ЗАПРОС НА ТАКСИ",
             titleShop: "🛒 Магазин Первой Помощи",
             subShop: "Необходимые товары с доставкой:",
@@ -825,7 +826,7 @@
             lblNa: "الاسم الكامل:", lblRm: "رقم الغرفة:", lblAp: "اختر المطار:",
             optIst: "مطار إسطنبول (IST) - 2.000 ₺", optSaw: "مطار صبيحة (SAW) - 2.200 ₺",
             lblFlight: "رمز الطيران (اختياري):", lblDt: "تاريخ ووقت طلب التاكسي:", lblPy: "مكان وطريقة الدفع:",
-            optPy1: "بطاقة الائتمان في الفندق", optPy2: "نقداً في التاكسي", optPy3: "بطاقة الائتمان في التاكسي",
+            optPy1: "نقداً في الفندق", optPy2: "نقداً في التاكسي", optPy3: "بطاقة الائتمان في التاكسي",
             lblTotalTitle: "السعر الثابت المقدر:", btnWsSend: "إرسال طلب التاكسي",
             titleShop: "🛒 متجر الاحتياجات الطارئة",
             subShop: "المستلزمات الضرورية تصل إلى باب غرفتك:",
