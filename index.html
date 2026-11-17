@@ -120,9 +120,9 @@
     <div class="menu-title" id="menuTitle">🏢 Triada Hotel Rehber Menü</div>
     
     <a href="#wifiSec" class="menu-link" onclick="closeMenu()"><span id="mlWifi">📶 Wi-Fi Bağlantı Rehberi</span> 📍</a>
+    <a href="#taxiSec" class="menu-link" onclick="closeMenu()"><span id="ml1">🚕 Sarı Taksi Çağır</span> 📍</a>
     <a href="#buildingsSec" class="menu-link" onclick="closeMenu()"><span id="ml2">📍 Otel Binalarımız (Konumlar)</span> 📍</a>
     <a href="#guideSec" class="menu-link" onclick="closeMenu()"><span id="ml4">🗺️ İstanbul Gezi Rehberi</span> 📍</a>
-    <a href="#taxiSec" class="menu-link" onclick="closeMenu()"><span id="ml1">🚕 Sarı Taksi Çağır</span> 📍</a>
     <a href="#shopSec" class="menu-link" onclick="closeMenu()"><span id="ml3">🛒 Acil İhtiyaç Marketi</span> 📍</a>
     
     <div class="menu-category-fixed" id="mcEmergency">🚨 Acil Hizmetler & Konumlar</div>
@@ -170,7 +170,7 @@
         <p id="subTitle">7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri</p>
     </div>
 
-    <!-- 1. SIRADA: Wİ-Fİ REHBERİ -->
+    <!-- 1. SIRADA: Wİ-Fİ REHBERİ (Ana Bina Görseli + Hemen Ardından Annex Bilgisi) -->
     <div class="card" id="wifiSec" style="border-left-color: #25D366;">
         <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:10px;" id="wifiSub">Görsele bakarak hızlıca bağlanabilirsiniz:</p>
@@ -203,60 +203,7 @@
         </div>
     </div>
 
-    <!-- 2. SIRADA: OTEL BİNALARI SEKSİYONU -->
-    <div class="card" id="buildingsSec" style="border-left-color: #f2a900;">
-        <h2 id="titleBuildings">🏢 Triada Hotel Binalarımız</h2>
-        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="subBuildings">Otel binalarımızın konumlarına tek tıkla ulaşın:</p>
-        
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="b1Title">🏨 Ana Bina (Main Building)</div>
-                <div class="guide-desc" id="b1Desc">Triada Hotel Karaköy Merkez Bina</div>
-            </div>
-            <a href="https://maps.google.com/?cid=16349782730457908562&entry=gps&g_st=ac" target="_blank" class="guide-link" id="bMap1">Harita 📍</a>
-        </div>
-
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="b2Title">🏢 1. Ek Bina (Annex 1)</div>
-                <div class="guide-desc" id="b2Desc">Triada Hotel Annex Building 1</div>
-            </div>
-            <a href="https://maps.app.goo.gl/ekuJ6mV7aZAYTFrF9?g_st=ac" target="_blank" class="guide-link" id="bMap2">Harita 📍</a>
-        </div>
-
-        <div class="guide-item">
-            <div>
-                <div class="guide-title" id="b3Title">🏢 2. Ek Bina (Annex 2)</div>
-                <div class="guide-desc" id="b3Desc">Triada Hotel Annex Building 2</div>
-            </div>
-            <a href="https://maps.app.goo.gl/dVAUehD18cSLg6Cg8?g_st=ac" target="_blank" class="guide-link" id="bMap3">Harita 📍</a>
-        </div>
-    </div>
-
-    <!-- 3. SIRADA: GEZİ REHBERİ -->
-    <div class="card" id="guideSec" style="border-left-color: #f2a900;">
-        <h2 id="guideHeader">🗺️ Karaköy & İstanbul Gezi Rehberi</h2>
-        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="guideSub">En popüler noktalar ve tüm İstanbul harita konumları:</p>
-        
-        <div id="topGuidesList"></div>
-        <div class="more-items" id="moreGuidesList"></div>
-
-        <button class="btn-expand" onclick="toggleGuides()" id="btnExpandGuides">
-            🔍 Tüm Gezilecek Yerleri Göster (66 Nokta)
-        </button>
-
-        <a href="https://www.google.com/maps/search/?api=1&query=Triada+Hotel+Karakoy" target="_blank" class="btn-map" style="background:#222; color:#fff; border-color:#555; margin-top:5px;" id="btnHotelMap">
-            🏨 Triada Hotel Karaköy Yol Tarifi
-        </a>
-    </div>
-
-    <!-- GÜVEN KUTUSU -->
-    <div class="trust-box" id="trustBox">
-        🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>
-        Ödemenizi İster Nakit İster Kartla Yapabilirsiniz!
-    </div>
-
-    <!-- 4. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASYON FORMU -->
+    <!-- 2. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASYON FORMU (Daha Yukarıya Taşındı) -->
     <div id="taxiSec">
         <div class="card">
             <h2><span id="titleIst">✈️ İstanbul Havalimanı (IST)</span></h2>
@@ -323,8 +270,9 @@
                 <label id="lblPy">Ödeme Yeri ve Şekli:</label>
                 <select id="selPay">
                     <option value="Hotel-Cash" id="optPy1">Otelde Nakit Ödeme</option>
-                    <option value="Driver-Cash" id="optPy2">Araçta Nakit (Taksiciye)</option>
-                    <option value="Driver-Card" id="optPy3">Araçta Kredi Kartı</option>
+                    <option value="Hotel-Eft" id="optPy2">Otelde Havale / EFT</option>
+                    <option value="Driver-Cash" id="optPy3">Araçta Nakit (Taksiciye)</option>
+                    <option value="Driver-Card" id="optPy4">Araçta Kredi Kartı</option>
                 </select>
             </div>
 
@@ -337,6 +285,59 @@
                 TAKSİ TALEBİ GÖNDER
             </button>
         </div>
+    </div>
+
+    <!-- 3. SIRADA: OTEL BİNALARI SEKSİYONU -->
+    <div class="card" id="buildingsSec" style="border-left-color: #f2a900;">
+        <h2 id="titleBuildings">🏢 Triada Hotel Binalarımız</h2>
+        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="subBuildings">Otel binalarımızın konumlarına tek tıkla ulaşın:</p>
+        
+        <div class="guide-item">
+            <div>
+                <div class="guide-title" id="b1Title">🏨 Ana Bina (Main Building)</div>
+                <div class="guide-desc" id="b1Desc">Triada Hotel Karaköy Merkez Bina</div>
+            </div>
+            <a href="https://maps.google.com/?cid=16349782730457908562&entry=gps&g_st=ac" target="_blank" class="guide-link" id="bMap1">Harita 📍</a>
+        </div>
+
+        <div class="guide-item">
+            <div>
+                <div class="guide-title" id="b2Title">🏢 1. Ek Bina (Annex 1)</div>
+                <div class="guide-desc" id="b2Desc">Triada Hotel Annex Building 1</div>
+            </div>
+            <a href="https://maps.app.goo.gl/ekuJ6mV7aZAYTFrF9?g_st=ac" target="_blank" class="guide-link" id="bMap2">Harita 📍</a>
+        </div>
+
+        <div class="guide-item">
+            <div>
+                <div class="guide-title" id="b3Title">🏢 2. Ek Bina (Annex 2)</div>
+                <div class="guide-desc" id="b3Desc">Triada Hotel Annex Building 2</div>
+            </div>
+            <a href="https://maps.app.goo.gl/dVAUehD18cSLg6Cg8?g_st=ac" target="_blank" class="guide-link" id="bMap3">Harita 📍</a>
+        </div>
+    </div>
+
+    <!-- 4. SIRADA: GEZİ REHBERİ -->
+    <div class="card" id="guideSec" style="border-left-color: #f2a900;">
+        <h2 id="guideHeader">🗺️ Karaköy & İstanbul Gezi Rehberi</h2>
+        <p style="font-size:12px; color:#aaa; margin-bottom:12px;" id="guideSub">En popüler noktalar ve tüm İstanbul harita konumları:</p>
+        
+        <div id="topGuidesList"></div>
+        <div class="more-items" id="moreGuidesList"></div>
+
+        <button class="btn-expand" onclick="toggleGuides()" id="btnExpandGuides">
+            🔍 Tüm Gezilecek Yerleri Göster (66 Nokta)
+        </button>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Triada+Hotel+Karakoy" target="_blank" class="btn-map" style="background:#222; color:#fff; border-color:#555; margin-top:5px;" id="btnHotelMap">
+            🏨 Triada Hotel Karaköy Yol Tarifi
+        </a>
+    </div>
+
+    <!-- GÜVEN KUTUSU -->
+    <div class="trust-box" id="trustBox">
+        🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>
+        Ödemenizi İster Nakit, İster Havale, İster Kartla Yapabilirsiniz!
     </div>
 
     <!-- 5. SIRADA: ACİL İHTİYAÇ & DESTEK MARKETİ -->
@@ -624,7 +625,7 @@
             guideSub: "En popüler noktalar ve tüm İstanbul harita konumları:",
             btnExpandGuides: "🔍 Tüm Gezilecek Yerleri Göster (66 Nokta)",
             btnHotelMap: "🏨 Triada Hotel Karaköy Yol Tarifi",
-            trustBox: "🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>Ödemenizi İster Nakit İster Kartla Yapabilirsiniz!",
+            trustBox: "🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>Ödemenizi İster Nakit, İster Havale, İster Kartla Yapabilirsiniz!",
             titleIst: "✈️ İstanbul Havalimanı (IST)",
             istInfo: "• Ulaşım süresi: Yaklaşık 45 - 60 dakika.<br>• Uçuştan <strong>en geç 3.5 saat önce</strong> taksi ayarlanmalıdır.",
             mapBtnIst: "📍 IST Harita Konumu", ytBtnIst: "▶ IST Yolcu Video Rehberi",
@@ -637,7 +638,7 @@
             lblNa: "Adınız Soyadınız:", lblRm: "Oda Numaranız:", lblAp: "Havalimanı Seçin:",
             optIst: "İstanbul Havalimanı (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
             lblFlight: "Uçuş Kodu (İsteğe Bağlı):", lblDt: "Taksi İstediğiniz Tarih ve Saat:", lblPy: "Ödeme Yeri ve Şekli:",
-            optPy1: "Otelde Nakit Ödeme", optPy2: "Araçta Nakit (Taksiciye)", optPy3: "Araçta Kredi Kartı",
+            optPy1: "Otelde Nakit Ödeme", optPy2: "Otelde Havale / EFT", optPy3: "Araçta Nakit (Taksiciye)", optPy4: "Araçta Kredi Kartı",
             lblTotalTitle: "Ödenecek Net Fiyat:", btnWsSend: "TAKSİ TALEBİ GÖNDER",
             titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
             subShop: "İhtiyacınız olan ürünler kapınıza gelsin:",
@@ -687,7 +688,7 @@
             guideSub: "Most popular spots and full Istanbul map locations:",
             btnExpandGuides: "🔍 Show All Places To Visit (66 Spots)",
             btnHotelMap: "🏨 Triada Hotel Karaköy Directions",
-            trustBox: "🛡️ 100% Safe, Economical & Fixed Price Guarantee<br>Pay either in Cash or by Card!",
+            trustBox: "🛡️ 100% Safe, Economical & Fixed Price Guarantee<br>Pay either in Cash, Bank Transfer, or Card!",
             titleIst: "✈️ Istanbul Airport (IST)",
             istInfo: "• Travel time: Approx. 45 - 60 mins.<br>• Taxi must be arranged <strong>at least 3.5 hours before</strong> flight.",
             mapBtnIst: "📍 IST Map Location", ytBtnIst: "▶ IST Passenger Video Guide",
@@ -700,7 +701,7 @@
             lblNa: "Full Name:", lblRm: "Room Number:", lblAp: "Select Airport:",
             optIst: "Istanbul Airport (IST) - 2.000 ₺", optSaw: "Sabiha Gokcen (SAW) - 2.200 ₺",
             lblFlight: "Flight Code (Optional):", lblDt: "Taxi Pickup Date & Time:", lblPy: "Payment Location & Method:",
-            optPy1: "Cash at Hotel", optPy2: "Cash in Taxi (to Driver)", optPy3: "Credit Card in Taxi",
+            optPy1: "Cash at Hotel", optPy2: "Bank Transfer / EFT at Hotel", optPy3: "Cash in Taxi (to Driver)", optPy4: "Credit Card in Taxi",
             lblTotalTitle: "Fixed Price To Pay:", btnWsSend: "SEND TAXI REQUEST",
             titleShop: "🛒 Emergency & Support Shop",
             subShop: "Essential items delivered to your door:",
@@ -750,7 +751,7 @@
             guideSub: "Популярные места и полная карта Стамбула:",
             btnExpandGuides: "🔍 Показать все места (66 точек)",
             btnHotelMap: "🏨 Маршрут к Triada Hotel Karaköy",
-            trustBox: "🛡️ 100% Безопасность и Фиксированная Цена<br>Оплачивайте наличными или картой!",
+            trustBox: "🛡️ 100% Безопасность и Фиксированная Цена<br>Оплачивайте наличными, переводом или картой!",
             titleIst: "✈️ Аэропорт Стамбула (IST)",
             istInfo: "• Время в пути: около 45-60 минут.<br>• Такси необходимо заказать <strong>минимум за 3.5 часа</strong> до вылета.",
             mapBtnIst: "📍 IST Карта", ytBtnIst: "▶ Видео-гид по аэропорту IST",
@@ -763,7 +764,7 @@
             lblNa: "Имя и Фамилия:", lblRm: "Номер комнаты:", lblAp: "Выберите аэропорт:",
             optIst: "Аэропорт Стамбула (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
             lblFlight: "Номер рейса (необязательно):", lblDt: "Дата и время подачи такси:", lblPy: "Место и способ оплаты:",
-            optPy1: "Наличными в отеле", optPy2: "Наличными водителю", optPy3: "Картой в такси",
+            optPy1: "Наличными в отеле", optPy2: "Перевод / EFT в отеле", optPy3: "Наличными водителю", optPy4: "Картой в такси",
             lblTotalTitle: "Фиксированная цена:", btnWsSend: "ОТПРАВИТЬ ЗАПРОС НА ТАКСИ",
             titleShop: "🛒 Магазин Первой Помощи",
             subShop: "Необходимые товары с доставкой:",
@@ -813,7 +814,7 @@
             guideSub: "أشهر الأماكن السياحية ومواقع الخرائط في إسطنبول:",
             btnExpandGuides: "🔍 عرض جميع الأماكن السياحية (66 موقعاً)",
             btnHotelMap: "🏨 الاتجاهات إلى فندق تريادا كراكوي",
-            trustBox: "🛡️ ضمان أمان وسعر ثابت ومحدد<br>ادفع نقداً أو بالبطاقة!",
+            trustBox: "🛡️ ضمان أمان وسعر ثابت ومحدد<br>ادفع نقداً، أو عبر الحوالة البنكية، أو بالبطاقة!",
             titleIst: "✈️ مطار إسطنبول (IST)",
             istInfo: "• مدة الرحلة: حوالي 45 - 60 دقيقة.<br>• يجب حجز التاكسي <strong>قبل 3.5 ساعة على الأقل</strong> من موعد الطيران.",
             mapBtnIst: "📍 موقع خريطة IST", ytBtnIst: "▶ فيديو دليل الركاب IST",
@@ -826,7 +827,7 @@
             lblNa: "الاسم الكامل:", lblRm: "رقم الغرفة:", lblAp: "اختر المطار:",
             optIst: "مطار إسطنبول (IST) - 2.000 ₺", optSaw: "مطار صبيحة (SAW) - 2.200 ₺",
             lblFlight: "رمز الطيران (اختياري):", lblDt: "تاريخ ووقت طلب التاكسي:", lblPy: "مكان وطريقة الدفع:",
-            optPy1: "نقداً في الفندق", optPy2: "نقداً في التاكسي", optPy3: "بطاقة الائتمان في التاكسي",
+            optPy1: "نقداً في الفندق", optPy2: "حوالة / EFT في الفندق", optPy3: "نقداً في التاكسي", optPy4: "بطاقة الائتمان في التاكسي",
             lblTotalTitle: "السعر الثابت المقدر:", btnWsSend: "إرسال طلب التاكسي",
             titleShop: "🛒 متجر الاحتياجات الطارئة",
             subShop: "المستلزمات الضرورية تصل إلى باب غرفتك:",
@@ -901,7 +902,7 @@
             return;
         }
 
-        const payIcon = payVal.includes('Card') ? "💳" : "💸";
+        const payIcon = payVal.includes('Card') ? "💳" : payVal.includes('Eft') ? "🏦" : "💸";
         const msg = `🚖 YENİ SARI TAKSİ TALEBİ:\n👤 İsim: ${name}\n🔑 Oda No: ${room}\n🛫 Havalimanı: ${airport}\n🎫 Uçuş Kodu: ${flight}\n📅 Tarih/Saat: ${time}\n${payIcon} Ödeme: ${payText}\n💰 Net Tutar: ${totalPrice}`;
 
         const targetNumber = "905014712020";
