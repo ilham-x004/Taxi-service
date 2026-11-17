@@ -165,7 +165,7 @@
         </div>
     </div>
 
-    <!-- BAŞLIK (Rozet kaldırıldı) -->
+    <!-- BAŞLIK -->
     <div class="header">
         <h1>Triada Hotel Karaköy</h1>
         <p id="subTitle">7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri</p>
@@ -208,7 +208,7 @@
             <img src="taxiserit.jpg" alt="Taksi Damalı Şerit" onerror="this.src='https://i.imgur.com/35695.png'">
         </div>
 
-        <!-- GÜVEN KUTUSU (Doğru konuma, taksi şeridinin hemen altına taşındı) -->
+        <!-- GÜVEN KUTUSU -->
         <div class="trust-box" id="trustBox">
             🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>
             Ödemenizi İster Nakit, İster Havale, İster Kartla Yapabilirsiniz!
@@ -259,11 +259,6 @@
                     <option value="IST" id="optIst">İstanbul Havalimanı (IST) - 2.000 ₺</option>
                     <option value="SAW" id="optSaw">Sabiha Gökçen (SAW) - 2.200 ₺</option>
                 </select>
-            </div>
-
-            <div class="form-group">
-                <label id="lblFlight">Uçuş Kodu:</label>
-                <input type="text" id="txtFlight" placeholder="Örn: TK1982">
             </div>
 
             <div class="form-group">
@@ -634,7 +629,7 @@
             flexBox: "🔄 Rezervasyonunuzu oluşturduktan sonra istediğiniz zaman tarih ve saati ücretsiz değiştirebilirsiniz!",
             lblNa: "Adınız Soyadınız:", lblRm: "Oda Numaranız:", lblAp: "Havalimanı Seçin:",
             optIst: "İstanbul Havalimanı (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
-            lblFlight: "Uçuş Kodu:", lblDt: "Taksi İstediğiniz Tarih ve Saat:", lblPy: "Ödeme Yeri ve Şekli:",
+            lblDt: "Taksi İstediğiniz Tarih ve Saat:", lblPy: "Ödeme Yeri ve Şekli:",
             optPy1: "Otelde Nakit Ödeme", optPy2: "Otelde Havale / EFT", optPy3: "Araçta Nakit (Taksiciye)", optPy4: "Araçta Kredi Kartı",
             lblTotalTitle: "Ödenecek Net Fiyat:", btnWsSend: "TAKSİ TALEBİ GÖNDER",
             titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
@@ -695,7 +690,7 @@
             flexBox: "🔄 You can freely change your date and time anytime after creating your reservation!",
             lblNa: "Full Name:", lblRm: "Room Number:", lblAp: "Select Airport:",
             optIst: "Istanbul Airport (IST) - 2.000 ₺", optSaw: "Sabiha Gokcen (SAW) - 2.200 ₺",
-            lblFlight: "Flight Code:", lblDt: "Taxi Pickup Date & Time:", lblPy: "Payment Location & Method:",
+            lblDt: "Taxi Pickup Date & Time:", lblPy: "Payment Location & Method:",
             optPy1: "Cash at Hotel", optPy2: "Bank Transfer / EFT at Hotel", optPy3: "Cash in Taxi (to Driver)", optPy4: "Credit Card in Taxi",
             lblTotalTitle: "Fixed Price To Pay:", btnWsSend: "SEND TAXI REQUEST",
             titleShop: "🛒 Emergency & Support Shop",
@@ -756,7 +751,7 @@
             flexBox: "🔄 Вы можете бесплатно изменить дату и время в любое время после создания бронирования!",
             lblNa: "Имя и Фамилия:", lblRm: "Номер комнаты:", lblAp: "Выберите аэропорт:",
             optIst: "Аэропорт Стамбула (IST) - 2.000 ₺", optSaw: "Sabiha Gökçen (SAW) - 2.200 ₺",
-            lblFlight: "Номер рейса:", lblDt: "Дата и время подачи такси:", lblPy: "Место и способ оплаты:",
+            lblDt: "Дата и время подачи такси:", lblPy: "Место и способ оплаты:",
             optPy1: "Наличными в отеле", optPy2: "Перевод / EFT в отеле", optPy3: "Наличными водителю", optPy4: "Картой в такси",
             lblTotalTitle: "Фиксированная цена:", btnWsSend: "ОТПРАВИТЬ ЗАПРОС НА ТАКСИ",
             titleShop: "🛒 Магазин Первой Помощи",
@@ -817,7 +812,7 @@
             flexBox: "🔄 يمكنك تغيير التاريخ والوقت مجاناً في أي وقت بعد إنشاء الحجز الخاص بك!",
             lblNa: "الاسم الكامل:", lblRm: "رقم الغرفة:", lblAp: "اختر المطار:",
             optIst: "مطار إسطنبول (IST) - 2.000 ₺", optSaw: "مطار صبيحة (SAW) - 2.200 ₺",
-            lblFlight: "رمز الطيران:", lblDt: "تاريخ ووقت طلب التاكسي:", lblPy: "مكان وطريقة الدفع:",
+            lblDt: "تاريخ ووقت طلب التاكسي:", lblPy: "مكان وطريقة الدفع:",
             optPy1: "نقداً في الفندق", optPy2: "حوالة / EFT في الفندق", optPy3: "نقداً في التاكسي", optPy4: "بطاقة الائتمان في التاكسي",
             lblTotalTitle: "السعر الثابت المقدر:", btnWsSend: "إرسال طلب التاكسي",
             titleShop: "🛒 متجر الاحتياجات الطارئة",
@@ -881,7 +876,6 @@
         const name = document.getElementById('txtName').value.trim();
         const room = document.getElementById('txtRoom').value.trim();
         const airport = document.getElementById('selAirport').value;
-        const flight = document.getElementById('txtFlight').value.trim() || "Belirtilmedi";
         const time = document.getElementById('txtTime').value;
         const paySelect = document.getElementById('selPay');
         const payVal = paySelect.value;
@@ -894,7 +888,7 @@
         }
 
         const payIcon = payVal.includes('Card') ? "💳" : payVal.includes('Eft') ? "🏦" : "💸";
-        const msg = `🚖 YENİ SARI TAKSİ TALEBİ:\n👤 İsim: ${name}\n🔑 Oda No: ${room}\n🛫 Havalimanı: ${airport}\n🎫 Uçuş Kodu: ${flight}\n📅 Tarih/Saat: ${time}\n${payIcon} Ödeme: ${payText}\n💰 Net Tutar: ${totalPrice}`;
+        const msg = `🚖 YENİ SARI TAKSİ TALEBİ:\n👤 İsim: ${name}\n🔑 Oda No: ${room}\n🛫 Havalimanı: ${airport}\n📅 Tarih/Saat: ${time}\n${payIcon} Ödeme: ${payText}\n💰 Net Tutar: ${totalPrice}`;
 
         const targetNumber = "905014712020";
         const url = `https://wa.me/${targetNumber}?text=${encodeURIComponent(msg)}`;
