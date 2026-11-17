@@ -7,13 +7,13 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #121212; color: #f5f5f5; padding: 15px; padding-bottom: 90px; display: flex; justify-content: center; }
-        .container { max-width: 480px; width: 100%; background: #1e1e1e; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 1px solid #333; position: relative; }
+        .container { max-width: 480px; width: 100%; background: #1e1e1e; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 1px solid #333; position: relative; overflow: hidden; }
         
         /* ÜST BAR VE HAMBURGER MENÜ */
         .top-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
         .menu-btn { background: #2a2a2a; border: 1px solid #f2a900; color: #f2a900; font-size: 22px; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
         
-        /* KAYAR YAN MENÜ (Sadeleştirildi ve İkonlar Düzeltildi) */
+        /* KAYAR YAN MENÜ */
         .side-menu { position: fixed; top: 0; left: -320px; width: 310px; height: 100%; background: #181818; border-right: 2px solid #f2a900; z-index: 10000; padding: 20px; transition: 0.3s; box-shadow: 5px 0 15px rgba(0,0,0,0.7); overflow-y: auto; }
         .side-menu.active { left: 0; }
         .menu-close { background: none; border: none; color: #f2a900; font-size: 26px; float: right; cursor: pointer; }
@@ -49,6 +49,10 @@
         .card-info { font-size: 12px; color: #bbb; line-height: 1.5; margin-top: 8px; }
         
         .capacity-box { background: #1a1a1a; padding: 12px; border-radius: 8px; font-size: 12px; color: #ddd; margin-bottom: 15px; border: 1px dashed #f2a900; line-height: 1.5; }
+
+        /* Taksi Geçiş Şeridi Stili (Uçtan Uca) */
+        .taxi-stripe-container { margin: 15px -20px 20px -20px; height: 18px; overflow: hidden; background: #000; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .taxi-stripe-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .form-group { margin-bottom: 12px; }
         label { font-size: 13px; color: #ccc; display: block; margin-bottom: 4px; }
@@ -113,7 +117,7 @@
 <!-- KARARATMA KATMANI -->
 <div class="overlay" id="menuOverlay" onclick="closeMenu()"></div>
 
-<!-- SOL KAYAR MENÜ (Temizlendi ve Düzenlendi) -->
+<!-- SOL KAYAR MENÜ -->
 <div class="side-menu" id="sideMenu">
     <button class="menu-close" onclick="closeMenu()">✕</button>
     <div class="menu-title" id="menuTitle">🏢 Triada Hotel Menü</div>
@@ -200,8 +204,12 @@
         </div>
     </div>
 
-    <!-- 2. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASYON FORMU (Harita ve Videolar Kaldırıldı) -->
+    <!-- TAKSİ BÖLÜMÜ BAŞLANGICI VE UÇTAN UCA TAKSİ ŞERİDİ (taxiserit.jpg) -->
     <div id="taxiSec">
+        <div class="taxi-stripe-container">
+            <img src="taxiserit.jpg" alt="Taksi Damalı Şerit" onerror="this.src='https://i.imgur.com/35695.png'">
+        </div>
+
         <div class="card">
             <h2><span id="titleIst">✈️ İstanbul Havalimanı (IST)</span></h2>
             <div class="price">2.000 ₺ <span style="font-size:12px; color:#25D366; font-weight:normal;">(Sabit Fiyat)</span></div>
@@ -633,7 +641,7 @@
             lblTotalTitle: "Ödenecek Net Fiyat:", btnWsSend: "TAKSİ TALEBİ GÖNDER",
             titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
             subShop: "İhtiyacınız olan ürünler kapınıza gelsin:",
-            sp1Title: "💳 İstanbulkart (Ulaşım Kartı)", sp1Desc: "Tramvay, metro و otobüs kullanımı için", btnBuy1: "Sipariş Et 💬",
+            sp1Title: "💳 İstanbulkart (Ulaşım Kartı)", sp1Desc: "Tramvay, metro ve otobüs kullanımı için", btnBuy1: "Sipariş Et 💬",
             sp2Title: "🔌 Şarj Başlığı & Dönüştürücü", sp2Desc: "Priz adaptör dönüştürücü (Converter)", btnBuy2: "Sipariş Et 💬",
             sp4Title: "☂️ Yağmur Şemsiyesi", sp4Desc: "Kaliteli kişisel şemsiye", btnBuy4: "Sipariş Et 💬",
             btnExpandShop: "🔍 Tüm Ürünleri Göster / Büyüt",
