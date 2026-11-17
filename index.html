@@ -69,6 +69,10 @@
         .wifi-step-box { background: #1a1a1a; padding: 10px; border-radius: 6px; margin-bottom: 8px; border-left: 3px solid #25D366; font-size: 12px; line-height: 1.5; color: #ddd; }
         .wifi-step-box strong { color: #25D366; }
 
+        /* Annex Bina Wi-Fi Kutusu */
+        .annex-wifi-box { background: #262111; border: 1px dashed #f2a900; padding: 12px; border-radius: 8px; margin-bottom: 12px; font-size: 13px; color: #ddd; line-height: 1.5; text-align: center; }
+        .annex-wifi-box strong { color: #f2a900; }
+
         /* Rehber & Market Liste Stili */
         .guide-item { background: #1a1a1a; padding: 11px 12px; border-radius: 8px; margin-bottom: 8px; border-left: 3px solid #f2a900; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
         .guide-title { font-size: 13.5px; font-weight: bold; color: #fff; }
@@ -86,7 +90,7 @@
         .more-items { display: none; }
         .btn-expand { background: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 12px; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; margin-top: 8px; margin-bottom: 10px; transition: 0.2s; }
 
-        /* YORUM KARTI STİLLERİ (Wi-Fi görseli gibi tam genişlikte büyük boy) */
+        /* YORUM KARTI STİLLERİ */
         .review-card { background: linear-gradient(135deg, #262626, #1f1f1f); border: 1px dashed #f2a900; border-radius: 12px; padding: 18px; margin-top: 20px; text-align: center; }
         .review-card h3 { font-size: 15px; color: #f2a900; margin-bottom: 8px; }
         .review-card p { font-size: 12.5px; color: #ccc; line-height: 1.5; margin-bottom: 12px; }
@@ -171,6 +175,13 @@
         <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:10px;" id="wifiSub">Görsele bakarak hızlıca bağlanabilirsiniz:</p>
         
+        <!-- ANNEX BİNA Wİ-Fİ BİLGİ KUTUSU (Detaylı Yazılı Adımlar ile Görselin Arasına Eklendi) -->
+        <div class="annex-wifi-box" id="annexWifiBox">
+            🏢 <strong>Annex Bina Misafirlerimiz İçin:</strong><br>
+            Wi-Fi Adı: <strong>TRIADA KARAKOY</strong><br>
+            Şifre: <strong>triada2022</strong>
+        </div>
+
         <div class="wifi-img-container">
             <img src="wifi.png" alt="Triada Guest Wi-Fi Bağlantı Rehberi Adımları" onerror="this.src='https://i.imgur.com/35695.png'">
         </div>
@@ -386,7 +397,7 @@
             ⭐ Google'da Değerlendir / Yorum Yaz
         </a>
 
-        <!-- YORUM1.PNG GÖRSELİ (Wi-Fi görseli gibi tam genişlikte büyük boy) -->
+        <!-- YORUM1.PNG GÖRSELİ -->
         <div class="review-img-container">
             <img src="yorum1.png" alt="İlham Google Yorum QR Kod">
         </div>
@@ -598,6 +609,7 @@
             mcCare: "💈 Berber, Kuaför & SPA",
             wifiTitle: "📶 Ücretsiz Wi-Fi Oturum Açma Rehberi",
             wifiSub: "Görsele bakarak hızlıca bağlanabilirsiniz:",
+            annexWifiBox: "🏢 <strong>Annex Bina Misafirlerimiz İçin:</strong><br>Wi-Fi Adı: <strong>TRIADA KARAKOY</strong><br>Şifre: <strong>triada2022</strong>",
             wifiDetailToggleTitle: "📖 Detaylı Yazılı Adımları Göster / Gizle",
             wifiStep1: '<strong>Adım 1 & 2:</strong> Telefonunuzun Wi-Fi ayarlarından <strong>"Triada Guest"</strong> ağını seçin ve ekranda çıkan <em>"Kablosuz ağda oturum açın"</em> bildirimine dokunun.',
             wifiStep2: '<strong>Adım 3 & 4:</strong> Oturum açma sayfası açıldığında alt kısımdaki turuncu <strong>"Hızlı Giriş"</strong> butonuna basın ve açılan menüden <strong>"Hotel Misafir Girişi"</strong> seçeneğini seçin.',
@@ -660,6 +672,7 @@
             mcCare: "💈 Barber, Hairdresser & SPA",
             wifiTitle: "📶 Free Wi-Fi Login Guide",
             wifiSub: "Connect easily by following the image:",
+            annexWifiBox: "🏢 <strong>For Annex Building Guests:</strong><br>Wi-Fi Name: <strong>TRIADA KARAKOY</strong><br>Password: <strong>triada2022</strong>",
             wifiDetailToggleTitle: "📖 Show / Hide Detailed Written Steps",
             wifiStep1: '<strong>Step 1 & 2:</strong> Select the <strong>"Triada Guest"</strong> network from your phone Wi-Fi settings and tap the <em>"Sign in to Wi-Fi network"</em> notification.',
             wifiStep2: '<strong>Step 3 & 4:</strong> When the login page opens, tap the orange <strong>"Hızlı Giriş" (Quick Login)</strong> button at the bottom and select <strong>"Hotel Misafir Girişi"</strong> from the menu.',
@@ -722,6 +735,7 @@
             mcCare: "💈 Парикмахерская и СПА",
             wifiTitle: "📶 Инструкция по входу в Wi-Fi",
             wifiSub: "Подключайтесь, следуя изображению:",
+            annexWifiBox: "🏢 <strong>Для гостей корпуса Annex:</strong><br>Имя Wi-Fi: <strong>TRIADA KARAKOY</strong><br>Пароль: <strong>triada2022</strong>",
             wifiDetailToggleTitle: "📖 Показать / Скрыть подробные шаги",
             wifiStep1: '<strong>Шаг 1 и 2:</strong> Выберите сеть <strong>"Triada Guest"</strong> в настройках Wi-Fi телефона и нажмите на уведомление <em>"Войти в сеть Wi-Fi"</em>.',
             wifiStep2: '<strong>Шаг 3 и 4:</strong> Когда откроется страница входа, нажмите оранжевую кнопку <strong>"Hızlı Giriş"</strong> внизу и выберите <strong>"Hotel Misafir Girişi"</strong>.',
@@ -784,6 +798,7 @@
             mcCare: "💈 الحلاقة والسبا",
             wifiTitle: "📶 دليل تسجيل الدخول لشبكة الواي فاي المجانية",
             wifiSub: "اتصل بسهولة باتباع الصورة أدناه:",
+            annexWifiBox: "🏢 <strong>لضيوف مبنى Annex (الملحق):</strong><br>اسم الواي فاي: <strong>TRIADA KARAKOY</strong><br>كلمة المرور: <strong>triada2022</strong>",
             wifiDetailToggleTitle: "📖 إظهار / إخفاء الخطوات المكتوبة المفصلة",
             wifiStep1: '<strong>الخطوة 1 و 2:</strong> اختر شبكة <strong>"Triada Guest"</strong> من إعدادات الواي فاي بهاتفك واضغط على إشعار <em>"تسجيل الدخول إلى شبكة Wi-Fi"</em>.',
             wifiStep2: '<strong>الخطوة 3 و 4:</strong> عند فتح صفحة تسجيل الدخول، اضغط على الزر البرتقالي <strong>"Hızlı Giriş"</strong> في الأسفل واختر <strong>"Hotel Misafir Girişi"</strong>.',
@@ -844,7 +859,7 @@
         for(let key in t) {
             let el = document.getElementById(key);
             if(el) {
-                if(key.includes('Info') || key === 'capBox' || key === 'trustBox' || key === 'flexBox' || key.includes('wifiStep')) {
+                if(key.includes('Info') || key === 'capBox' || key === 'trustBox' || key === 'flexBox' || key.includes('wifiStep') || key === 'annexWifiBox') {
                     el.innerHTML = t[key];
                 } else {
                     el.innerText = t[key];
