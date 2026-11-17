@@ -13,7 +13,7 @@
         .top-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
         .menu-btn { background: #2a2a2a; border: 1px solid #f2a900; color: #f2a900; font-size: 22px; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
         
-        /* KAYAR YAN MENÜ */
+        /* KAYAR YAN MENÜ (Sadeleştirildi ve İkonlar Düzeltildi) */
         .side-menu { position: fixed; top: 0; left: -320px; width: 310px; height: 100%; background: #181818; border-right: 2px solid #f2a900; z-index: 10000; padding: 20px; transition: 0.3s; box-shadow: 5px 0 15px rgba(0,0,0,0.7); overflow-y: auto; }
         .side-menu.active { left: 0; }
         .menu-close { background: none; border: none; color: #f2a900; font-size: 26px; float: right; cursor: pointer; }
@@ -61,7 +61,6 @@
 
         .btn-ws { background-color: #25D366; color: white; border: none; width: 100%; padding: 14px; border-radius: 30px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
         .btn-map { background-color: #333; color: #f2a900; border: 1px solid #f2a900; width: 100%; padding: 10px; border-radius: 30px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; text-decoration: none; }
-        .btn-yt { background-color: #bb0000; color: #fff; border: none; width: 100%; padding: 9px; border-radius: 30px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; text-decoration: none; }
 
         /* Wi-Fi Görsel ve Detay Alanı */
         .wifi-img-container { text-align: center; margin-top: 10px; margin-bottom: 10px; }
@@ -114,37 +113,37 @@
 <!-- KARARATMA KATMANI -->
 <div class="overlay" id="menuOverlay" onclick="closeMenu()"></div>
 
-<!-- SOL KAYAR MENÜ -->
+<!-- SOL KAYAR MENÜ (Temizlendi ve Düzenlendi) -->
 <div class="side-menu" id="sideMenu">
     <button class="menu-close" onclick="closeMenu()">✕</button>
-    <div class="menu-title" id="menuTitle">🏢 Triada Hotel Rehber Menü</div>
+    <div class="menu-title" id="menuTitle">🏢 Triada Hotel Menü</div>
     
-    <a href="#wifiSec" class="menu-link" onclick="closeMenu()"><span id="mlWifi">📶 Wi-Fi Bağlantı Rehberi</span> 📍</a>
-    <a href="#taxiSec" class="menu-link" onclick="closeMenu()"><span id="ml1">🚕 Sarı Taksi Çağır</span> 📍</a>
-    <a href="#buildingsSec" class="menu-link" onclick="closeMenu()"><span id="ml2">📍 Otel Binalarımız (Konumlar)</span> 📍</a>
-    <a href="#guideSec" class="menu-link" onclick="closeMenu()"><span id="ml4">🗺️ İstanbul Gezi Rehberi</span> 📍</a>
-    <a href="#shopSec" class="menu-link" onclick="closeMenu()"><span id="ml3">🛒 Acil İhtiyaç Marketi</span> 📍</a>
+    <a href="#wifiSec" class="menu-link" onclick="closeMenu()"><span id="mlWifi">📶 Wi-Fi Bağlantı Rehberi</span> ➔</a>
+    <a href="#taxiSec" class="menu-link" onclick="closeMenu()"><span id="ml1">🚕 Sarı Taksi Çağır</span> ➔</a>
+    <a href="#buildingsSec" class="menu-link" onclick="closeMenu()"><span id="ml2">📍 Otel Binalarımız</span> ➔</a>
+    <a href="#guideSec" class="menu-link" onclick="closeMenu()"><span id="ml4">🗺️ İstanbul Gezi Rehberi</span> ➔</a>
+    <a href="#shopSec" class="menu-link" onclick="closeMenu()"><span id="ml3">🛒 Acil İhtiyaç Marketi</span> ➔</a>
     
     <div class="menu-category-fixed" id="mcEmergency">🚨 Acil Hizmetler & Konumlar</div>
-    <a href="https://maps.app.goo.gl/biVGdVAnQXLnwANe6?g_st=ac" target="_blank" class="menu-link"><div><span id="mEx">💱 Güvenilir Döviz Bürosu</span><span class="menu-subtext">Nakit/Döviz bozdurma noktası</span></div>📍</a>
-    <a href="https://maps.app.goo.gl/tJkGVbgf96CGFTE49?g_st=ac" target="_blank" class="menu-link"><div><span id="mPh">🏥 Nöbetçi 24 Saat Açık Eczane</span><span class="menu-subtext">7/24 Sağlık & İlaç ihtiyaçları</span></div>📍</a>
-    <a href="https://maps.app.goo.gl/aKrabXJbymTmtfP3A" target="_blank" class="menu-link"><div><span id="mPh2">💊 En Yakın Eczane</span><span class="menu-subtext">Yakın sağlık noktası</span></div>📍</a>
-    <a href="https://maps.app.goo.gl/MkQuQitKw48yYTw98?g_st=ac" target="_blank" class="menu-link"><div><span id="mMkt">🛒 En Yakın Market</span><span class="menu-subtext">Günlük ihtiyaç & Atıştırmalık</span></div>📍</a>
-    <a href="https://maps.app.goo.gl/esDV88XG8D1Tt74C6?g_st=ac" target="_blank" class="menu-link"><div><span id="mAtm">🏧 Ortak ATM Noktaları</span><span class="menu-subtext">Nakit çekim bankamatikler</span></div>📍</a>
-    <a href="https://maps.app.goo.gl/F3ZvGWppxmUXPoneA?g_st=ac" target="_blank" class="menu-link"><div><span id="mPk">🅿️ Galataport AVM Kapalı Otoparkı</span><span class="menu-subtext">7/24 Güvenli kapalı otopark</span></div>📍</a>
+    <a href="https://maps.app.goo.gl/biVGdVAnQXLnwANe6?g_st=ac" target="_blank" class="menu-link"><div><span id="mEx">💱 Güvenilir Döviz Bürosu</span><span class="menu-subtext">Nakit/Döviz bozdurma noktası</span></div>➔</a>
+    <a href="https://maps.app.goo.gl/tJkGVbgf96CGFTE49?g_st=ac" target="_blank" class="menu-link"><div><span id="mPh">🏥 Nöbetçi 24 Saat Eczane</span><span class="menu-subtext">7/24 Sağlık & İlaç</span></div>➔</a>
+    <a href="https://maps.app.goo.gl/aKrabXJbymTmtfP3A" target="_blank" class="menu-link"><div><span id="mPh2">💊 En Yakın Eczane</span><span class="menu-subtext">Yakın sağlık noktası</span></div>➔</a>
+    <a href="https://maps.app.goo.gl/MkQuQitKw48yYTw98?g_st=ac" target="_blank" class="menu-link"><div><span id="mMkt">🛒 En Yakın Market</span><span class="menu-subtext">Günlük ihtiyaç & Atıştırmalık</span></div>➔</a>
+    <a href="https://maps.app.goo.gl/esDV88XG8D1Tt74C6?g_st=ac" target="_blank" class="menu-link"><div><span id="mAtm">🏧 Ortak ATM Noktaları</span><span class="menu-subtext">Nakit çekim bankamatikler</span></div>➔</a>
+    <a href="https://maps.app.goo.gl/F3ZvGWppxmUXPoneA?g_st=ac" target="_blank" class="menu-link"><div><span id="mPk">🅿️ Galataport Kapalı Otopark</span><span class="menu-subtext">7/24 Güvenli otopark</span></div>➔</a>
 
     <div class="accordion-header" onclick="toggleAcc('accFood')"><span id="mcFood">🥐 Yeme, İçme & Cafeler</span> <span>▼</span></div>
     <div class="accordion-content" id="accFood">
-        <a href="https://maps.app.goo.gl/ie138XCPTvNUPj4Q9?g_st=ac" target="_blank" class="menu-link"><div><span>🍲 Restoran</span><span class="menu-subtext">Geleneksel & Akşam Yemeği</span></div>📍</a>
-        <a href="https://maps.app.goo.gl/osv2t9MHzxxchnDH7?g_st=ac" target="_blank" class="menu-link"><div><span>🐟 Balık Restoranı</span><span class="menu-subtext">Taze Balık & Deniz Ürünleri</span></div>📍</a>
-        <a href="https://maps.app.goo.gl/Xa7Cm8FPnefF28b2A" target="_blank" class="menu-link"><div><span>☕ Cafe & Kahve</span><span class="menu-subtext">Keyifli Kahve Molası</span></div>📍</a>
-        <a href="https://maps.app.goo.gl/kc4KeuVZiTEE4D9VA?g_st=ac" target="_blank" class="menu-link"><div><span>🍸 Bar & Gece Mekanı</span><span class="menu-subtext">Kokteyl & Eğlence</span></div>📍</a>
+        <a href="https://maps.app.goo.gl/ie138XCPTvNUPj4Q9?g_st=ac" target="_blank" class="menu-link"><div><span>🍲 Restoran</span><span class="menu-subtext">Geleneksel & Akşam Yemeği</span></div>➔</a>
+        <a href="https://maps.app.goo.gl/osv2t9MHzxxchnDH7?g_st=ac" target="_blank" class="menu-link"><div><span>🐟 Balık Restoranı</span><span class="menu-subtext">Taze Balık & Deniz Ürünleri</span></div>➔</a>
+        <a href="https://maps.app.goo.gl/Xa7Cm8FPnefF28b2A" target="_blank" class="menu-link"><div><span>☕ Cafe & Kahve</span><span class="menu-subtext">Keyifli Kahve Molası</span></div>➔</a>
+        <a href="https://maps.app.goo.gl/kc4KeuVZiTEE4D9VA?g_st=ac" target="_blank" class="menu-link"><div><span>🍸 Bar & Gece Mekanı</span><span class="menu-subtext">Kokteyl & Eğlence</span></div>➔</a>
     </div>
 
     <div class="accordion-header" onclick="toggleAcc('accCare')"><span id="mcCare">💈 Berber, Kuaför & SPA</span> <span>▼</span></div>
     <div class="accordion-content" id="accCare">
-        <a href="https://maps.app.goo.gl/g4uM7aNUdCu27fKM7?g_st=ac" target="_blank" class="menu-link"><div><span>💈 Berber & Kuaför</span><span class="menu-subtext">Erkek & Kadın Saç Bakımı</span></div>📍</a>
-        <a href="https://maps.app.goo.gl/nxQoA6fDi7grMk9g6?g_st=ac" target="_blank" class="menu-link"><div><span>🧖 Masaj, SPA & Hamam</span><span class="menu-subtext">Yol Yorgunluğu & Rahatlama</span></div>📍</a>
+        <a href="https://maps.app.goo.gl/g4uM7aNUdCu27fKM7?g_st=ac" target="_blank" class="menu-link"><div><span>💈 Berber & Kuaför</span><span class="menu-subtext">Erkek & Kadın Saç Bakımı</span></div>➔</a>
+        <a href="https://maps.app.goo.gl/nxQoA6fDi7grMk9g6?g_st=ac" target="_blank" class="menu-link"><div><span>🧖 Masaj, SPA & Hamam</span><span class="menu-subtext">Yol Yorgunluğu & Rahatlama</span></div>➔</a>
     </div>
 
     <a href="https://wa.me/905014712020" target="_blank" class="menu-link" style="color:#25D366; font-weight:bold; margin-top:20px; font-size:15px;" id="ml5">💬 Bellboy Destek WhatsApp</a>
@@ -170,17 +169,15 @@
         <p id="subTitle">7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri</p>
     </div>
 
-    <!-- 1. SIRADA: Wİ-Fİ REHBERİ (Ana Bina Görseli + Hemen Ardından Annex Bilgisi) -->
+    <!-- 1. SIRADA: Wİ-Fİ REHBERİ -->
     <div class="card" id="wifiSec" style="border-left-color: #25D366;">
         <h2 style="color: #25D366;"><span id="wifiTitle">📶 Ücretsiz Wi-Fi Oturum Açma Rehberi</span></h2>
         <p style="font-size:12px; color:#aaa; margin-bottom:10px;" id="wifiSub">Görsele bakarak hızlıca bağlanabilirsiniz:</p>
         
-        <!-- 1. SIRA: TRİADA GUEST RESİMLİ REHBER -->
         <div class="wifi-img-container">
             <img src="wifi.png" alt="Triada Guest Wi-Fi Bağlantı Rehberi Adımları" onerror="this.src='https://i.imgur.com/35695.png'">
         </div>
 
-        <!-- 2. SIRA: ANNEX BİNA Wİ-Fİ BİLGİ KUTUSU (Görselin Hemen Ardından) -->
         <div class="annex-wifi-box" id="annexWifiBox" style="margin-top: 12px;">
             🏢 <strong>Annex Bina Misafirlerimiz İçin:</strong><br>
             Wi-Fi Adı: <strong>TRIADA KARAKOY</strong><br>
@@ -203,28 +200,24 @@
         </div>
     </div>
 
-    <!-- 2. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASYON FORMU (Daha Yukarıya Taşındı) -->
+    <!-- 2. SIRADA: SARI TAKSİ HİZMETLERİ & REZERVASYON FORMU (Harita ve Videolar Kaldırıldı) -->
     <div id="taxiSec">
         <div class="card">
             <h2><span id="titleIst">✈️ İstanbul Havalimanı (IST)</span></h2>
-            <div class="price">2.000 ₺ <span style="font-size:12px; color:#25D366; font-weight:normal;">(Sabit Fiyat / Fixed Price)</span></div>
+            <div class="price">2.000 ₺ <span style="font-size:12px; color:#25D366; font-weight:normal;">(Sabit Fiyat)</span></div>
             <div class="card-info" id="istInfo">
                 • Ulaşım süresi: Yaklaşık 45 - 60 dakika.<br>
                 • Uçuştan <strong>en geç 3.5 saat önce</strong> taksi ayarlanmalıdır.
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Istanbul+Airport" target="_blank" class="btn-map" id="mapBtnIst">📍 IST Harita Konumu</a>
-            <a href="https://www.youtube.com/results?search_query=istanbul+airport+terminal+guide" target="_blank" class="btn-yt" id="ytBtnIst">▶ IST Yolcu Video Rehberi</a>
         </div>
 
         <div class="card">
             <h2><span id="titleSaw">✈️ Sabiha Gökçen Havalimanı (SAW)</span></h2>
-            <div class="price">2.200 ₺ <span style="font-size:12px; color:#25D366; font-weight:normal;">(Sabit Fiyat / Fixed Price)</span></div>
+            <div class="price">2.200 ₺ <span style="font-size:12px; color:#25D366; font-weight:normal;">(Sabit Fiyat)</span></div>
             <div class="card-info" id="sawInfo">
                 • Ulaşım süresi: Yaklaşık 60 - 90 dakika.<br>
                 • Uçuştan <strong>en geç 4 saat önce</strong> taksi ayarlanmalıdır.
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sabiha+Gokcen+Airport" target="_blank" class="btn-map" id="mapBtnSaw">📍 SAW Harita Konumu</a>
-            <a href="https://www.youtube.com/results?search_query=sabiha+gokcen+airport+terminal+guide" target="_blank" class="btn-yt" id="ytBtnSaw">▶ SAW Yolcu Video Rehberi</a>
         </div>
 
         <div class="capacity-box" id="capBox">
@@ -593,20 +586,20 @@
     const translations = {
         tr: {
             subTitle: "7/24 Wi-Fi, Konum & Bellboy Destek Hizmetleri",
-            menuTitle: "🏢 Triada Hotel Rehber Menü",
+            menuTitle: "🏢 Triada Hotel Menü",
             mlWifi: "📶 Wi-Fi Bağlantı Rehberi",
-            ml2: "📍 Otel Binalarımız (Konumlar)",
-            ml4: "🗺️ İstanbul Gezi Rehberi",
             ml1: "🚕 Sarı Taksi Çağır",
+            ml2: "📍 Otel Binalarımız",
+            ml4: "🗺️ İstanbul Gezi Rehberi",
             ml3: "🛒 Acil İhtiyaç Marketi",
             ml5: "💬 Bellboy Destek WhatsApp",
             mcEmergency: "🚨 Acil Hizmetler & Konumlar",
             mEx: "💱 Güvenilir Döviz Bürosu",
-            mPh: "🏥 Nöbetçi 24 Saat Açık Eczane",
+            mPh: "🏥 Nöbetçi 24 Saat Eczane",
             mPh2: "💊 En Yakın Eczane",
             mMkt: "🛒 En Yakın Market",
             mAtm: "🏧 Ortak ATM Noktaları",
-            mPk: "🅿️ Galataport AVM Kapalı Otoparkı",
+            mPk: "🅿️ Galataport Kapalı Otopark",
             mcFood: "🥐 Yeme, İçme & Cafeler",
             mcCare: "💈 Berber, Kuaför & SPA",
             wifiTitle: "📶 Ücretsiz Wi-Fi Oturum Açma Rehberi",
@@ -628,10 +621,8 @@
             trustBox: "🛡️ %100 Güvenli, Ekonomik & Sabit Fiyat Garantisi<br>Ödemenizi İster Nakit, İster Havale, İster Kartla Yapabilirsiniz!",
             titleIst: "✈️ İstanbul Havalimanı (IST)",
             istInfo: "• Ulaşım süresi: Yaklaşık 45 - 60 dakika.<br>• Uçuştan <strong>en geç 3.5 saat önce</strong> taksi ayarlanmalıdır.",
-            mapBtnIst: "📍 IST Harita Konumu", ytBtnIst: "▶ IST Yolcu Video Rehberi",
             titleSaw: "✈️ Sabiha Gökçen Havalimanı (SAW)",
             sawInfo: "• Ulaşım süresi: Yaklaşık 60 - 90 dakika.<br>• Uçuştan <strong>en geç 4 saat önce</strong> taksi ayarlanmalıdır.",
-            mapBtnSaw: "📍 SAW Harita Konumu", ytBtnSaw: "▶ SAW Yolcu Video Rehberi",
             capBox: "🚖 <strong>Sarı Taksi Kapasitesi:</strong><br>• Maksimum 4 Yolcu<br>• 4-5 Büyük Valiz / 3-4 El Çantası sığabilir.",
             formTitle: "🚕 Sarı Taksi Çağır",
             flexBox: "🔄 Rezervasyonunuzu oluşturduktan sonra istediğiniz zaman tarih ve saati ücretsiz değiştirebilirsiniz!",
@@ -642,7 +633,7 @@
             lblTotalTitle: "Ödenecek Net Fiyat:", btnWsSend: "TAKSİ TALEBİ GÖNDER",
             titleShop: "🛒 Acil İhtiyaç & Destek Marketi",
             subShop: "İhtiyacınız olan ürünler kapınıza gelsin:",
-            sp1Title: "💳 İstanbulkart (Ulaşım Kartı)", sp1Desc: "Tramvay, metro ve otobüs kullanımı için", btnBuy1: "Sipariş Et 💬",
+            sp1Title: "💳 İstanbulkart (Ulaşım Kartı)", sp1Desc: "Tramvay, metro و otobüs kullanımı için", btnBuy1: "Sipariş Et 💬",
             sp2Title: "🔌 Şarj Başlığı & Dönüştürücü", sp2Desc: "Priz adaptör dönüştürücü (Converter)", btnBuy2: "Sipariş Et 💬",
             sp4Title: "☂️ Yağmur Şemsiyesi", sp4Desc: "Kaliteli kişisel şemsiye", btnBuy4: "Sipariş Et 💬",
             btnExpandShop: "🔍 Tüm Ürünleri Göster / Büyüt",
@@ -656,11 +647,11 @@
         },
         en: {
             subTitle: "24/7 Wi-Fi, Location & Bellboy Support",
-            menuTitle: "🏢 Triada Hotel Guide Menu",
+            menuTitle: "🏢 Triada Hotel Menu",
             mlWifi: "📶 Wi-Fi Connection Guide",
-            ml2: "📍 Hotel Buildings (Locations)",
-            ml4: "🗺️ Istanbul City Guide",
             ml1: "🚕 Order Yellow Taxi",
+            ml2: "📍 Hotel Buildings",
+            ml4: "🗺️ Istanbul City Guide",
             ml3: "🛒 Emergency Shop",
             ml5: "💬 Bellboy Support WhatsApp",
             mcEmergency: "🚨 Emergency Services & Map",
@@ -691,10 +682,8 @@
             trustBox: "🛡️ 100% Safe, Economical & Fixed Price Guarantee<br>Pay either in Cash, Bank Transfer, or Card!",
             titleIst: "✈️ Istanbul Airport (IST)",
             istInfo: "• Travel time: Approx. 45 - 60 mins.<br>• Taxi must be arranged <strong>at least 3.5 hours before</strong> flight.",
-            mapBtnIst: "📍 IST Map Location", ytBtnIst: "▶ IST Passenger Video Guide",
             titleSaw: "✈️ Sabiha Gokcen Airport (SAW)",
             sawInfo: "• Travel time: Approx. 60 - 90 mins.<br>• Taxi must be arranged <strong>at least 4 hours before</strong> flight.",
-            mapBtnSaw: "📍 SAW Map Location", ytBtnSaw: "▶ SAW Passenger Video Guide",
             capBox: "🚖 <strong>Yellow Taxi Capacity:</strong><br>• Maximum 4 Passengers<br>• Fits 4-5 Large Suitcases / 3-4 Hand Luggage.",
             formTitle: "🚕 Order Yellow Taxi",
             flexBox: "🔄 You can freely change your date and time anytime after creating your reservation!",
@@ -721,9 +710,9 @@
             subTitle: "24/7 Wi-Fi, Локация и Поддержка Беллбоя",
             menuTitle: "🏢 Меню Triada Hotel",
             mlWifi: "📶 Руководство по Wi-Fi",
-            ml2: "📍 Здания Отеля (Карта)",
-            ml4: "🗺️ Путеводитель по Стамбулу",
             ml1: "🚕 Заказать Желтое Такси",
+            ml2: "📍 Здания Отеля",
+            ml4: "🗺️ Путеводитель по Стамбулу",
             ml3: "🛒 Магазин Первой Помощи",
             ml5: "💬 WhatsApp Поддержка",
             mcEmergency: "🚨 Важные услуги и карта",
@@ -754,10 +743,8 @@
             trustBox: "🛡️ 100% Безопасность и Фиксированная Цена<br>Оплачивайте наличными, переводом или картой!",
             titleIst: "✈️ Аэропорт Стамбула (IST)",
             istInfo: "• Время в пути: около 45-60 минут.<br>• Такси необходимо заказать <strong>минимум за 3.5 часа</strong> до вылета.",
-            mapBtnIst: "📍 IST Карта", ytBtnIst: "▶ Видео-гид по аэропорту IST",
             titleSaw: "✈️ Аэропорт Сабиха Гёкчен (SAW)",
             sawInfo: "• Время в пути: около 60-90 минут.<br>• Такси необходимо заказать <strong>минимум за 4 часа</strong> до вылета.",
-            mapBtnSaw: "📍 SAW Карта", ytBtnSaw: "▶ Видео-гид по аэропорту SAW",
             capBox: "🚖 <strong>Вместимость Желтого Такси:</strong><br>• Максимум 4 Пассажира<br>• Вмещает 4-5 больших чемоданов / 3-4 ручные клади.",
             formTitle: "🚕 Заказать Желтое Такси",
             flexBox: "🔄 Вы можете бесплатно изменить дату и время в любое время после создания бронирования!",
@@ -784,9 +771,9 @@
             subTitle: "خدمة الواي فاي، الموقع ودعم بيلبوي 24/7",
             menuTitle: "🏢 قائمة فندق تريادا",
             mlWifi: "📶 دليل الاتصال بالواي فاي",
-            ml2: "📍 مباني الفندق (المواقع)",
-            ml4: "🗺️ دليل إسطنبول السياحي",
             ml1: "🚕 طلب تاكسي أصفر",
+            ml2: "📍 مباني الفندق",
+            ml4: "🗺️ دليل إسطنبول السياحي",
             ml3: "🛒 متجر الاحتياجات",
             ml5: "💬 واتساب دعم بيلبوي",
             mcEmergency: "🚨 الخدمات الطارئة والمواقع",
@@ -817,10 +804,8 @@
             trustBox: "🛡️ ضمان أمان وسعر ثابت ومحدد<br>ادفع نقداً، أو عبر الحوالة البنكية، أو بالبطاقة!",
             titleIst: "✈️ مطار إسطنبول (IST)",
             istInfo: "• مدة الرحلة: حوالي 45 - 60 دقيقة.<br>• يجب حجز التاكسي <strong>قبل 3.5 ساعة على الأقل</strong> من موعد الطيران.",
-            mapBtnIst: "📍 موقع خريطة IST", ytBtnIst: "▶ فيديو دليل الركاب IST",
             titleSaw: "✈️ مطار صبيحة كوكجن (SAW)",
             sawInfo: "• مدة الرحلة: حوالي 60 - 90 دقيقة.<br>• يجب حجز التاكسي <strong>قبل 4 ساعات على الأقل</strong> من موعد الطيران.",
-            mapBtnSaw: "📍 SAW موقع خريطة", ytBtnSaw: "▶ فيديو دليل الركاب SAW",
             capBox: "🚖 <strong>سعة التاكسي الأصفر:</strong><br>• 4 ركاب كحد أقصى<br>• يتسع لـ 4-5 حقائب كبيرة / 3-4 حقائب يد.",
             formTitle: "🚕 طلب تاكسي أصفر",
             flexBox: "🔄 يمكنك تغيير التاريخ والوقت مجاناً في أي وقت بعد إنشاء الحجز الخاص بك!",
